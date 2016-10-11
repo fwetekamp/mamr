@@ -7,11 +7,21 @@
 //
 
 import WatchKit
+import UserNotifications   
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+        let center = UNUserNotificationCenter.current()
+        
+        
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("Got the auth!")
+            } else {
+                print("I need the auth to spam you")
+            }
+        }
     }
 
     func applicationDidBecomeActive() {

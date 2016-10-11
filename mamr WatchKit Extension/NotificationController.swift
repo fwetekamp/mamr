@@ -13,6 +13,9 @@ import UserNotifications
 
 class NotificationController: WKUserNotificationInterfaceController {
 
+    
+    @IBOutlet var notificationdish2: WKInterfaceLabel!
+    @IBOutlet var test_image: WKInterfaceImage!
     override init() {
         // Initialize variables here.
         super.init()
@@ -30,8 +33,16 @@ class NotificationController: WKUserNotificationInterfaceController {
         super.didDeactivate()
     }
 
-    /*
+
     override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Swift.Void) {
+        
+        
+        if notification.request.content.title == "Your Lunch" {
+            notificationdish2.setText("Dynamics")
+            test_image.setImageNamed("test_dish")
+        }
+        
+        
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
@@ -39,5 +50,5 @@ class NotificationController: WKUserNotificationInterfaceController {
         // After populating your dynamic notification interface call the completion block.
         completionHandler(.custom)
     }
-    */
+
 }

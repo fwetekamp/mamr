@@ -235,6 +235,7 @@
 				TargetAttributes = {
 					1FDA8AFC1DAD50C10030FA6B = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9J5KWZ8M97;
 						ProvisioningStyle = Automatic;
 					};
 					1FDA8B0E1DAD50C10030FA6B = {
@@ -523,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = mamr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr;
@@ -535,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = mamr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr;
