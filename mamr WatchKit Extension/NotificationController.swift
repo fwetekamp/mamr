@@ -14,8 +14,12 @@ import UserNotifications
 class NotificationController: WKUserNotificationInterfaceController {
 
     
-    @IBOutlet var notificationdish2: WKInterfaceLabel!
+    @IBOutlet var notificationdish1: WKInterfaceLabel!
     @IBOutlet var test_image: WKInterfaceImage!
+    @IBOutlet var title_dish1: WKInterfaceLabel!
+    @IBOutlet var notificationdish2: WKInterfaceLabel!
+    @IBOutlet var title_dish2: WKInterfaceLabel!
+    @IBOutlet var test_image2: WKInterfaceImage!
     override init() {
         // Initialize variables here.
         super.init()
@@ -38,9 +42,16 @@ class NotificationController: WKUserNotificationInterfaceController {
         
         
         if notification.request.content.title == "Your Lunch" {
-            notificationdish2.setText("Dynamics")
+            notificationdish1.setText("#1 - Fresh Salmon")
+            title_dish1.setText("9.40€")
+            notificationdish2.setText("#2 - Beef Salad")
+            title_dish2.setText("8.30€")
+
             test_image.setImageNamed("test_dish")
+            test_image2.setImageNamed("test_dish")
+
         }
+        
         
         
         // This method is called when a notification needs to be presented.

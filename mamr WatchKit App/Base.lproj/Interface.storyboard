@@ -49,12 +49,25 @@
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="mamr_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Label" id="rUK-Be-KbG"/>
+                        <label alignment="center" text="Dish1" id="rUK-Be-KbG">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                        </label>
                         <imageView alignment="left" id="x6o-rS-gri"/>
+                        <label alignment="center" text="Title" id="XCj-Wy-3Mm"/>
+                        <separator alignment="left" id="WwF-kU-ukN"/>
+                        <label alignment="center" text="Dish2" id="EL7-Qk-Lep">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                        </label>
+                        <imageView alignment="left" id="0RR-Y2-PRO"/>
+                        <label alignment="center" text="Title" id="prf-Iw-q8S"/>
                     </items>
                     <connections>
-                        <outlet property="notificationdish2" destination="rUK-Be-KbG" id="hdR-kp-men"/>
-                        <outlet property="test_image" destination="x6o-rS-gri" id="c3I-1q-doY"/>
+                        <outlet property="notificationdish1" destination="rUK-Be-KbG" id="wKP-9u-9ez"/>
+                        <outlet property="notificationdish2" destination="EL7-Qk-Lep" id="6an-Hz-TZi"/>
+                        <outlet property="test_image" destination="x6o-rS-gri" id="WPc-c2-Cb0"/>
+                        <outlet property="test_image2" destination="0RR-Y2-PRO" id="BJ9-cb-xY1"/>
+                        <outlet property="title_dish1" destination="XCj-Wy-3Mm" id="w9k-gA-uoh"/>
+                        <outlet property="title_dish2" destination="prf-Iw-q8S" id="t5p-YA-Q8V"/>
                     </connections>
                 </controller>
             </objects>
