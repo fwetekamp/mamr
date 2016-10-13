@@ -7,7 +7,8 @@
 //
 
 import WatchKit
-import UserNotifications   
+import UserNotifications
+import HealthKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
@@ -21,6 +22,11 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             } else {
                 print("I need the auth to spam you")
             }
+        }
+        
+        guard HKHealthStore.isHealthDataAvailable() == true else { //checking if health data is available
+            print("no health data available")
+            return
         }
     }
 

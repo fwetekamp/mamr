@@ -20,6 +20,7 @@
 		1FDA8B281DAD50C20030FA6B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B271DAD50C20030FA6B /* ExtensionDelegate.swift */; };
 		1FDA8B2A1DAD50C20030FA6B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B291DAD50C20030FA6B /* NotificationController.swift */; };
 		1FDA8B2C1DAD50C20030FA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */; };
+		1FE87ADC1DAEBB240046DB24 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE87ADB1DAEBB240046DB24 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F1F0B421DAEADF000F38619 /* mamr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mamr.entitlements; sourceTree = "<group>"; };
+		1F1F0B431DAEB9D000F38619 /* mamr WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit App.entitlements"; sourceTree = "<group>"; };
+		1F1F0B441DAEB9DF00F38619 /* mamr WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		1FDA8AFD1DAD50C10030FA6B /* mamr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mamr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDA8B001DAD50C10030FA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FDA8B021DAD50C10030FA6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		1FDA8B291DAD50C20030FA6B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FDA8B2D1DAD50C20030FA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FE87ADB1DAEBB240046DB24 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE87ADC1DAEBB240046DB24 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1F0B3F1DAEADF000F38619 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FE87ADB1DAEBB240046DB24 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1FDA8AF41DAD50C10030FA6B = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +124,7 @@
 				1FDA8B131DAD50C10030FA6B /* mamr WatchKit App */,
 				1FDA8B221DAD50C20030FA6B /* mamr WatchKit Extension */,
 				1FDA8AFE1DAD50C10030FA6B /* Products */,
+				1F1F0B3F1DAEADF000F38619 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +141,7 @@
 		1FDA8AFF1DAD50C10030FA6B /* mamr */ = {
 			isa = PBXGroup;
 			children = (
+				1F1F0B421DAEADF000F38619 /* mamr.entitlements */,
 				1FDA8B001DAD50C10030FA6B /* AppDelegate.swift */,
 				1FDA8B021DAD50C10030FA6B /* ViewController.swift */,
 				1FDA8B041DAD50C10030FA6B /* Main.storyboard */,
@@ -139,6 +155,7 @@
 		1FDA8B131DAD50C10030FA6B /* mamr WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				1F1F0B431DAEB9D000F38619 /* mamr WatchKit App.entitlements */,
 				1FDA8B141DAD50C10030FA6B /* Interface.storyboard */,
 				1FDA8B171DAD50C10030FA6B /* Assets.xcassets */,
 				1FDA8B191DAD50C20030FA6B /* Info.plist */,
@@ -149,6 +166,7 @@
 		1FDA8B221DAD50C20030FA6B /* mamr WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1F1F0B441DAEB9DF00F38619 /* mamr WatchKit Extension.entitlements */,
 				1FDA8B251DAD50C20030FA6B /* InterfaceController.swift */,
 				1FDA8B271DAD50C20030FA6B /* ExtensionDelegate.swift */,
 				1FDA8B291DAD50C20030FA6B /* NotificationController.swift */,
@@ -230,23 +248,41 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Fabian Wetekamp";
 				TargetAttributes = {
 					1FDA8AFC1DAD50C10030FA6B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9J5KWZ8M97;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 					1FDA8B0E1DAD50C10030FA6B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9J5KWZ8M97;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1FDA8B1D1DAD50C20030FA6B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9J5KWZ8M97;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -381,11 +417,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos3.0]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -435,11 +472,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -456,6 +494,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=*]" = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = "mamr WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr.watchkitapp.watchkitextension;
@@ -483,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = "mamr WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr.watchkitapp.watchkitextension;
@@ -500,6 +541,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mamr WatchKit App/mamr WatchKit App.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				IBSC_MODULE = mamr_WatchKit_Extension;
 				INFOPLIST_FILE = "mamr WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr.watchkitapp;
@@ -517,6 +561,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mamr WatchKit App/mamr WatchKit App.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				IBSC_MODULE = mamr_WatchKit_Extension;
 				INFOPLIST_FILE = "mamr WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr.watchkitapp;
@@ -533,6 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mamr/mamr.entitlements;
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = mamr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -546,6 +594,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mamr/mamr.entitlements;
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = mamr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
