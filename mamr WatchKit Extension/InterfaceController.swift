@@ -9,6 +9,7 @@
 import WatchKit
 import Foundation
 import UserNotifications
+import HealthKit
 
 
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with delegate
@@ -17,8 +18,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         let center1 = UNUserNotificationCenter.current()
         center1.delegate = self
         
-        let order1 = UNNotificationAction(identifier: "oder1", title: "Order Dish #1", options: .foreground)
-        let order2 = UNNotificationAction(identifier: "oder1", title: "Order Dish #2", options: .foreground)
+        let order1 = UNNotificationAction(identifier: "oder1", title: "Order Dish #1", options: .foreground) //Button 1
+        let order2 = UNNotificationAction(identifier: "oder1", title: "Order Dish #2", options: .foreground) //Button 2
         
         let category = UNNotificationCategory(identifier: "lunch_notification", actions: [order1, order2], intentIdentifiers: []) //setting the notification category for lunch
         
@@ -48,11 +49,24 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         center.add(request)
         print("notification delivered")
     }
+    
+//Starting heart rate code
+    let calendar = NSCalendar.current
+
+    
+ 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        guard let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
+            print("not working")
+            return
+        }
+        
         // Configure interface objects here.
     }
+    let query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: <#T##NSPredicate?#>, options: <#T##HKStatisticsOptions#>, anchorDate: Date, intervalComponents: DateComponents.init(hour: 2))
+    
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
