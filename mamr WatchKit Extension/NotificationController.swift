@@ -41,15 +41,14 @@ class NotificationController: WKUserNotificationInterfaceController {
     override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Swift.Void) {
         
         
-        if notification.request.content.title == "Your Lunch" {
+        if notification.request.content.title == "Your Lunch" { //
             notificationdish1.setText("#1 - Fresh Salmon")
-            title_dish1.setText("9.40€")
+            title_dish1.setText("578kcal - 9.40€")
             notificationdish2.setText("#2 - Beef Salad")
-            title_dish2.setText("8.30€")
+            title_dish2.setText("483kcal - 8.30€")
 
             test_image.setImageNamed("test_dish")
             test_image2.setImageNamed("test_dish")
-
         }
         
         

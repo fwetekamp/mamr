@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11535.1" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -18,7 +21,11 @@
                                 <action selector="lunch_notifications" destination="AgC-eL-Hgc" id="ttb-HN-nOr"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Test Dinner Notifications" id="Fvn-Kj-QfK"/>
+                        <button width="1" alignment="left" title="Test Dinner Notifications" id="Fvn-Kj-QfK">
+                            <connections>
+                                <action selector="dinner_notifications" destination="AgC-eL-Hgc" id="DEu-Yx-w0c"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -42,7 +49,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="220" y="613"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
@@ -53,7 +60,7 @@
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                         </label>
                         <imageView alignment="left" id="x6o-rS-gri"/>
-                        <label alignment="center" text="Title" id="XCj-Wy-3Mm"/>
+                        <label alignment="center" text="Price" id="XCj-Wy-3Mm"/>
                         <separator alignment="left" id="WwF-kU-ukN"/>
                         <label alignment="center" text="Dish2" id="EL7-Qk-Lep">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
@@ -71,7 +78,41 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="569" y="643"/>
+            <point key="canvasLocation" x="603" y="614"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="h51-m9-opd">
+            <objects>
+                <notificationController id="eba-ii-ypI">
+                    <items>
+                        <label alignment="center" text="Your dinner" textAlignment="center" id="dMZ-hi-DDg">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                        </label>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="dinner_notification" id="wHB-bC-P1h">
+                        <color key="sashColor" red="0.17823024609999999" green="0.17823024609999999" blue="0.17823024609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="dMZ-hi-DDg" id="BE9-ih-EeU"/>
+                        <segue destination="W5t-CJ-L7X" kind="relationship" relationship="dynamicNotificationInterface" id="1Um-Ld-Dcv"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="975"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="RHo-0m-zKd">
+            <objects>
+                <controller id="W5t-CJ-L7X" customClass="NotificationController" customModule="mamr_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Dish1" id="rUK-Be-KsG">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                        </label>
+                        <label alignment="left" text="Dinner Dynamic" id="qUh-vS-Six"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="603" y="975"/>
         </scene>
     </scenes>
 </document>

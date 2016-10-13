@@ -47,15 +47,37 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         center.add(request)
-        print("notification delivered")
+        print("notification sent")
     }
     
-//Starting heart rate code
-    let calendar = NSCalendar.current
-
     
- 
-    override func awake(withContext context: Any?) {
+    @IBAction func dinner_notifications() { //dinner sample notification
+        
+        notificationcategories()
+        
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        
+        let content = UNMutableNotificationContent() //creating the notification
+        content.title = "Your Dinner"
+        content.body = "Your Dinner"
+        content.categoryIdentifier = "dinner_notification"
+        content.userInfo = ["customData": "fizzbuzz"]
+        content.sound = UNNotificationSound.default()
+        
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) //trigger to the test the notification
+        
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger) //generating random string with UUID() for dinner notification
+        center.add(request) //adding notification to UNNotificationCenter
+        print("notification sent")
+    }
+    
+
+    /*//Starting heart rate code
+     let calendar = NSCalendar.current
+     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         guard let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
@@ -67,7 +89,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     }
     let query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: <#T##NSPredicate?#>, options: <#T##HKStatisticsOptions#>, anchorDate: Date, intervalComponents: DateComponents.init(hour: 2))
     
-    
+    */
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
