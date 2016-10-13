@@ -9,9 +9,10 @@
 import WatchKit
 import Foundation
 import UserNotifications
+import UIKit
 
 
-class NotificationController: WKUserNotificationInterfaceController {
+class NotificationController: WKUserNotificationInterfaceController, UNUserNotificationCenterDelegate {
 
     
     @IBOutlet var notificationdish1: WKInterfaceLabel!
@@ -50,9 +51,6 @@ class NotificationController: WKUserNotificationInterfaceController {
             test_image.setImageNamed("test_dish")
             test_image2.setImageNamed("test_dish")
         }
-        
-        
-        
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
@@ -60,5 +58,51 @@ class NotificationController: WKUserNotificationInterfaceController {
         // After populating your dynamic notification interface call the completion block.
         completionHandler(.custom)
     }
+    
+func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("Tapped in notification")
+        let actionIdentifier = response.actionIdentifier
+        if actionIdentifier == "com.apple.UNNotificationDefaultActionIdentifier" || actionIdentifier == "com.apple.UNNotificationDismissActionIdentifier" {
+            return;
+        }
+        let dish1 = (actionIdentifier == "order1")
+        let dish2 = (actionIdentifier == "order2")
+    
+        repeat {
+            if (dish1) {
+                (print("order 1 pressed"))
+               break;
+            }
+            if (dish2) {
+                (print("order 2 pressed"))
+                break;
+            }
+        } while (false);
+        // Must be called when finished
+        completionHandler();
+    }
+    
+    /*optional func didReceive(_ response: UNNotificationResponse,
+                             completionHandler completion: @escaping () -> Void)
+    {
+        
+        if response.actionIdentifier == "tomorrowReminder" {
+            print("Tomrrow Button Pressed")
+            subLabel.text = "Reminder For Tomorrow"
+            subLabel.textColor = UIColor.blue
+            done(.dismissAndForwardAction)
+        }
+        
+        if response.actionIdentifier == "dismissReminder" {
+            print("Dismiss Button Pressed")
+            done(.dismiss)
+            
+        } else {
+            print("Else response")
+            done(.dismissAndForwardAction)
+        }
+        
+    }*/
+    
 
 }

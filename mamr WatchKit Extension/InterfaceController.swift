@@ -19,7 +19,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         center1.delegate = self
         
         let order1 = UNNotificationAction(identifier: "oder1", title: "Order Dish #1", options: .foreground) //Button 1
-        let order2 = UNNotificationAction(identifier: "oder1", title: "Order Dish #2", options: .foreground) //Button 2
+        let order2 = UNNotificationAction(identifier: "oder2", title: "Order Dish #2", options: .foreground) //Button 2
         
         let category = UNNotificationCategory(identifier: "lunch_notification", actions: [order1, order2], intentIdentifiers: []) //setting the notification category for lunch
         
@@ -55,7 +55,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         content.sound = UNNotificationSound.default()
         
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) //trigger to the test the notification
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false) //trigger to the test the notification
         
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
@@ -79,7 +79,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         content.sound = UNNotificationSound.default()
         
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) //trigger to the test the notification
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false) //trigger to the test the notification
         
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger) //generating random string with UUID() for dinner notification
