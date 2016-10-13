@@ -14,7 +14,7 @@ import HealthKit
 
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with delegate
     
-    func notificationcategories() { //declaring notification categories for actionable notifications
+    func lunchnotificationcategories() { //declaring for actionable buttons for lunchnotifications
         let center1 = UNUserNotificationCenter.current()
         center1.delegate = self
         
@@ -27,9 +27,22 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     }
     
     
+    func dinnernotificationcategories() { //declaring for actionable buttons for dinnernotifications
+        let center1 = UNUserNotificationCenter.current()
+        center1.delegate = self
+        
+        let order1 = UNNotificationAction(identifier: "getrecipe1", title: "Get Recipe #1", options: .foreground) //Button 1
+        let order2 = UNNotificationAction(identifier: "getrecipe2", title: "Get Recipe #2", options: .foreground) //Button 2
+        
+        let category = UNNotificationCategory(identifier: "dinner_notification", actions: [order1, order2], intentIdentifiers: []) //setting the notification category for lunch
+        
+        center1.setNotificationCategories([category])
+    }
+    
+    
     @IBAction func lunch_notifications() { //lunch sample notification
         
-        notificationcategories()
+        lunchnotificationcategories()
 
         let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()
@@ -53,7 +66,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
     @IBAction func dinner_notifications() { //dinner sample notification
         
-        notificationcategories()
+        dinnernotificationcategories()
         
         let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()

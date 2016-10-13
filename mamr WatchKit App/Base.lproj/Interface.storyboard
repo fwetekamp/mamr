@@ -18,7 +18,7 @@
                         </label>
                         <button width="1" alignment="left" title="Test Lunch Notifications" id="VES-zo-r0k">
                             <connections>
-                                <action selector="lunch_notifications" destination="AgC-eL-Hgc" id="ttb-HN-nOr"/>
+                                <action selector="lunch_notifications" destination="AgC-eL-Hgc" id="Hot-AU-VJ0"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Test Dinner Notifications" id="Fvn-Kj-QfK">
