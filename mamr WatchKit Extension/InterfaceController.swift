@@ -18,9 +18,9 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
     @IBAction func lunch_notifications() { //lunch sample notification
         
-        let notificationManger = Notificationshandler()
+        let notificationManager = NotificationsHandler()
         
-        notificationManger.lunchnotificationcategories()
+        notificationManager.lunchnotificationcategories()
 
         let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()
@@ -44,8 +44,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
     @IBAction func dinner_notifications() { //dinner sample notification
         
-        let notificationManger = Notificationshandler()
-        notificationManger.dinnernotificationcategories()
+        let notificationManager = NotificationsHandler()
+        notificationManager.dinnernotificationcategories()
         
         let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()
@@ -65,6 +65,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         center.add(request) //adding notification to UNNotificationCenter
         print("notification sent")
     }
+    
+    
     
 
     /*//Starting heart rate code

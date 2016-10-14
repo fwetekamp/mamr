@@ -9,7 +9,7 @@
 import WatchKit
 import UserNotifications
 
-class Notificationshandler: NSObject {
+class NotificationsHandler: NSObject {
     
     
     func lunchnotificationcategories() { //declaring for actionable buttons for lunchnotifications
