@@ -12,7 +12,7 @@ import UserNotifications
 import UIKit
 
 
-class NotificationController: WKUserNotificationInterfaceController, UNUserNotificationCenterDelegate {
+class NotificationController: WKUserNotificationInterfaceController {
 
     
     @IBOutlet var notificationdish1: WKInterfaceLabel!
@@ -59,9 +59,21 @@ class NotificationController: WKUserNotificationInterfaceController, UNUserNotif
         completionHandler(.custom)
     }
     
-func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("Tapped in notification")
-        let actionIdentifier = response.actionIdentifier
+    
+
+    
+  /*  switch(response.actionIdentifier){
+    case "order1":
+        print("tapped order1")
+    case "order2":
+        print("tapped order2")
+    default: break
+    }*/
+
+    
+    
+    
+       /* let actionIdentifier = response.actionIdentifier
         if actionIdentifier == "com.apple.UNNotificationDefaultActionIdentifier" || actionIdentifier == "com.apple.UNNotificationDismissActionIdentifier" {
             return;
         }
@@ -78,9 +90,8 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive respo
                 break;
             }
         } while (false);
-        // Must be called when finished
-        completionHandler();
-    }
+       */ // Must be called when finished
+
     
     /*optional func didReceive(_ response: UNNotificationResponse,
                              completionHandler completion: @escaping () -> Void)
@@ -103,6 +114,7 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive respo
         }
         
     }*/
-    
 
 }
+
+

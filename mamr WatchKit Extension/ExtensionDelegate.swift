@@ -10,28 +10,44 @@ import WatchKit
 import UserNotifications
 import HealthKit
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
+class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenterDelegate {
 
     func applicationDidFinishLaunching() {
         let center = UNUserNotificationCenter.current()
-        
-        
-        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in //requesting authorization for notifications on first launch
             if granted {
                 print("Got the auth!")
             } else {
                 print("I need the auth to spam you")
             }
+            
+           UNUserNotificationCenter.current().delegate = self //register to be delegate
         }
+
         
         guard HKHealthStore.isHealthDataAvailable() == true else { //checking if health data is available
             print("no health data available")
             return
         }
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("Tapped in notification")
+        let identifier = response.actionIdentifier
+        print(identifier)
+        
+        switch(identifier){
+        case "order1":
+            print("tapped order1")
+        case "order2":
+            print("tapped order2")
+        default: break
+        }
+        completionHandler()
+    }
+   
     func applicationDidFinishLaunchingwithoptions() {
     }
-
     
 
     func applicationDidBecomeActive() {
@@ -66,5 +82,4 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             }
         }
     }
-
 }

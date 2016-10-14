@@ -583,10 +583,12 @@
 				CODE_SIGN_ENTITLEMENTS = mamr/mamr.entitlements;
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = mamr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -597,10 +599,12 @@
 				CODE_SIGN_ENTITLEMENTS = mamr/mamr.entitlements;
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = mamr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
