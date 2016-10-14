@@ -12,31 +12,27 @@ import UserNotifications
 import HealthKit
 
 
-class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with delegate
+class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
     func lunchnotificationcategories() { //declaring for actionable buttons for lunchnotifications
-        let center1 = UNUserNotificationCenter.current()
-        center1.delegate = self
         
         let order1 = UNNotificationAction(identifier: "oder1", title: "Order Dish #1", options: .foreground) //Button 1
         let order2 = UNNotificationAction(identifier: "oder2", title: "Order Dish #2", options: .foreground) //Button 2
         
-        let category = UNNotificationCategory(identifier: "lunch_notification", actions: [order1, order2], intentIdentifiers: []) //setting the notification category for lunch
+        let lunchcategory = UNNotificationCategory(identifier: "lunch_notification", actions: [order1, order2], intentIdentifiers: []) //setting the notification category for lunch
         
-        center1.setNotificationCategories([category])
+        UNUserNotificationCenter.current().setNotificationCategories([lunchcategory]) //setting actions & categories
     }
     
     
     func dinnernotificationcategories() { //declaring for actionable buttons for dinnernotifications
-        let center1 = UNUserNotificationCenter.current()
-        center1.delegate = self
         
         let order1 = UNNotificationAction(identifier: "getrecipe1", title: "Get Recipe #1", options: .foreground) //Button 1
         let order2 = UNNotificationAction(identifier: "getrecipe2", title: "Get Recipe #2", options: .foreground) //Button 2
         
-        let category = UNNotificationCategory(identifier: "dinner_notification", actions: [order1, order2], intentIdentifiers: []) //setting the notification category for lunch
+        let dinnercategory = UNNotificationCategory(identifier: "dinner_notification", actions: [order1, order2], intentIdentifiers: []) //setting the notification category for lunch
         
-        center1.setNotificationCategories([category])
+        UNUserNotificationCenter.current().setNotificationCategories([dinnercategory])  //setting actions & categories
     }
     
     
