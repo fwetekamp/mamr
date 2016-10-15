@@ -14,13 +14,15 @@ import HealthKit
 
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
+    //var balance = Points()
+    var balance = [mamrpoints]()
 
-    //var balance = 0 //get a points object from NSCoder
-    var balance = Points()
+
     
     @IBOutlet var balancelabel: WKInterfaceLabel!
-    @IBAction func updatebalance() {
 
+    @IBAction func updatebalance() {
+        print(balance.Balance)
         balance.Balance += 1
         balancelabel.setText(String(balance.Balance))
         savedata(points: balance)
@@ -76,11 +78,10 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         print("notification sent")
     }
     
-    var data = [Points]()
 
     var filePath: String { //saving data
         let manager = FileManager.default
-        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first // using standard directory to sotring
+        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first // using standard directory to storing
         return url!.appendingPathComponent("Data").path
     }
     
@@ -91,6 +92,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     private func loadData() {
         if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? Points {
             balance = ourData
+            print("Data loaded")
+            print(ourData)
         }
     }
     

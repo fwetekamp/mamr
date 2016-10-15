@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "mamr WatchKit Extension/InterfaceController.swift"
-            timestampString = "498253713.778533"
+            filePath = "testingpersistence/ViewController.swift"
+            timestampString = "498257535.655401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "updatebalance()"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "Updatebalancelast(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

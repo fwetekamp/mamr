@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  mamr
+//  testingpersistencewithWatchOs
 //
-//  Created by Fabian Wetekamp on 11/10/2016.
+//  Created by Fabian Wetekamp on 16/10/2016.
 //  Copyright © 2016 Fabian Wetekamp. All rights reserved.
 //
 
@@ -19,5 +19,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
 }
 
