@@ -16,13 +16,14 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
 
     //var balance = 0 //get a points object from NSCoder
-    var balance = points(balance: 0)
+    var balance = Points()
     
     @IBOutlet var balancelabel: WKInterfaceLabel!
     @IBAction func updatebalance() {
 
         balance.Balance += 1
         balancelabel.setText(String(balance.Balance))
+        savedata(points: balance)
     }
     
 
@@ -75,12 +76,22 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         print("notification sent")
     }
     
-    var data = [points]()
+    var data = [Points]()
 
     var filePath: String { //saving data
         let manager = FileManager.default
         let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first // using standard directory to sotring
         return url!.appendingPathComponent("Data").path
+    }
+    
+    private func savedata(points: Points) {
+        print(balance.Balance)
+        NSKeyedArchiver.archiveRootObject(balance, toFile: filePath) //saving the points
+    }
+    private func loadData() {
+        if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? Points {
+            balance = ourData
+        }
     }
     
     
@@ -102,8 +113,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
     */
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        loadData()
     }
     
     override func didDeactivate() {

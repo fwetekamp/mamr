@@ -8,7 +8,7 @@
 
 import WatchKit
 
-class points: NSObject, NSCoding { //using NSCoding for simple data persistence
+class Points: NSObject, NSCoding { //using NSCoding for simple data persistence
     
     struct Keys { //struct is similar to a class
         static let Balance = "balance" //static variable to make them accessible without creating an ojbect
