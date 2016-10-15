@@ -24,9 +24,8 @@ class ViewController: UIViewController {
     }
     
 func  loadSampleUsers(){
-        let user1 = User(name: "Naveen")!
-        let user2 = User(name: "Aashish")!
-        users += [user1, user2]
+        let user1 = User(balance = 3)!
+        users += [user1]
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,9 +37,9 @@ func  loadSampleUsers(){
     @IBOutlet weak var enternewuser: UITextField!
     
     @IBAction func saveuser(_ sender: AnyObject) {
-        let newusername = enternewuser.text
-        lastsaveduser.text = newusername
-        users.append(User(name: newusername!)!)
+        let newvalue = enternewuser.text
+        lastsaveduser.text = newvalue
+        users.append(User(balance: newvalue!)!)
         saveUsers()
     }
     

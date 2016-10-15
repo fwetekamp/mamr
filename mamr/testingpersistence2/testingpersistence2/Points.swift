@@ -16,12 +16,12 @@ class User: NSObject, NSCoding {
     
     // MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("points")
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("users")
     
     // MARK: Types
     
     struct PropertyKey {
-        static let balanceKey = "balance"
+        static let nameKey = "name"
     }
     
     // MARK: Initialisation
@@ -38,11 +38,11 @@ class User: NSObject, NSCoding {
     }
     
     func  encode(with aCoder: NSCoder) {
-        aCoder.encode(self.name, forKey: PropertyKey.balanceKey)
+        aCoder.encode(self.name, forKey: PropertyKey.nameKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        let name = aDecoder.decodeObject(forKey: PropertyKey.balanceKey) as! String
+        let name = aDecoder.decodeObject(forKey: PropertyKey.nameKey) as! String
         
         // Because photo is an optional property of Meal, use conditional cast.
         // Must call designated initializer.

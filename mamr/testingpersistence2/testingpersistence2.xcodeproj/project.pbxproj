@@ -12,7 +12,7 @@
 		1F0FAA291DB2CF950049A6ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0FAA271DB2CF950049A6ED /* Main.storyboard */; };
 		1F0FAA2B1DB2CF950049A6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0FAA2A1DB2CF950049A6ED /* Assets.xcassets */; };
 		1F0FAA2E1DB2CF950049A6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0FAA2C1DB2CF950049A6ED /* LaunchScreen.storyboard */; };
-		1F0FAA361DB2CFB10049A6ED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FAA351DB2CFB10049A6ED /* User.swift */; };
+		1F0FAA361DB2CFB10049A6ED /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FAA351DB2CFB10049A6ED /* Points.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		1F0FAA2A1DB2CF950049A6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F0FAA2D1DB2CF950049A6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F0FAA2F1DB2CF950049A6ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F0FAA351DB2CFB10049A6ED /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1F0FAA351DB2CFB10049A6ED /* Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				1F0FAA2A1DB2CF950049A6ED /* Assets.xcassets */,
 				1F0FAA2C1DB2CF950049A6ED /* LaunchScreen.storyboard */,
 				1F0FAA2F1DB2CF950049A6ED /* Info.plist */,
-				1F0FAA351DB2CFB10049A6ED /* User.swift */,
+				1F0FAA351DB2CFB10049A6ED /* Points.swift */,
 			);
 			path = testingpersistence2;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			files = (
 				1F0FAA261DB2CF950049A6ED /* ViewController.swift in Sources */,
 				1F0FAA241DB2CF950049A6ED /* AppDelegate.swift in Sources */,
-				1F0FAA361DB2CFB10049A6ED /* User.swift in Sources */,
+				1F0FAA361DB2CFB10049A6ED /* Points.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
