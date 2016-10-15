@@ -40,7 +40,12 @@ class AddressInterfaceController: WKInterfaceController, CLLocationManagerDelega
         locationManager.requestLocation()
 
     }
-
+    @IBAction func zoomslider(value: Float) {
+        let degrees:CLLocationDegrees = CLLocationDegrees(value / 10)
+        let span = MKCoordinateSpanMake(degrees, degrees)
+        let region = MKCoordinateRegionMake(mapLocation!, span)
+        mapObject.setRegion(region)
+    }
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()

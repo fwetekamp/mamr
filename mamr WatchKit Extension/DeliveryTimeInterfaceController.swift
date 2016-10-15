@@ -17,9 +17,12 @@ class DeliveryTimeInterfaceController: WKInterfaceController {
     let yourlunch = Lunch(time: "", address: "")
 
     var itemList: [(String, String)] = [
-        ("Caption 1", "In 30 Minutes"),
-        ("Caption 2", "In 45 Minutes"),
-        ("Caption 3", "In 60 Minutes")]
+        ("Time 1", "11:00 - 11:30"),
+        ("Time 2", "11:30 - 12:00"),
+        ("Time 3", "12:00 - 12:30"),
+        ("Time 4", "12:30 - 13:00"),
+        ("Time 5", "13:00 - 13:30"),
+        ("Time 6", "13:30 - 14:00")]
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)

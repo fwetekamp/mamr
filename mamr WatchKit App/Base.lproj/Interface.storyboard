@@ -233,7 +233,7 @@
                         <label alignment="center" text="Delivery Time" id="JaJ-af-1Kb">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <picker height="100" alignment="left" id="bEK-ML-vvL">
+                        <picker height="61" alignment="left" id="bEK-ML-vvL">
                             <connections>
                                 <action selector="settime:" destination="Ani-vk-nkk" id="Lfd-sA-QZv"/>
                             </connections>
@@ -249,7 +249,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="654" y="286"/>
+            <point key="canvasLocation" x="654" y="276"/>
         </scene>
         <!--Address Interface Controller-->
         <scene sceneID="c38-A4-LvZ">
@@ -259,7 +259,12 @@
                         <label alignment="center" text="Address" id="WLz-cI-muI">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <map height="100" alignment="left" id="WjN-Ti-iIz"/>
+                        <map height="82" alignment="left" id="WjN-Ti-iIz"/>
+                        <slider width="1" height="26" alignment="left" value="1" maximum="3" steps="3" id="o55-gU-mLY">
+                            <connections>
+                                <action selector="zoomslider:" destination="mIu-1j-V3K" id="93s-HU-qeA"/>
+                            </connections>
+                        </slider>
                         <button width="1" alignment="left" title="Confirm" id="yBs-0a-CCa">
                             <connections>
                                 <segue destination="5fN-UA-8gZ" kind="push" id="AZU-7R-FDZ"/>
@@ -271,7 +276,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="964" y="242"/>
+            <point key="canvasLocation" x="964" y="223.5"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="0ek-ee-Q5p">
@@ -281,16 +286,19 @@
                         <label alignment="center" text="Payment" id="QXR-UR-Qwp">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <table alignment="left" id="pXi-wF-QBe">
-                            <items>
-                                <tableRow id="ZdC-Wb-6oi">
-                                    <group key="rootItem" width="1" alignment="left" id="Kji-2u-aMg"/>
-                                </tableRow>
-                            </items>
-                        </table>
-                        <button width="1" alignment="left" title="Next" id="lap-vq-6Vo">
+                        <paymentButton width="1" alignment="left" id="Zxg-Vf-Uoq">
                             <connections>
-                                <segue destination="qAh-LI-Zv8" kind="push" id="J0E-OC-4bK"/>
+                                <segue destination="qAh-LI-Zv8" kind="push" id="123-4N-3Yq"/>
+                            </connections>
+                        </paymentButton>
+                        <button width="1" alignment="left" title="Credit Card" id="nsB-dI-3ws">
+                            <connections>
+                                <segue destination="qAh-LI-Zv8" kind="push" id="RSo-Tm-TKo"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Paypal" id="m0Y-03-IsQ">
+                            <connections>
+                                <segue destination="qAh-LI-Zv8" kind="push" id="Yxa-jj-a6p"/>
                             </connections>
                         </button>
                     </items>
@@ -299,4 +307,7 @@
             <point key="canvasLocation" x="1256" y="242"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="123-4N-3Yq"/>
+    </inferredMetricsTieBreakers>
 </document>
