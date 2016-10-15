@@ -225,36 +225,36 @@
             </objects>
             <point key="canvasLocation" x="1542" y="242"/>
         </scene>
-        <!--Lunch Interface Handler-->
+        <!--Delivery Time Interface Controller-->
         <scene sceneID="2A2-67-Ik4">
             <objects>
-                <controller id="Ani-vk-nkk" customClass="LunchInterfaceHandler" customModule="mamr_WatchKit_Extension">
+                <controller id="Ani-vk-nkk" customClass="DeliveryTimeInterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Delivery Time" id="JaJ-af-1Kb">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <picker height="57" alignment="left" id="JbG-4A-vnP">
+                        <picker height="100" alignment="left" id="bEK-ML-vvL">
                             <connections>
-                                <action selector="settime:" destination="Ani-vk-nkk" id="GQa-Ec-b2d"/>
+                                <action selector="settime:" destination="Ani-vk-nkk" id="Lfd-sA-QZv"/>
                             </connections>
                         </picker>
-                        <button width="1" alignment="left" title="TESTTEST" id="IqN-Wd-gb5">
+                        <button width="1" alignment="left" title="Confirm" id="IqN-Wd-gb5">
                             <connections>
-                                <segue destination="mIu-1j-V3K" kind="push" id="K4f-ro-42z"/>
+                                <segue destination="mIu-1j-V3K" kind="push" id="ZJK-U2-XXx"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="AddressPicker" destination="JbG-4A-vnP" id="3dF-rJ-4rF"/>
+                        <outlet property="AddressPicker" destination="bEK-ML-vvL" id="qBM-Jv-aLb"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="666" y="242"/>
+            <point key="canvasLocation" x="654" y="286"/>
         </scene>
-        <!--Lunch Interface Handler-->
+        <!--Interface Controller-->
         <scene sceneID="c38-A4-LvZ">
             <objects>
-                <controller id="mIu-1j-V3K" customClass="LunchInterfaceHandler" customModule="mamr_WatchKit_Extension">
+                <controller id="mIu-1j-V3K" customClass="InterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Address" id="WLz-cI-muI">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
@@ -271,12 +271,12 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="950" y="488"/>
+            <point key="canvasLocation" x="964" y="242"/>
         </scene>
-        <!--Lunch Interface Handler-->
+        <!--Interface Controller-->
         <scene sceneID="0ek-ee-Q5p">
             <objects>
-                <controller id="5fN-UA-8gZ" customClass="LunchInterfaceHandler" customModule="mamr_WatchKit_Extension">
+                <controller id="5fN-UA-8gZ" customClass="InterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Payment" id="QXR-UR-Qwp">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
@@ -296,7 +296,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1227" y="242"/>
+            <point key="canvasLocation" x="1256" y="242"/>
         </scene>
     </scenes>
 </document>

@@ -8,7 +8,7 @@
 
 import WatchKit
 
-class Lunch: NSObject {
+class Lunch: NSObject { //class to initiate declare the luch object
     var deliverytime: String = ""
     var deliveryaddress: String = ""
     

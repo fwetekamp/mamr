@@ -1,8 +1,8 @@
 //
-//  SelectAddress.swift
+//  DeliveryTimeInterfaceController.swift
 //  mamr
 //
-//  Created by Fabian Wetekamp on 14/10/2016.
+//  Created by Fabian Wetekamp on 15/10/2016.
 //  Copyright © 2016 Fabian Wetekamp. All rights reserved.
 //
 
@@ -10,21 +10,20 @@ import WatchKit
 import Foundation
 
 
-class LunchInterfaceHandler: WKInterfaceController {
+class DeliveryTimeInterfaceController: WKInterfaceController {
+//took me a gazilion hours to find out that you have to create a separate interface for controller in order to get the picker to work
     
-    let yourlunch = Lunch(time: "", address: "")
     @IBOutlet var AddressPicker: WKInterfacePicker!
-    @IBAction func settime(_ value: Int) {
-        yourlunch.deliverytime = itemList[value].1
-    }
-    
+    let yourlunch = Lunch(time: "", address: "")
+
     var itemList: [(String, String)] = [
         ("Caption 1", "In 30 Minutes"),
         ("Caption 2", "In 45 Minutes"),
         ("Caption 3", "In 60 Minutes")]
-
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
         let pickerItems: [WKPickerItem] = itemList.map {
             
             let pickerItem = WKPickerItem()
@@ -34,15 +33,19 @@ class LunchInterfaceHandler: WKInterfaceController {
         }
         AddressPicker.setItems(pickerItems)
     }
-
+    @IBAction func settime(_ value: Int) {
+        yourlunch.deliverytime = itemList[value].1
+    }
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }
+
