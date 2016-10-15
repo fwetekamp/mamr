@@ -251,10 +251,10 @@
             </objects>
             <point key="canvasLocation" x="654" y="286"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Address Interface Controller-->
         <scene sceneID="c38-A4-LvZ">
             <objects>
-                <controller id="mIu-1j-V3K" customClass="InterfaceController" customModule="mamr_WatchKit_Extension">
+                <controller id="mIu-1j-V3K" customClass="AddressInterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Address" id="WLz-cI-muI">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
@@ -267,7 +267,7 @@
                         </button>
                     </items>
                     <connections>
-                        <outlet property="map" destination="WjN-Ti-iIz" id="SQ4-Yx-qgA"/>
+                        <outlet property="mapObject" destination="WjN-Ti-iIz" id="Yyo-Mr-eR9"/>
                     </connections>
                 </controller>
             </objects>

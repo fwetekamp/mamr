@@ -10,6 +10,7 @@
 		1F8959ED1DB1546400BC6D34 /* Notificationshandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */; };
 		1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959F21DB16B6C00BC6D34 /* Lunch.swift */; };
 		1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */; };
+		1F939D481DB1A938005FF392 /* AddressInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */; };
 		1FDA8B011DAD50C10030FA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B001DAD50C10030FA6B /* AppDelegate.swift */; };
 		1FDA8B031DAD50C10030FA6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B021DAD50C10030FA6B /* ViewController.swift */; };
 		1FDA8B061DAD50C10030FA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDA8B041DAD50C10030FA6B /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notificationshandler.swift; sourceTree = "<group>"; };
 		1F8959F21DB16B6C00BC6D34 /* Lunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lunch.swift; sourceTree = "<group>"; };
 		1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryTimeInterfaceController.swift; sourceTree = "<group>"; };
+		1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressInterfaceController.swift; sourceTree = "<group>"; };
 		1FDA8AFD1DAD50C10030FA6B /* mamr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mamr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDA8B001DAD50C10030FA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FDA8B021DAD50C10030FA6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				1F1F0B441DAEB9DF00F38619 /* mamr WatchKit Extension.entitlements */,
 				1F8959F21DB16B6C00BC6D34 /* Lunch.swift */,
+				1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */,
 				1FDA8B251DAD50C20030FA6B /* InterfaceController.swift */,
 				1FDA8B271DAD50C20030FA6B /* ExtensionDelegate.swift */,
 				1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */,
@@ -365,6 +368,7 @@
 				1FDA8B281DAD50C20030FA6B /* ExtensionDelegate.swift in Sources */,
 				1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */,
 				1FDA8B261DAD50C20030FA6B /* InterfaceController.swift in Sources */,
+				1F939D481DB1A938005FF392 /* AddressInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
