@@ -15,13 +15,14 @@ import HealthKit
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
 
-    var balance = 0
+    //var balance = 0 //get a points object from NSCoder
+    var balance = points(balance: 0)
     
     @IBOutlet var balancelabel: WKInterfaceLabel!
     @IBAction func updatebalance() {
-        var updatebalance = points(balance: balance)
-        balance += 1
-        balancelabel.setText(String(balance))
+
+        balance.Balance += 1
+        balancelabel.setText(String(balance.Balance))
     }
     
 
