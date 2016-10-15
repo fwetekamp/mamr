@@ -15,7 +15,16 @@ import HealthKit
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
 
+    var balance = 0
     
+    @IBOutlet var balancelabel: WKInterfaceLabel!
+    @IBAction func updatebalance() {
+        var updatebalance = points(balance: balance)
+        balance += 1
+        balancelabel.setText(String(balance))
+    }
+    
+
     @IBAction func lunch_notifications() { //lunch sample notification
         
         let notificationManager = NotificationsHandler()
@@ -41,8 +50,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         print("notification sent")
     }
     
-    
-    @IBAction func dinner_notifications() { //dinner sample notification
+    @IBAction func dinner_notification() { //dinner sample notification
         
         let notificationManager = NotificationsHandler()
         notificationManager.dinnernotificationcategories()
@@ -64,6 +72,14 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger) //generating random string with UUID() for dinner notification
         center.add(request) //adding notification to UNNotificationCenter
         print("notification sent")
+    }
+    
+    var data = [points]()
+
+    var filePath: String { //saving data
+        let manager = FileManager.default
+        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first // using standard directory to sotring
+        return url!.appendingPathComponent("Data").path
     }
     
     
