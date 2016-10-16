@@ -1,57 +1,18 @@
 //
 //  ExtensionDelegate.swift
-//  mamr WatchKit Extension
+//  testingpersistencewithWatchOs WatchKit Extension
 //
-//  Created by Fabian Wetekamp on 11/10/2016.
+//  Created by Fabian Wetekamp on 16/10/2016.
 //  Copyright © 2016 Fabian Wetekamp. All rights reserved.
 //
 
 import WatchKit
-import UserNotifications
-import HealthKit
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenterDelegate {
+class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in //requesting authorization for notifications on first launch
-            if granted {
-                print("Got the auth!")
-            } else {
-                print("I need the auth to spam you")
-            }
-            
-           UNUserNotificationCenter.current().delegate = self //register to be delegate
-        }
-
-        
-        guard HKHealthStore.isHealthDataAvailable() == true else { //checking if health data is available
-            print("no health data available")
-            return
-        }
+        // Perform any final initialization of your application.
     }
-    
-    
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("Tapped in notification")
-        let identifier = response.actionIdentifier
-        print(identifier)
-        
-        switch(identifier){
-        case "order1":
-            print("tapped order1")
-        case "order2":
-            print("tapped order2")
-        default: break
-        }
-        completionHandler()
-    }
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
-        completionHandler([.alert, .badge, .sound])
-    }
-
-
 
     func applicationDidBecomeActive() {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
@@ -85,4 +46,5 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
             }
         }
     }
+
 }

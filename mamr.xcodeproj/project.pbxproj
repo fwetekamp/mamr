@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0FA9F11DB26DF30049A6ED /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FA9F01DB26DF30049A6ED /* Points.swift */; };
+		1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */; };
+		1F8959ED1DB1546400BC6D34 /* Notificationshandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */; };
+		1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959F21DB16B6C00BC6D34 /* Lunch.swift */; };
+		1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */; };
+		1F939D481DB1A938005FF392 /* AddressInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */; };
 		1FDA8B011DAD50C10030FA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B001DAD50C10030FA6B /* AppDelegate.swift */; };
 		1FDA8B031DAD50C10030FA6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B021DAD50C10030FA6B /* ViewController.swift */; };
 		1FDA8B061DAD50C10030FA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDA8B041DAD50C10030FA6B /* Main.storyboard */; };
@@ -66,9 +72,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F0FA9F01DB26DF30049A6ED /* Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		1F1F0B421DAEADF000F38619 /* mamr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mamr.entitlements; sourceTree = "<group>"; };
 		1F1F0B431DAEB9D000F38619 /* mamr WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit App.entitlements"; sourceTree = "<group>"; };
 		1F1F0B441DAEB9DF00F38619 /* mamr WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsInferfaceController.swift; sourceTree = "<group>"; };
+		1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notificationshandler.swift; sourceTree = "<group>"; };
+		1F8959F21DB16B6C00BC6D34 /* Lunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lunch.swift; sourceTree = "<group>"; };
+		1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryTimeInterfaceController.swift; sourceTree = "<group>"; };
+		1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressInterfaceController.swift; sourceTree = "<group>"; };
 		1FDA8AFD1DAD50C10030FA6B /* mamr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mamr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDA8B001DAD50C10030FA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FDA8B021DAD50C10030FA6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +121,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0FA9EF1DB26A1A0049A6ED /* InterfaceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */,
+				1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */,
+			);
+			name = InterfaceControllers;
+			sourceTree = "<group>";
+		};
+		1F0FA9F21DB26DFA0049A6ED /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1F8959F21DB16B6C00BC6D34 /* Lunch.swift */,
+				1F0FA9F01DB26DF30049A6ED /* Points.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
 		1F1F0B3F1DAEADF000F38619 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,9 +197,13 @@
 			isa = PBXGroup;
 			children = (
 				1F1F0B441DAEB9DF00F38619 /* mamr WatchKit Extension.entitlements */,
+				1F0FA9F21DB26DFA0049A6ED /* DataModel */,
+				1F0FA9EF1DB26A1A0049A6ED /* InterfaceControllers */,
 				1FDA8B251DAD50C20030FA6B /* InterfaceController.swift */,
 				1FDA8B271DAD50C20030FA6B /* ExtensionDelegate.swift */,
+				1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */,
 				1FDA8B291DAD50C20030FA6B /* NotificationController.swift */,
+				1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */,
 				1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */,
 				1FDA8B2D1DAD50C20030FA6B /* Info.plist */,
 				1FDA8B231DAD50C20030FA6B /* Supporting Files */,
@@ -350,9 +384,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */,
 				1FDA8B2A1DAD50C20030FA6B /* NotificationController.swift in Sources */,
+				1F8959ED1DB1546400BC6D34 /* Notificationshandler.swift in Sources */,
 				1FDA8B281DAD50C20030FA6B /* ExtensionDelegate.swift in Sources */,
+				1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */,
+				1F0FA9F11DB26DF30049A6ED /* Points.swift in Sources */,
 				1FDA8B261DAD50C20030FA6B /* InterfaceController.swift in Sources */,
+				1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */,
+				1F939D481DB1A938005FF392 /* AddressInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,10 +623,12 @@
 				CODE_SIGN_ENTITLEMENTS = mamr/mamr.entitlements;
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = mamr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -597,10 +639,12 @@
 				CODE_SIGN_ENTITLEMENTS = mamr/mamr.entitlements;
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				INFOPLIST_FILE = mamr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

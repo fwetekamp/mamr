@@ -1,35 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11535.1" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SzG-QD-DVv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <scene sceneID="7O7-dx-DJV">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="mamr_WatchKit_App" customModuleProvider="target">
+                <controller id="SzG-QD-DVv" customClass="InterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Hello. I'm Mamr." id="hPj-be-sOV">
+                        <label alignment="center" text="Hello. I'm mamr." id="Eaw-sT-x9L">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
+                        <label height="20" alignment="left" text="label" id="6LZ-RG-FQu"/>
+                        <button width="1" alignment="left" title="Tests" id="A9D-Ow-2HP">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Lunch" id="0f6-GB-YW7">
+                            <connections>
+                                <segue destination="Ani-vk-nkk" kind="push" id="1Hy-GG-gNM"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Dinner" id="sIF-ty-0Fv"/>
+                        <button width="1" alignment="left" title="Update Balance" id="Z2l-h7-IzF">
+                            <connections>
+                                <action selector="updatebalance" destination="SzG-QD-DVv" id="qID-QX-ZdK"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="balancelabelhome" destination="6LZ-RG-FQu" id="8ab-Zt-teK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="260" y="285"/>
+        </scene>
+        <!--Tests Inferface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="TestsInferfaceController" customModule="mamr_WatchKit_Extension">
+                    <items>
                         <button width="1" alignment="left" title="Test Lunch Notifications" id="VES-zo-r0k">
                             <connections>
-                                <action selector="lunch_notifications" destination="AgC-eL-Hgc" id="ttb-HN-nOr"/>
+                                <action selector="TestLunch" destination="AgC-eL-Hgc" id="N5a-rg-2R4"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Test Dinner Notifications" id="Fvn-Kj-QfK">
                             <connections>
-                                <action selector="dinner_notifications" destination="AgC-eL-Hgc" id="DEu-Yx-w0c"/>
+                                <action selector="TestDinner" destination="AgC-eL-Hgc" id="vXF-AB-mn5"/>
                             </connections>
                         </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="573" y="-52.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -49,7 +76,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="613"/>
+            <point key="canvasLocation" x="260" y="823"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
@@ -78,7 +105,38 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="614"/>
+            <point key="canvasLocation" x="573" y="845"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="1bV-GQ-fZ1">
+            <objects>
+                <controller id="cg2-iR-wfL">
+                    <items>
+                        <button width="1" alignment="left" title="Show Groceries" id="c28-bR-Iyt"/>
+                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="964" y="1306"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="HIV-eM-V8K">
+            <objects>
+                <controller id="svJ-VC-iyw">
+                    <items>
+                        <label alignment="left" text="Groceries Dish 1" id="G8E-n4-Ioh"/>
+                        <table alignment="left" id="0BQ-iT-VJz">
+                            <items>
+                                <tableRow id="oES-X9-mnh">
+                                    <group key="rootItem" width="1" alignment="left" id="RxY-TG-H9k"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Done" id="XIu-D7-u4k"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1266" y="1107"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="h51-m9-opd">
@@ -98,7 +156,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="975"/>
+            <point key="canvasLocation" x="220" y="1306"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="RHo-0m-zKd">
@@ -112,7 +170,153 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="975"/>
+            <point key="canvasLocation" x="603" y="1306"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="tqo-dN-3BI">
+            <objects>
+                <controller id="w1Y-We-CDf">
+                    <items>
+                        <label alignment="left" text="Recipe Step 1" id="her-pv-YBp"/>
+                        <table alignment="left" id="5Hs-Ez-bti"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1266" y="1452"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="CZB-Up-Hxk">
+            <objects>
+                <controller id="W4e-7G-WTh">
+                    <items>
+                        <label alignment="left" text="Recipe Step 2" id="jNb-vm-xHK"/>
+                        <table alignment="left" id="ps9-XG-1Lr"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1581" y="1452"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="TW3-w2-2I1">
+            <objects>
+                <controller id="pQr-1k-Wo6">
+                    <items>
+                        <label alignment="left" text="Recipe Step 3" id="JB0-Ci-zYc"/>
+                        <table alignment="left" id="2NC-mn-DQV"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1887" y="1452"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Odg-Qh-1kW">
+            <objects>
+                <controller id="nnJ-0D-O1e">
+                    <items>
+                        <label alignment="left" text="Enjoy! " id="ZKL-ef-6gU"/>
+                        <table alignment="left" id="yrK-Vr-6fO"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2195" y="1452"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="wTq-fi-5B1">
+            <objects>
+                <controller id="qAh-LI-Zv8">
+                    <items>
+                        <label alignment="center" text="Order Placed" id="2YZ-Os-bzb">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <imageView width="90" alignment="left" id="ET1-qG-g03"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1542" y="242"/>
+        </scene>
+        <!--Delivery Time Interface Controller-->
+        <scene sceneID="2A2-67-Ik4">
+            <objects>
+                <controller id="Ani-vk-nkk" customClass="DeliveryTimeInterfaceController" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Delivery Time" id="JaJ-af-1Kb">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <picker height="61" alignment="left" id="bEK-ML-vvL">
+                            <connections>
+                                <action selector="settime:" destination="Ani-vk-nkk" id="Lfd-sA-QZv"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Confirm" id="IqN-Wd-gb5">
+                            <connections>
+                                <segue destination="mIu-1j-V3K" kind="push" id="ZJK-U2-XXx"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="AddressPicker" destination="bEK-ML-vvL" id="qBM-Jv-aLb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="654" y="276"/>
+        </scene>
+        <!--Address Interface Controller-->
+        <scene sceneID="c38-A4-LvZ">
+            <objects>
+                <controller id="mIu-1j-V3K" customClass="AddressInterfaceController" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Address" id="WLz-cI-muI">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <map height="82" alignment="left" id="WjN-Ti-iIz"/>
+                        <slider width="1" height="26" alignment="left" value="1" maximum="3" steps="3" id="o55-gU-mLY">
+                            <connections>
+                                <action selector="zoomslider:" destination="mIu-1j-V3K" id="93s-HU-qeA"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Confirm" id="yBs-0a-CCa">
+                            <connections>
+                                <segue destination="5fN-UA-8gZ" kind="push" id="AZU-7R-FDZ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="mapObject" destination="WjN-Ti-iIz" id="Yyo-Mr-eR9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="964" y="223.5"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="0ek-ee-Q5p">
+            <objects>
+                <controller id="5fN-UA-8gZ" customClass="InterfaceController" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Payment" id="QXR-UR-Qwp">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <paymentButton width="1" alignment="left" id="Zxg-Vf-Uoq">
+                            <connections>
+                                <segue destination="qAh-LI-Zv8" kind="push" id="123-4N-3Yq"/>
+                            </connections>
+                        </paymentButton>
+                        <button width="1" alignment="left" title="Credit Card" id="nsB-dI-3ws">
+                            <connections>
+                                <segue destination="qAh-LI-Zv8" kind="push" id="RSo-Tm-TKo"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Paypal" id="m0Y-03-IsQ">
+                            <connections>
+                                <segue destination="qAh-LI-Zv8" kind="push" id="Yxa-jj-a6p"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1256" y="242"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="123-4N-3Yq"/>
+    </inferredMetricsTieBreakers>
 </document>
