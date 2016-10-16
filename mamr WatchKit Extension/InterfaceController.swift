@@ -14,7 +14,7 @@ import HealthKit
 
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
-    var points = [Points]()
+    var points = [Points]() //initializing balance array
     
     @IBOutlet var balancelabelhome: WKInterfaceLabel!
     
@@ -22,9 +22,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         super.willActivate()
     }
     override func handleAction(withIdentifier identifier: String?, for notification: UNNotification) {
-        print("Tapped in notification")
+        print("Tapped in notification") //handling action notifications
         print(identifier)
-        
         switch(identifier){
         case "order1"?:
             print("tapped order1")
@@ -39,7 +38,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        if let savedBalance = loadBalance(){
+        if let savedBalance = loadBalance(){  //loading point balance from NSCoder and printing it to main label
             points += savedBalance
             
         }else{
@@ -47,10 +46,49 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         }
         let lastbalancestring:Int = (points.last?.balance)!
         print(lastbalancestring)
-        balancelabelhome.setText("You earned \(lastbalancestring) points")
+        if lastbalancestring == 1 { // it has to be grammatically correct, right?
+            balancelabelhome.setText("You earned \(lastbalancestring) point")
+        }
+        else {
+            balancelabelhome.setText("You earned \(lastbalancestring) points")
+        }
     }
     
-    func  initiliazebalance(){
+    @IBAction func ScheduleLunch() {
+        
+        let notificationManager = NotificationsHandler()
+        
+        notificationManager.lunchnotificationcategories()
+        
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        
+        let content = UNMutableNotificationContent() //creating the notification
+        content.title = "Your Lunch"
+        content.body = "Your Lunch"
+        content.categoryIdentifier = "lunch_notification"
+        content.userInfo = ["customData": "fizzbuzz"]
+        content.sound = UNNotificationSound.default()
+        
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 11
+        dateComponents.minute = 00
+        for i in 2..<7 { //scheduling for lunch notifications for weekdays
+        dateComponents.weekday = i
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+        print("notification scheduled")
+        }
+    }
+
+    
+    
+    
+    func  initiliazebalance(){ //points are saved, the last array element will be set to 0
         let user1 = Points(balance: 0)
         points += [user1!]
     }
@@ -61,7 +99,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     }
     
 
-    @IBAction func updatebalance() {
+    @IBAction func updatebalance() { //testing function to increment balance, remove later
         let lastbalance:Int = (points.last?.balance)!
         let newvalueint:Int = lastbalance + 1
         balancelabelhome.setText("You earned \(newvalueint) points")
@@ -69,11 +107,11 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         saveBalance()
     }
     
-    @IBAction func reset() {
+    @IBAction func reset() { //test function to setbalance to 0
         initiliazebalance()
         saveBalance()
-        let loadedbalance = loadBalance()
-        balancelabelhome.setText("You earned \(loadedbalance?.last?.balance) points")
+        balancelabelhome.setText("You earned 0 points")
+        print("balance resetted")
     }
 
     func saveBalance(){
@@ -88,7 +126,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     }
     
 
-    /*//Starting heart rate code
+    /*//Starting heart rate code // heartrate code used at this stage
      let calendar = NSCalendar.current
      override func awake(withContext context: Any?) {
         super.awake(withContext: context)

@@ -17,6 +17,11 @@
                         <label height="20" alignment="center" text="label" id="6LZ-RG-FQu">
                             <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
+                        <button width="1" alignment="left" title="Schedule Lunch" id="HvA-jH-zZ4">
+                            <connections>
+                                <action selector="ScheduleLunch" destination="SzG-QD-DVv" id="lNf-mt-8Vk"/>
+                            </connections>
+                        </button>
                         <button width="1" alignment="left" title="Lunch" id="0f6-GB-YW7">
                             <connections>
                                 <segue destination="Ani-vk-nkk" kind="push" id="1Hy-GG-gNM"/>
