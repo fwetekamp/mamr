@@ -27,7 +27,11 @@
                                 <segue destination="Ani-vk-nkk" kind="push" id="1Hy-GG-gNM"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Dinner" id="sIF-ty-0Fv"/>
+                        <button width="1" alignment="left" title="Dinner" id="sIF-ty-0Fv">
+                            <connections>
+                                <segue destination="cg2-iR-wfL" kind="push" id="LUa-fU-au3"/>
+                            </connections>
+                        </button>
                         <button width="1" alignment="left" title="Tests" id="A9D-Ow-2HP">
                             <connections>
                                 <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
@@ -69,7 +73,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="573" y="-52.5"/>
+            <point key="canvasLocation" x="603" y="-6"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -89,7 +93,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="260" y="823"/>
+            <point key="canvasLocation" x="260" y="1131"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
@@ -118,38 +122,63 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="573" y="845"/>
+            <point key="canvasLocation" x="603" y="1132"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="1bV-GQ-fZ1">
             <objects>
                 <controller id="cg2-iR-wfL">
                     <items>
-                        <button width="1" alignment="left" title="Show Groceries" id="c28-bR-Iyt"/>
-                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx"/>
+                        <button width="1" alignment="left" title="Shop Groceries" id="c28-bR-Iyt">
+                            <connections>
+                                <segue destination="svJ-VC-iyw" kind="push" id="JRx-t9-Gxz"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx">
+                            <connections>
+                                <segue destination="w1Y-We-CDf" kind="push" id="fWs-m6-xa3"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="964" y="1306"/>
+            <point key="canvasLocation" x="603" y="633"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Groceries Interface Controller-->
         <scene sceneID="HIV-eM-V8K">
             <objects>
-                <controller id="svJ-VC-iyw">
+                <controller id="svJ-VC-iyw" customClass="GroceriesInterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Groceries Dish 1" id="G8E-n4-Ioh"/>
+                        <table alignment="left" id="XAJ-iK-3af"/>
                         <table alignment="left" id="0BQ-iT-VJz">
                             <items>
                                 <tableRow id="oES-X9-mnh">
-                                    <group key="rootItem" width="1" alignment="left" id="RxY-TG-H9k"/>
+                                    <group key="rootItem" width="1" height="20" alignment="left" id="RxY-TG-H9k">
+                                        <items>
+                                            <label alignment="left" text="Type" id="x9s-dP-SDV">
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                            </label>
+                                            <label alignment="left" text="Amount" id="NXH-tb-7Hx">
+                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                    </group>
                                 </tableRow>
                             </items>
                         </table>
-                        <button width="1" alignment="left" title="Done" id="XIu-D7-u4k"/>
+                        <button width="1" alignment="left" title="Done" id="XIu-D7-u4k">
+                            <connections>
+                                <segue destination="w1Y-We-CDf" kind="push" id="U7o-Sq-nh3"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="groceriesamount" destination="NXH-tb-7Hx" id="An5-Op-wCZ"/>
+                        <outlet property="grocieryname" destination="x9s-dP-SDV" id="jg9-vC-j0q"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1266" y="1107"/>
+            <point key="canvasLocation" x="946" y="633"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="h51-m9-opd">
@@ -169,7 +198,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="1306"/>
+            <point key="canvasLocation" x="260" y="1457"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="RHo-0m-zKd">
@@ -183,7 +212,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="1306"/>
+            <point key="canvasLocation" x="603" y="1457"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="tqo-dN-3BI">
@@ -195,7 +224,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1266" y="1452"/>
+            <point key="canvasLocation" x="1311" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="CZB-Up-Hxk">
@@ -207,7 +236,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1581" y="1452"/>
+            <point key="canvasLocation" x="1708" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="TW3-w2-2I1">
@@ -219,7 +248,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1887" y="1452"/>
+            <point key="canvasLocation" x="2098" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="Odg-Qh-1kW">
@@ -231,7 +260,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="2195" y="1452"/>
+            <point key="canvasLocation" x="2444" y="633"/>
         </scene>
         <!--Oder confirmed Controller-->
         <scene sceneID="wTq-fi-5B1">
@@ -260,7 +289,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1744" y="269"/>
+            <point key="canvasLocation" x="1708" y="311"/>
         </scene>
         <!--Lunch_Start-->
         <scene sceneID="2A2-67-Ik4">
@@ -286,7 +315,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="621" y="369"/>
+            <point key="canvasLocation" x="603" y="310"/>
         </scene>
         <!--Address Interface Controller-->
         <scene sceneID="c38-A4-LvZ">
@@ -297,11 +326,6 @@
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
                         <map height="82" alignment="left" id="WjN-Ti-iIz"/>
-                        <slider width="1" height="26" alignment="left" value="1" maximum="3" steps="3" id="o55-gU-mLY">
-                            <connections>
-                                <action selector="zoomsliderWithValue:" destination="mIu-1j-V3K" id="cyi-5J-9Al"/>
-                            </connections>
-                        </slider>
                         <button width="1" alignment="left" title="Confirm" id="yBs-0a-CCa">
                             <connections>
                                 <segue destination="5fN-UA-8gZ" kind="push" id="gEB-Lm-Yph"/>
@@ -313,7 +337,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="964" y="370"/>
+            <point key="canvasLocation" x="946" y="311"/>
         </scene>
         <!--Payment Interface Controller-->
         <scene sceneID="0ek-ee-Q5p">
@@ -344,10 +368,11 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1353" y="369"/>
+            <point key="canvasLocation" x="1335" y="310"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7Hr-kz-eUE"/>
+        <segue reference="zj7-V1-IeZ"/>
+        <segue reference="U7o-Sq-nh3"/>
     </inferredMetricsTieBreakers>
 </document>
