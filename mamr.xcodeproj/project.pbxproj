@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F0FA9F11DB26DF30049A6ED /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FA9F01DB26DF30049A6ED /* Points.swift */; };
 		1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */; };
+		1F54D8151DB3C0D000519334 /* PaymentInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8141DB3C0D000519334 /* PaymentInterfaceController.swift */; };
+		1F54D8171DB3C29000519334 /* Oder_confirmed_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8161DB3C29000519334 /* Oder_confirmed_Controller.swift */; };
 		1F8959ED1DB1546400BC6D34 /* Notificationshandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */; };
 		1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959F21DB16B6C00BC6D34 /* Lunch.swift */; };
 		1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */; };
@@ -77,6 +79,8 @@
 		1F1F0B431DAEB9D000F38619 /* mamr WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit App.entitlements"; sourceTree = "<group>"; };
 		1F1F0B441DAEB9DF00F38619 /* mamr WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsInferfaceController.swift; sourceTree = "<group>"; };
+		1F54D8141DB3C0D000519334 /* PaymentInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentInterfaceController.swift; sourceTree = "<group>"; };
+		1F54D8161DB3C29000519334 /* Oder_confirmed_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oder_confirmed_Controller.swift; sourceTree = "<group>"; };
 		1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notificationshandler.swift; sourceTree = "<group>"; };
 		1F8959F21DB16B6C00BC6D34 /* Lunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lunch.swift; sourceTree = "<group>"; };
 		1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryTimeInterfaceController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,9 @@
 			children = (
 				1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */,
 				1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */,
+				1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */,
+				1F54D8141DB3C0D000519334 /* PaymentInterfaceController.swift */,
+				1F54D8161DB3C29000519334 /* Oder_confirmed_Controller.swift */,
 			);
 			name = InterfaceControllers;
 			sourceTree = "<group>";
@@ -199,11 +206,10 @@
 				1F1F0B441DAEB9DF00F38619 /* mamr WatchKit Extension.entitlements */,
 				1F0FA9F21DB26DFA0049A6ED /* DataModel */,
 				1F0FA9EF1DB26A1A0049A6ED /* InterfaceControllers */,
-				1FDA8B251DAD50C20030FA6B /* InterfaceController.swift */,
 				1FDA8B271DAD50C20030FA6B /* ExtensionDelegate.swift */,
+				1FDA8B251DAD50C20030FA6B /* InterfaceController.swift */,
 				1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */,
 				1FDA8B291DAD50C20030FA6B /* NotificationController.swift */,
-				1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */,
 				1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */,
 				1FDA8B2D1DAD50C20030FA6B /* Info.plist */,
 				1FDA8B231DAD50C20030FA6B /* Supporting Files */,
@@ -384,11 +390,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F54D8151DB3C0D000519334 /* PaymentInterfaceController.swift in Sources */,
 				1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */,
 				1FDA8B2A1DAD50C20030FA6B /* NotificationController.swift in Sources */,
 				1F8959ED1DB1546400BC6D34 /* Notificationshandler.swift in Sources */,
 				1FDA8B281DAD50C20030FA6B /* ExtensionDelegate.swift in Sources */,
 				1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */,
+				1F54D8171DB3C29000519334 /* Oder_confirmed_Controller.swift in Sources */,
 				1F0FA9F11DB26DF30049A6ED /* Points.swift in Sources */,
 				1FDA8B261DAD50C20030FA6B /* InterfaceController.swift in Sources */,
 				1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */,

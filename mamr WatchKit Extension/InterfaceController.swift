@@ -14,7 +14,7 @@ import HealthKit
 
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
-    var users = [Points]()
+    var points = [Points]()
     
     @IBOutlet var balancelabelhome: WKInterfaceLabel!
     
@@ -25,19 +25,19 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         super.awake(withContext: context)
         
         if let savedBalance = loadBalance(){
-            users += savedBalance
+            points += savedBalance
             
         }else{
             initiliazebalance()
         }
-        let lastbalancestring:Int = (users.last?.balance)!
+        let lastbalancestring:Int = (points.last?.balance)!
         print(lastbalancestring)
-        balancelabelhome.setText(String(lastbalancestring))
+        balancelabelhome.setText("You earned \(lastbalancestring) points")
     }
     
     func  initiliazebalance(){
         let user1 = Points(balance: 0)
-        users = [user1!]
+        points += [user1!]
     }
     
     override func didDeactivate() {
@@ -47,18 +47,22 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
 
     @IBAction func updatebalance() {
-        let lastbalance:Int = (users.last?.balance)!
+        let lastbalance:Int = (points.last?.balance)!
         let newvalueint:Int = lastbalance + 1
-        balancelabelhome.setText(String(newvalueint))
-        users.append(Points(balance: newvalueint)!)
+        balancelabelhome.setText("You earned \(newvalueint) points")
+        points.append(Points(balance: newvalueint)!)
         saveBalance()
     }
     
+    @IBAction func reset() {
+        initiliazebalance()
+        saveBalance()
+        let loadedbalance = loadBalance()
+        balancelabelhome.setText("You earned \(loadedbalance?.last?.balance) points")
+    }
 
-
-    
     func saveBalance(){
-        let isSuccessfullSave = NSKeyedArchiver.archiveRootObject(users, toFile: Points.ArchiveURL.path)
+        let isSuccessfullSave = NSKeyedArchiver.archiveRootObject(points, toFile: Points.ArchiveURL.path)
         if !isSuccessfullSave{
             print("Failed to save balance")
         }

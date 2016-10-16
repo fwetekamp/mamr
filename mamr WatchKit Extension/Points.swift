@@ -9,7 +9,7 @@
 import WatchKit
 
 class Points: NSObject, NSCoding {
-    // MARK: Properties
+    //  class Properties
     var balance: Int
     
     // MARK: Archiving Paths
