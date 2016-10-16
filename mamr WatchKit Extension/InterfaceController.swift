@@ -85,9 +85,6 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         }
     }
 
-    
-    
-    
     func  initiliazebalance(){ //points are saved, the last array element will be set to 0
         let user1 = Points(balance: 0)
         points += [user1!]

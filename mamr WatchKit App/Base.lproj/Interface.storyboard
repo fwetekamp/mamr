@@ -299,7 +299,7 @@
                         <map height="82" alignment="left" id="WjN-Ti-iIz"/>
                         <slider width="1" height="26" alignment="left" value="1" maximum="3" steps="3" id="o55-gU-mLY">
                             <connections>
-                                <action selector="zoomslider:" destination="mIu-1j-V3K" id="93s-HU-qeA"/>
+                                <action selector="zoomsliderWithValue:" destination="mIu-1j-V3K" id="cyi-5J-9Al"/>
                             </connections>
                         </slider>
                         <button width="1" alignment="left" title="Confirm" id="yBs-0a-CCa">
