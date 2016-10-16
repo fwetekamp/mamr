@@ -14,90 +14,59 @@ import HealthKit
 
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
-    //var balance = Points()
-    var balance = [mamrpoints]()
-
-
+    var users = [Points]()
     
-    @IBOutlet var balancelabel: WKInterfaceLabel!
+    @IBOutlet var balancelabelhome: WKInterfaceLabel!
+    
+    override func willActivate() {
+        super.willActivate()
+    }
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        
+        if let savedBalance = loadBalance(){
+            users += savedBalance
+            
+        }else{
+            initiliazebalance()
+        }
+        let lastbalancestring:Int = (users.last?.balance)!
+        print(lastbalancestring)
+        balancelabelhome.setText(String(lastbalancestring))
+    }
+    
+    func  initiliazebalance(){
+        let user1 = Points(balance: 0)
+        users = [user1!]
+    }
+    
+    override func didDeactivate() {
+        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
+    }
+    
 
     @IBAction func updatebalance() {
-        print(balance.Balance)
-        balance.Balance += 1
-        balancelabel.setText(String(balance.Balance))
-        savedata(points: balance)
+        let lastbalance:Int = (users.last?.balance)!
+        let newvalueint:Int = lastbalance + 1
+        balancelabelhome.setText(String(newvalueint))
+        users.append(Points(balance: newvalueint)!)
+        saveBalance()
     }
     
 
-    @IBAction func lunch_notifications() { //lunch sample notification
-        
-        let notificationManager = NotificationsHandler()
-        
-        notificationManager.lunchnotificationcategories()
 
-        let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
-
-        let content = UNMutableNotificationContent() //creating the notification
-        content.title = "Your Lunch"
-        content.body = "Your Lunch"
-        content.categoryIdentifier = "lunch_notification"
-        content.userInfo = ["customData": "fizzbuzz"]
-        content.sound = UNNotificationSound.default()
-        
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false) //trigger to the test the notification
-        
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        center.add(request)
-        print("notification sent")
-    }
     
-    @IBAction func dinner_notification() { //dinner sample notification
-        
-        let notificationManager = NotificationsHandler()
-        notificationManager.dinnernotificationcategories()
-        
-        let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
-        
-        let content = UNMutableNotificationContent() //creating the notification
-        content.title = "Your Dinner"
-        content.body = "Your Dinner"
-        content.categoryIdentifier = "dinner_notification"
-        content.userInfo = ["customData": "fizzbuzz"]
-        content.sound = UNNotificationSound.default()
-        
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false) //trigger to the test the notification
-        
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger) //generating random string with UUID() for dinner notification
-        center.add(request) //adding notification to UNNotificationCenter
-        print("notification sent")
-    }
-    
-
-    var filePath: String { //saving data
-        let manager = FileManager.default
-        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first // using standard directory to storing
-        return url!.appendingPathComponent("Data").path
-    }
-    
-    private func savedata(points: Points) {
-        print(balance.Balance)
-        NSKeyedArchiver.archiveRootObject(balance, toFile: filePath) //saving the points
-    }
-    private func loadData() {
-        if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? Points {
-            balance = ourData
-            print("Data loaded")
-            print(ourData)
+    func saveBalance(){
+        let isSuccessfullSave = NSKeyedArchiver.archiveRootObject(users, toFile: Points.ArchiveURL.path)
+        if !isSuccessfullSave{
+            print("Failed to save balance")
         }
     }
     
-    
+    func  loadBalance() -> [Points]?{
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Points.ArchiveURL.path) as? [Points]
+    }
     
 
     /*//Starting heart rate code
@@ -115,14 +84,5 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     let query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: <#T##NSPredicate?#>, options: <#T##HKStatisticsOptions#>, anchorDate: Date, intervalComponents: DateComponents.init(hour: 2))
     
     */
-    override func willActivate() {
-        super.willActivate()
-        loadData()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
     
 }

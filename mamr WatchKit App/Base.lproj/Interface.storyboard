@@ -13,6 +13,7 @@
                         <label alignment="center" text="Hello. I'm mamr." id="Eaw-sT-x9L">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
+                        <label height="20" alignment="left" text="label" id="6LZ-RG-FQu"/>
                         <button width="1" alignment="left" title="Tests" id="A9D-Ow-2HP">
                             <connections>
                                 <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
@@ -24,39 +25,38 @@
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Dinner" id="sIF-ty-0Fv"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="260" y="284.5"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
-            <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="mamr_WatchKit_App" customModuleProvider="target">
-                    <items>
-                        <label alignment="left" text="0" id="Sww-Hh-LQS"/>
-                        <button width="1" alignment="left" title="Test Lunch Notifications" id="VES-zo-r0k">
+                        <button width="1" alignment="left" title="Update Balance" id="Z2l-h7-IzF">
                             <connections>
-                                <action selector="lunch_notifications" destination="AgC-eL-Hgc" id="Hot-AU-VJ0"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Test Dinner Notifications" id="Fvn-Kj-QfK">
-                            <connections>
-                                <action selector="dinner_notifications" destination="AgC-eL-Hgc" id="DEu-Yx-w0c"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Increase Balance" id="hdX-NO-1I4">
-                            <connections>
-                                <action selector="updatebalance" destination="AgC-eL-Hgc" id="aUQ-0l-Inp"/>
+                                <action selector="updatebalance" destination="SzG-QD-DVv" id="qID-QX-ZdK"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="balancelabel" destination="Sww-Hh-LQS" id="gnq-Il-qyF"/>
+                        <outlet property="balancelabelhome" destination="6LZ-RG-FQu" id="8ab-Zt-teK"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="573" y="-52"/>
+            <point key="canvasLocation" x="260" y="285"/>
+        </scene>
+        <!--Tests Inferface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="TestsInferfaceController" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Test Lunch Notifications" id="VES-zo-r0k">
+                            <connections>
+                                <action selector="TestLunch" destination="AgC-eL-Hgc" id="N5a-rg-2R4"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Test Dinner Notifications" id="Fvn-Kj-QfK">
+                            <connections>
+                                <action selector="TestDinner" destination="AgC-eL-Hgc" id="vXF-AB-mn5"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="573" y="-52.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

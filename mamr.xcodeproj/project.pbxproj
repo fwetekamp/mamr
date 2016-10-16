@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F0FA9F11DB26DF30049A6ED /* mamrpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FA9F01DB26DF30049A6ED /* mamrpoints.swift */; };
-		1F0FA9F41DB27ADF0049A6ED /* points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FA9F31DB27ADF0049A6ED /* points.swift */; };
-		1F0FA9F61DB29C1A0049A6ED /* Pointsiphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FA9F51DB29C1A0049A6ED /* Pointsiphone.swift */; };
+		1F0FA9F11DB26DF30049A6ED /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FA9F01DB26DF30049A6ED /* Points.swift */; };
+		1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */; };
 		1F8959ED1DB1546400BC6D34 /* Notificationshandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */; };
 		1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959F21DB16B6C00BC6D34 /* Lunch.swift */; };
 		1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */; };
@@ -73,12 +72,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F0FA9F01DB26DF30049A6ED /* mamrpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mamrpoints.swift; sourceTree = "<group>"; };
-		1F0FA9F31DB27ADF0049A6ED /* points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = points.swift; sourceTree = "<group>"; };
-		1F0FA9F51DB29C1A0049A6ED /* Pointsiphone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pointsiphone.swift; sourceTree = "<group>"; };
+		1F0FA9F01DB26DF30049A6ED /* Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		1F1F0B421DAEADF000F38619 /* mamr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mamr.entitlements; sourceTree = "<group>"; };
 		1F1F0B431DAEB9D000F38619 /* mamr WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit App.entitlements"; sourceTree = "<group>"; };
 		1F1F0B441DAEB9DF00F38619 /* mamr WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsInferfaceController.swift; sourceTree = "<group>"; };
 		1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notificationshandler.swift; sourceTree = "<group>"; };
 		1F8959F21DB16B6C00BC6D34 /* Lunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lunch.swift; sourceTree = "<group>"; };
 		1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryTimeInterfaceController.swift; sourceTree = "<group>"; };
@@ -136,8 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				1F8959F21DB16B6C00BC6D34 /* Lunch.swift */,
-				1F0FA9F01DB26DF30049A6ED /* mamrpoints.swift */,
-				1F0FA9F31DB27ADF0049A6ED /* points.swift */,
+				1F0FA9F01DB26DF30049A6ED /* Points.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -175,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				1F1F0B421DAEADF000F38619 /* mamr.entitlements */,
-				1F0FA9F51DB29C1A0049A6ED /* Pointsiphone.swift */,
 				1FDA8B001DAD50C10030FA6B /* AppDelegate.swift */,
 				1FDA8B021DAD50C10030FA6B /* ViewController.swift */,
 				1FDA8B041DAD50C10030FA6B /* Main.storyboard */,
@@ -207,6 +203,7 @@
 				1FDA8B271DAD50C20030FA6B /* ExtensionDelegate.swift */,
 				1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */,
 				1FDA8B291DAD50C20030FA6B /* NotificationController.swift */,
+				1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */,
 				1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */,
 				1FDA8B2D1DAD50C20030FA6B /* Info.plist */,
 				1FDA8B231DAD50C20030FA6B /* Supporting Files */,
@@ -379,7 +376,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FDA8B031DAD50C10030FA6B /* ViewController.swift in Sources */,
-				1F0FA9F61DB29C1A0049A6ED /* Pointsiphone.swift in Sources */,
 				1FDA8B011DAD50C10030FA6B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,9 +389,9 @@
 				1F8959ED1DB1546400BC6D34 /* Notificationshandler.swift in Sources */,
 				1FDA8B281DAD50C20030FA6B /* ExtensionDelegate.swift in Sources */,
 				1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */,
-				1F0FA9F41DB27ADF0049A6ED /* points.swift in Sources */,
-				1F0FA9F11DB26DF30049A6ED /* mamrpoints.swift in Sources */,
+				1F0FA9F11DB26DF30049A6ED /* Points.swift in Sources */,
 				1FDA8B261DAD50C20030FA6B /* InterfaceController.swift in Sources */,
+				1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */,
 				1F939D481DB1A938005FF392 /* AddressInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
