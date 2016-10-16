@@ -13,20 +13,21 @@
                         <label alignment="center" text="Hello. I'm mamr." id="Eaw-sT-x9L">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
+                        <imageView alignment="center" image="Logo" id="XBN-9Y-f8p"/>
                         <label height="20" alignment="center" text="label" id="6LZ-RG-FQu">
-                            <fontDescription key="font" type="system" weight="light" pointSize="14"/>
+                            <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
-                        <button width="1" alignment="left" title="Tests" id="A9D-Ow-2HP">
-                            <connections>
-                                <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
-                            </connections>
-                        </button>
                         <button width="1" alignment="left" title="Lunch" id="0f6-GB-YW7">
                             <connections>
                                 <segue destination="Ani-vk-nkk" kind="push" id="1Hy-GG-gNM"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Dinner" id="sIF-ty-0Fv"/>
+                        <button width="1" alignment="left" title="Tests" id="A9D-Ow-2HP">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
+                            </connections>
+                        </button>
                         <button width="1" alignment="left" title="Update Balance" id="Z2l-h7-IzF">
                             <connections>
                                 <action selector="updatebalance" destination="SzG-QD-DVv" id="qID-QX-ZdK"/>
@@ -254,12 +255,12 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1702" y="475"/>
+            <point key="canvasLocation" x="1744" y="269"/>
         </scene>
-        <!--Delivery Time Interface Controller-->
+        <!--Lunch_Start-->
         <scene sceneID="2A2-67-Ik4">
             <objects>
-                <controller id="Ani-vk-nkk" customClass="DeliveryTimeInterfaceController" customModule="mamr_WatchKit_Extension">
+                <controller identifier="Lunch_Start" id="Ani-vk-nkk" customClass="DeliveryTimeInterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Delivery Time" id="JaJ-af-1Kb">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
@@ -271,7 +272,7 @@
                         </picker>
                         <button width="1" alignment="left" title="Confirm" id="IqN-Wd-gb5">
                             <connections>
-                                <segue destination="mIu-1j-V3K" kind="push" id="ZJK-U2-XXx"/>
+                                <segue destination="mIu-1j-V3K" kind="push" id="SVc-CM-JXC"/>
                             </connections>
                         </button>
                     </items>
@@ -280,7 +281,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="654" y="276"/>
+            <point key="canvasLocation" x="621" y="369"/>
         </scene>
         <!--Address Interface Controller-->
         <scene sceneID="c38-A4-LvZ">
@@ -298,7 +299,7 @@
                         </slider>
                         <button width="1" alignment="left" title="Confirm" id="yBs-0a-CCa">
                             <connections>
-                                <segue destination="5fN-UA-8gZ" kind="push" id="AZU-7R-FDZ"/>
+                                <segue destination="5fN-UA-8gZ" kind="push" id="gEB-Lm-Yph"/>
                             </connections>
                         </button>
                     </items>
@@ -307,7 +308,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="964" y="269"/>
+            <point key="canvasLocation" x="964" y="370"/>
         </scene>
         <!--Payment Interface Controller-->
         <scene sceneID="0ek-ee-Q5p">
@@ -320,28 +321,28 @@
                         <paymentButton width="1" alignment="left" id="Zxg-Vf-Uoq">
                             <connections>
                                 <action selector="ApplePay" destination="5fN-UA-8gZ" id="8nh-0E-fjC"/>
-                                <segue destination="qAh-LI-Zv8" kind="push" id="123-4N-3Yq"/>
+                                <segue destination="qAh-LI-Zv8" kind="push" id="9Av-Zd-NO7"/>
                             </connections>
                         </paymentButton>
                         <button width="1" alignment="left" title="Credit Card" id="nsB-dI-3ws">
                             <connections>
                                 <action selector="CreditCard" destination="5fN-UA-8gZ" id="TYD-nA-lg9"/>
-                                <segue destination="qAh-LI-Zv8" kind="push" id="RSo-Tm-TKo"/>
+                                <segue destination="qAh-LI-Zv8" kind="push" id="zj7-V1-IeZ"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="PayPal" id="m0Y-03-IsQ">
                             <connections>
                                 <action selector="PayPal" destination="5fN-UA-8gZ" id="whc-e8-8ks"/>
-                                <segue destination="qAh-LI-Zv8" kind="push" id="Yxa-jj-a6p"/>
+                                <segue destination="qAh-LI-Zv8" kind="push" id="7Hr-kz-eUE"/>
                             </connections>
                         </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1266" y="253"/>
+            <point key="canvasLocation" x="1353" y="369"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="123-4N-3Yq"/>
+        <segue reference="7Hr-kz-eUE"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,6 +21,21 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     override func willActivate() {
         super.willActivate()
     }
+    override func handleAction(withIdentifier identifier: String?, for notification: UNNotification) {
+        print("Tapped in notification")
+        print(identifier)
+        
+        switch(identifier){
+        case "order1"?:
+            print("tapped order1")
+            pushController(withName: "Lunch_Start", context: "segue")
+        case "order2"?:
+            print("tapped order2")
+            pushController(withName: "Lunch_Start", context: "segue")
+        default: break
+        }
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
