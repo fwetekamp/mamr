@@ -15,8 +15,13 @@ import HealthKit
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
     var points = [Points]() //initializing balance array
+    let center = UNUserNotificationCenter.current()
+
     
     @IBOutlet var balancelabelhome: WKInterfaceLabel!
+    @IBAction func deletenotififcations() {
+        center.removeAllPendingNotificationRequests()
+    }
     
     override func willActivate() {
         super.willActivate()
@@ -41,7 +46,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         if let savedBalance = loadBalance(){  //loading point balance from NSCoder and printing it to main label
             points += savedBalance
             
-        }else{
+        }
+        else {
             initiliazebalance()
         }
         let lastbalancestring:Int = (points.last?.balance)!
@@ -60,8 +66,6 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         notificationManager.lunchnotificationcategories()
         
-        let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
         
         let content = UNMutableNotificationContent() //creating the notification
         content.title = "Your Lunch"
@@ -81,7 +85,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         center.add(request)
-        print("notification scheduled")
+        print("notification scheduled \(dateComponents.weekday)")
         }
     }
 

@@ -22,27 +22,31 @@
                                 <action selector="ScheduleLunch" destination="SzG-QD-DVv" id="lNf-mt-8Vk"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Lunch" id="0f6-GB-YW7">
-                            <connections>
-                                <segue destination="Ani-vk-nkk" kind="push" id="1Hy-GG-gNM"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Dinner" id="sIF-ty-0Fv">
+                        <button width="1" alignment="left" title="Dinner Flow" id="sIF-ty-0Fv">
                             <connections>
                                 <segue destination="cg2-iR-wfL" kind="push" id="LUa-fU-au3"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Tests" id="A9D-Ow-2HP">
+                        <button width="1" height="25" alignment="left" title="Delete Notifications" id="uqj-J3-TLN">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="deletenotififcations" destination="SzG-QD-DVv" id="RBn-rh-F5c"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="25" alignment="left" title="Tests" id="A9D-Ow-2HP">
+                            <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Update Balance" id="Z2l-h7-IzF">
+                        <button width="1" height="25" alignment="left" title="Update Point Balance" id="Z2l-h7-IzF">
+                            <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <action selector="updatebalance" destination="SzG-QD-DVv" id="qID-QX-ZdK"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Reset Balance" id="s1A-5g-ek2">
+                        <button width="1" height="25" alignment="left" title="Reset Balance" id="s1A-5g-ek2">
+                            <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <action selector="reset" destination="SzG-QD-DVv" id="W9O-hg-J9w"/>
                             </connections>
@@ -53,7 +57,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="260" y="285"/>
+            <point key="canvasLocation" x="260" y="249"/>
         </scene>
         <!--Tests Inferface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -103,18 +107,26 @@
                         <label alignment="center" text="Dish1" id="rUK-Be-KbG">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                         </label>
-                        <imageView alignment="left" id="x6o-rS-gri"/>
+                        <label height="10" alignment="center" text="Label" id="AjC-PY-vwZ">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <imageView alignment="left" image="Lunch_Day1_Dish1" id="x6o-rS-gri"/>
                         <label alignment="center" text="Price" id="XCj-Wy-3Mm"/>
                         <separator alignment="left" id="WwF-kU-ukN"/>
                         <label alignment="center" text="Dish2" id="EL7-Qk-Lep">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                         </label>
-                        <imageView alignment="left" id="0RR-Y2-PRO"/>
+                        <label height="10" alignment="center" text="Label" id="UOR-9C-AkX">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="0RR-Y2-PRO"/>
                         <label alignment="center" text="Title" id="prf-Iw-q8S"/>
                     </items>
                     <connections>
                         <outlet property="notificationdish1" destination="rUK-Be-KbG" id="wKP-9u-9ez"/>
                         <outlet property="notificationdish2" destination="EL7-Qk-Lep" id="6an-Hz-TZi"/>
+                        <outlet property="subtitle_dish1" destination="AjC-PY-vwZ" id="YDI-n7-32d"/>
+                        <outlet property="subtitle_dish2" destination="UOR-9C-AkX" id="oZ1-hQ-yLx"/>
                         <outlet property="test_image" destination="x6o-rS-gri" id="WPc-c2-Cb0"/>
                         <outlet property="test_image2" destination="0RR-Y2-PRO" id="BJ9-cb-xY1"/>
                         <outlet property="title_dish1" destination="XCj-Wy-3Mm" id="w9k-gA-uoh"/>
@@ -122,7 +134,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="1132"/>
+            <point key="canvasLocation" x="603" y="1048"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="1bV-GQ-fZ1">
@@ -172,10 +184,6 @@
                             </connections>
                         </button>
                     </items>
-                    <connections>
-                        <outlet property="groceriesamount" destination="NXH-tb-7Hx" id="An5-Op-wCZ"/>
-                        <outlet property="grocieryname" destination="x9s-dP-SDV" id="jg9-vC-j0q"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="946" y="633"/>
@@ -315,7 +323,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="310"/>
+            <point key="canvasLocation" x="603" y="275"/>
         </scene>
         <!--Address Interface Controller-->
         <scene sceneID="c38-A4-LvZ">

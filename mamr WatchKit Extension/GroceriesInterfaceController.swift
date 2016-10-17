@@ -17,7 +17,7 @@ class GroceriesInterfaceController: WKInterfaceController {
     @IBOutlet var grocieryname: WKInterfaceLabel!
     @IBOutlet var grocerysamount: WKInterfaceLabel!
     let ingredientsname = ["Pasta", "Bacon", "Zucchini", "Parmesan", "Mushrooms", "Salt", "Pepper"]
-    let ingredientsamount = ["200g", "150g", "1", "50g", "150g", "", "Pepper"]*/
+  /*  let ingredientsamount = ["200g", "150g", "1", "50g", "150g", "", "Pepper"]
     
     func loadTable() {
         myTable.setNumberOfRows(stringData.count,
@@ -30,6 +30,7 @@ class GroceriesInterfaceController: WKInterfaceController {
                     row.myImage.setImage(UIImage(named: imageData[index]))
                 }
     }
+    */
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)

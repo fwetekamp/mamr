@@ -18,8 +18,10 @@ class NotificationController: WKUserNotificationInterfaceController {
     @IBOutlet var notificationdish1: WKInterfaceLabel!
     @IBOutlet var test_image: WKInterfaceImage!
     @IBOutlet var title_dish1: WKInterfaceLabel!
+    @IBOutlet var subtitle_dish1: WKInterfaceLabel!
     @IBOutlet var notificationdish2: WKInterfaceLabel!
     @IBOutlet var title_dish2: WKInterfaceLabel!
+    @IBOutlet var subtitle_dish2: WKInterfaceLabel!
     @IBOutlet var test_image2: WKInterfaceImage!
     override init() {
         // Initialize variables here.
@@ -43,13 +45,16 @@ class NotificationController: WKUserNotificationInterfaceController {
         
         
         if notification.request.content.title == "Your Lunch" { //
-            notificationdish1.setText("#1 - Fresh Salmon")
-            title_dish1.setText("578kcal - 9.40€")
-            notificationdish2.setText("#2 - Beef Salad")
-            title_dish2.setText("483kcal - 8.30€")
+            notificationdish1.setText("#1 - Grilled Salmon")
+            title_dish1.setText("478kcal - 9.40€")
+            subtitle_dish1.setText("with rocket & mashed potatoes")
+            notificationdish2.setText("#2 - Roast Chicken")
+            subtitle_dish2.setText("with mushroom sauce")
 
-            test_image.setImageNamed("test_dish")
-            test_image2.setImageNamed("test_dish")
+            title_dish2.setText("583kcal - 8.30€")
+
+            test_image.setImageNamed("Lunch_Day1_Dish1")
+            test_image2.setImageNamed("Lunch_Day1_Dish2")
         }
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
