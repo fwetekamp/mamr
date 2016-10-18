@@ -105,30 +105,34 @@
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="mamr_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="center" text="Dish1" id="rUK-Be-KbG">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
-                        <label height="10" alignment="center" text="Label" id="AjC-PY-vwZ">
-                            <fontDescription key="font" type="system" pointSize="10"/>
+                        <label height="10" alignment="center" text="Subtitle" id="AjC-PY-vwZ">
+                            <fontDescription key="font" type="system" weight="light" pointSize="9"/>
                         </label>
-                        <imageView alignment="left" image="Lunch_Day1_Dish1" id="x6o-rS-gri"/>
-                        <label alignment="center" text="Price" id="XCj-Wy-3Mm"/>
+                        <imageView alignment="left" image="Lunch_Day1_Dish1" id="mol-AX-LSd"/>
+                        <label alignment="center" text="Price" id="XCj-Wy-3Mm">
+                            <fontDescription key="font" type="system" pointSize="9"/>
+                        </label>
                         <separator alignment="left" id="WwF-kU-ukN"/>
                         <label alignment="center" text="Dish2" id="EL7-Qk-Lep">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
-                        <label height="10" alignment="center" text="Label" id="UOR-9C-AkX">
-                            <fontDescription key="font" type="system" pointSize="10"/>
+                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="Yo6-gW-YGW"/>
+                        <label height="10" alignment="center" text="Subtitle" id="UOR-9C-AkX">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="9"/>
                         </label>
-                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="0RR-Y2-PRO"/>
-                        <label alignment="center" text="Title" id="prf-Iw-q8S"/>
+                        <label alignment="center" text="Price" id="prf-Iw-q8S">
+                            <fontDescription key="font" type="system" pointSize="9"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="notificationdish1" destination="rUK-Be-KbG" id="wKP-9u-9ez"/>
                         <outlet property="notificationdish2" destination="EL7-Qk-Lep" id="6an-Hz-TZi"/>
                         <outlet property="subtitle_dish1" destination="AjC-PY-vwZ" id="YDI-n7-32d"/>
                         <outlet property="subtitle_dish2" destination="UOR-9C-AkX" id="oZ1-hQ-yLx"/>
-                        <outlet property="test_image" destination="x6o-rS-gri" id="WPc-c2-Cb0"/>
-                        <outlet property="test_image2" destination="0RR-Y2-PRO" id="BJ9-cb-xY1"/>
+                        <outlet property="test_image" destination="mol-AX-LSd" id="lf2-4b-M1N"/>
+                        <outlet property="test_image2" destination="Yo6-gW-YGW" id="4gT-LQ-DIc"/>
                         <outlet property="title_dish1" destination="XCj-Wy-3Mm" id="w9k-gA-uoh"/>
                         <outlet property="title_dish2" destination="prf-Iw-q8S" id="t5p-YA-Q8V"/>
                     </connections>
