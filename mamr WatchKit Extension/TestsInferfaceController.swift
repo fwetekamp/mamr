@@ -59,7 +59,7 @@ class TestsInferfaceController: WKInterfaceController {
         content.sound = UNNotificationSound.default()
         
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false) //trigger to the test the notification
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) //trigger to the test the notification
         
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger) //generating random string with UUID() for dinner notification

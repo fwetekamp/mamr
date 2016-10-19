@@ -22,23 +22,31 @@
                                 <action selector="ScheduleLunch" destination="SzG-QD-DVv" id="lNf-mt-8Vk"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Lunch" id="0f6-GB-YW7">
+                        <button width="1" alignment="left" title="Dinner Flow" id="sIF-ty-0Fv">
                             <connections>
-                                <segue destination="Ani-vk-nkk" kind="push" id="1Hy-GG-gNM"/>
+                                <segue destination="cg2-iR-wfL" kind="push" id="LUa-fU-au3"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Dinner" id="sIF-ty-0Fv"/>
-                        <button width="1" alignment="left" title="Tests" id="A9D-Ow-2HP">
+                        <button width="1" height="25" alignment="left" title="Delete Notifications" id="uqj-J3-TLN">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="deletenotififcations" destination="SzG-QD-DVv" id="RBn-rh-F5c"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="25" alignment="left" title="Tests" id="A9D-Ow-2HP">
+                            <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Update Balance" id="Z2l-h7-IzF">
+                        <button width="1" height="25" alignment="left" title="Update Point Balance" id="Z2l-h7-IzF">
+                            <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <action selector="updatebalance" destination="SzG-QD-DVv" id="qID-QX-ZdK"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Reset Balance" id="s1A-5g-ek2">
+                        <button width="1" height="25" alignment="left" title="Reset Balance" id="s1A-5g-ek2">
+                            <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <action selector="reset" destination="SzG-QD-DVv" id="W9O-hg-J9w"/>
                             </connections>
@@ -49,7 +57,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="260" y="285"/>
+            <point key="canvasLocation" x="260" y="249"/>
         </scene>
         <!--Tests Inferface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -69,15 +77,36 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="573" y="-52.5"/>
+            <point key="canvasLocation" x="603" y="-6"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="center" text="Your lunch" textAlignment="center" id="IdU-wH-bcW">
+                        <label alignment="center" text="Today's Lunch" textAlignment="center" id="IdU-wH-bcW">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                        </label>
+                        <label alignment="center" text="1. Salmon Fillet" id="rBT-JE-QYL">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
+                        </label>
+                        <label height="10" alignment="center" text="with rocket &amp; mashed potatoes" id="F2s-id-OsJ">
+                            <fontDescription key="font" type="system" weight="light" pointSize="9"/>
+                        </label>
+                        <imageView alignment="left" image="Lunch_Day1_Dish1" id="KtU-Au-xEk"/>
+                        <label height="11" alignment="center" text="478kcal - 9.40€" id="BXe-tr-dE8">
+                            <fontDescription key="font" type="system" pointSize="9"/>
+                        </label>
+                        <separator alignment="left" id="Emx-Y6-oWH"/>
+                        <label alignment="center" text="2. Grilled Chicken" id="OGJ-Cq-2ox">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
+                        </label>
+                        <label height="10" alignment="center" text="with mushroom sauce" id="F2s-id-OWJ">
+                            <fontDescription key="font" type="system" weight="light" pointSize="9"/>
+                        </label>
+                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="VdC-fh-QPi"/>
+                        <label height="10" alignment="center" text="583kcal - 8.30€" id="f7p-gd-DJA">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="9"/>
                         </label>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="lunch_notification" id="JfB-70-Muf">
@@ -89,67 +118,107 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="260" y="823"/>
+            <point key="canvasLocation" x="260" y="1047"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="mamr_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Dish1" id="rUK-Be-KbG">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                        <label height="9" alignment="left" text="Your lunch for" id="VOJ-qu-oMI">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
                         </label>
-                        <imageView alignment="left" id="x6o-rS-gri"/>
-                        <label alignment="center" text="Price" id="XCj-Wy-3Mm"/>
+                        <label height="23" alignment="left" text="Wednesday" id="ihn-KQ-aRA">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="22"/>
+                        </label>
+                        <label height="16" alignment="left" text="Dish1" id="rUK-Be-KbG">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
+                        </label>
+                        <label height="8" alignment="center" text="Subtitle" id="AjC-PY-vwZ">
+                            <fontDescription key="font" type="system" weight="light" pointSize="10"/>
+                        </label>
+                        <imageView alignment="left" image="Lunch_Day1_Dish1" id="mol-AX-LSd"/>
+                        <label alignment="center" text="478kcal - 9.40€" id="XCj-Wy-3Mm">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
                         <separator alignment="left" id="WwF-kU-ukN"/>
-                        <label alignment="center" text="Dish2" id="EL7-Qk-Lep">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                        <label alignment="left" text="Dish2" id="EL7-Qk-Lep">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
-                        <imageView alignment="left" id="0RR-Y2-PRO"/>
-                        <label alignment="center" text="Title" id="prf-Iw-q8S"/>
+                        <label height="10" alignment="center" text="Subtitle" id="UOR-9C-AkX">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="10"/>
+                        </label>
+                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="Yo6-gW-YGW"/>
+                        <label alignment="center" text="583kcal - 8.30€" id="prf-Iw-q8S">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
                     </items>
                     <connections>
+                        <outlet property="Lunch_headline" destination="ihn-KQ-aRA" id="X78-ga-JkE"/>
                         <outlet property="notificationdish1" destination="rUK-Be-KbG" id="wKP-9u-9ez"/>
                         <outlet property="notificationdish2" destination="EL7-Qk-Lep" id="6an-Hz-TZi"/>
-                        <outlet property="test_image" destination="x6o-rS-gri" id="WPc-c2-Cb0"/>
-                        <outlet property="test_image2" destination="0RR-Y2-PRO" id="BJ9-cb-xY1"/>
+                        <outlet property="subtitle_dish1" destination="AjC-PY-vwZ" id="YDI-n7-32d"/>
+                        <outlet property="subtitle_dish2" destination="UOR-9C-AkX" id="oZ1-hQ-yLx"/>
+                        <outlet property="test_image" destination="mol-AX-LSd" id="lf2-4b-M1N"/>
+                        <outlet property="test_image2" destination="Yo6-gW-YGW" id="4gT-LQ-DIc"/>
                         <outlet property="title_dish1" destination="XCj-Wy-3Mm" id="w9k-gA-uoh"/>
                         <outlet property="title_dish2" destination="prf-Iw-q8S" id="t5p-YA-Q8V"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="573" y="845"/>
+            <point key="canvasLocation" x="603" y="1042.5"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="1bV-GQ-fZ1">
             <objects>
                 <controller id="cg2-iR-wfL">
                     <items>
-                        <button width="1" alignment="left" title="Show Groceries" id="c28-bR-Iyt"/>
-                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx"/>
+                        <button width="1" alignment="left" title="Shop Groceries" id="c28-bR-Iyt">
+                            <connections>
+                                <segue destination="svJ-VC-iyw" kind="push" id="JRx-t9-Gxz"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx">
+                            <connections>
+                                <segue destination="w1Y-We-CDf" kind="push" id="fWs-m6-xa3"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="964" y="1306"/>
+            <point key="canvasLocation" x="603" y="633"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Groceries Interface Controller-->
         <scene sceneID="HIV-eM-V8K">
             <objects>
-                <controller id="svJ-VC-iyw">
+                <controller id="svJ-VC-iyw" customClass="GroceriesInterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Groceries Dish 1" id="G8E-n4-Ioh"/>
+                        <table alignment="left" id="XAJ-iK-3af"/>
                         <table alignment="left" id="0BQ-iT-VJz">
                             <items>
                                 <tableRow id="oES-X9-mnh">
-                                    <group key="rootItem" width="1" alignment="left" id="RxY-TG-H9k"/>
+                                    <group key="rootItem" width="1" height="20" alignment="left" id="RxY-TG-H9k">
+                                        <items>
+                                            <label alignment="left" text="Type" id="x9s-dP-SDV">
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                            </label>
+                                            <label alignment="left" text="Amount" id="NXH-tb-7Hx">
+                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                    </group>
                                 </tableRow>
                             </items>
                         </table>
-                        <button width="1" alignment="left" title="Done" id="XIu-D7-u4k"/>
+                        <button width="1" alignment="left" title="Done" id="XIu-D7-u4k">
+                            <connections>
+                                <segue destination="w1Y-We-CDf" kind="push" id="U7o-Sq-nh3"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1266" y="1107"/>
+            <point key="canvasLocation" x="946" y="633"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="h51-m9-opd">
@@ -169,7 +238,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="1306"/>
+            <point key="canvasLocation" x="260" y="1457"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="RHo-0m-zKd">
@@ -183,7 +252,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="1306"/>
+            <point key="canvasLocation" x="603" y="1457"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="tqo-dN-3BI">
@@ -195,7 +264,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1266" y="1452"/>
+            <point key="canvasLocation" x="1311" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="CZB-Up-Hxk">
@@ -207,7 +276,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1581" y="1452"/>
+            <point key="canvasLocation" x="1708" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="TW3-w2-2I1">
@@ -219,7 +288,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1887" y="1452"/>
+            <point key="canvasLocation" x="2098" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="Odg-Qh-1kW">
@@ -231,7 +300,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="2195" y="1452"/>
+            <point key="canvasLocation" x="2444" y="633"/>
         </scene>
         <!--Oder confirmed Controller-->
         <scene sceneID="wTq-fi-5B1">
@@ -260,7 +329,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1744" y="269"/>
+            <point key="canvasLocation" x="1708" y="311"/>
         </scene>
         <!--Lunch_Start-->
         <scene sceneID="2A2-67-Ik4">
@@ -286,7 +355,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="621" y="369"/>
+            <point key="canvasLocation" x="603" y="275"/>
         </scene>
         <!--Address Interface Controller-->
         <scene sceneID="c38-A4-LvZ">
@@ -297,11 +366,6 @@
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
                         <map height="82" alignment="left" id="WjN-Ti-iIz"/>
-                        <slider width="1" height="26" alignment="left" value="1" maximum="3" steps="3" id="o55-gU-mLY">
-                            <connections>
-                                <action selector="zoomsliderWithValue:" destination="mIu-1j-V3K" id="cyi-5J-9Al"/>
-                            </connections>
-                        </slider>
                         <button width="1" alignment="left" title="Confirm" id="yBs-0a-CCa">
                             <connections>
                                 <segue destination="5fN-UA-8gZ" kind="push" id="gEB-Lm-Yph"/>
@@ -313,7 +377,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="964" y="370"/>
+            <point key="canvasLocation" x="946" y="311"/>
         </scene>
         <!--Payment Interface Controller-->
         <scene sceneID="0ek-ee-Q5p">
@@ -344,10 +408,11 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1353" y="369"/>
+            <point key="canvasLocation" x="1335" y="310"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7Hr-kz-eUE"/>
+        <segue reference="zj7-V1-IeZ"/>
+        <segue reference="U7o-Sq-nh3"/>
     </inferredMetricsTieBreakers>
 </document>

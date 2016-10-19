@@ -15,11 +15,14 @@ import UIKit
 class NotificationController: WKUserNotificationInterfaceController {
 
     
+    @IBOutlet var Lunch_headline: WKInterfaceLabel!
     @IBOutlet var notificationdish1: WKInterfaceLabel!
     @IBOutlet var test_image: WKInterfaceImage!
     @IBOutlet var title_dish1: WKInterfaceLabel!
+    @IBOutlet var subtitle_dish1: WKInterfaceLabel!
     @IBOutlet var notificationdish2: WKInterfaceLabel!
     @IBOutlet var title_dish2: WKInterfaceLabel!
+    @IBOutlet var subtitle_dish2: WKInterfaceLabel!
     @IBOutlet var test_image2: WKInterfaceImage!
     override init() {
         // Initialize variables here.
@@ -40,80 +43,79 @@ class NotificationController: WKUserNotificationInterfaceController {
 
 
     override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Swift.Void) {
-        
-        
-        if notification.request.content.title == "Your Lunch" { //
-            notificationdish1.setText("#1 - Fresh Salmon")
-            title_dish1.setText("578kcal - 9.40€")
-            notificationdish2.setText("#2 - Beef Salad")
-            title_dish2.setText("483kcal - 8.30€")
+        let date = NSDate()
+        let calendar = NSCalendar.autoupdatingCurrent
+        let datecomponents = calendar.dateComponents([.weekday], from: date as Date) //getting the current weekday
+        let weekday = datecomponents.weekday
+        if notification.request.content.categoryIdentifier == "lunch_notification" { //branching by notification category
 
-            test_image.setImageNamed("test_dish")
-            test_image2.setImageNamed("test_dish")
-        }
-        // This method is called when a notification needs to be presented.
-        // Implement it if you use a dynamic notification interface.
-        // Populate your dynamic notification interface as quickly as possible.
-        //
-        // After populating your dynamic notification interface call the completion block.
+        switch weekday {
+        case 2?:                                                            //monday
+            self.Lunch_headline.setText("Monday")
+            self.notificationdish1.setText("#1 Baked Seabass")
+            self.title_dish1.setText("478kcal - 9.40€")
+            self.subtitle_dish1.setText("with Rocket Salad")
+            self.notificationdish2.setText("#2 Roast Chicken")
+            self.subtitle_dish2.setText("with Mushroom Sauce")
+            self.title_dish2.setText("583kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day1_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
+        case 3?:                                                            //tuesday
+            self.Lunch_headline.setText("Tuesday")
+            self.notificationdish1.setText("#1 Teriyaki Chicken")
+            self.title_dish1.setText("478kcal - 9.00€")
+            self.subtitle_dish1.setText("with Fried Rice")
+            self.notificationdish2.setText("#2 Avocado Salad")
+            self.title_dish2.setText("478kcal - 8.00€")
+            self.subtitle_dish2.setText("with Grilled Sweet Potatoe")
+            self.test_image.setImageNamed("Lunch_Day2_Dish2")
+            self.test_image2.setImageNamed("Lunch_Day2_Dish1")
+        case 4?:                                                            //wedneday
+            self.Lunch_headline.setText("Wednesday")
+            self.notificationdish1.setText("#1 Almond Salmon")
+            self.title_dish1.setText("448kcal - 9.60€")
+            self.subtitle_dish1.setText("with Orange Blur Blanc")
+            self.notificationdish2.setText("#2 - Grilled Chicken")
+            self.subtitle_dish2.setText("with Toasted Barley")
+            self.title_dish2.setText("535kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day3_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day3_Dish2")
+        case 5?:                                                            //thursday
+            self.Lunch_headline.setText("Thursday")
+            self.notificationdish1.setText("#1 Pesto Pasta")
+            self.title_dish1.setText("578kcal - 8.00€")
+            self.subtitle_dish1.setText("with Chicken Fillet")
+            self.notificationdish2.setText("#2 Grilled Perch Fillet")
+            self.subtitle_dish2.setText(" with Apricot & Herb Barley")
+            self.title_dish2.setText("461kcal - 9.80€")
+            self.test_image.setImageNamed("Lunch_Day4_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day4_Dish2")
+        case 6?:                                                            //friday
+            self.Lunch_headline.setText("Friday")
+            self.notificationdish1.setText("#1 Grilled Beef")
+            self.title_dish1.setText("478kcal - 9.40€")
+            self.subtitle_dish1.setText("with Soba Noodles")
+            self.notificationdish2.setText("#2 Teriyaki Salmon")
+            self.subtitle_dish2.setText("with Bok Choy & Rice")
+            self.title_dish2.setText("583kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day5_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day5_Dish2")
+        default:
+            self.notificationdish1.setText("#1 - General test dish")
+            self.title_dish1.setText("478kcal - 9.40€")
+            self.subtitle_dish1.setText("with rocket & mashed potatoes")
+            self.notificationdish2.setText("#2 - Roast Chicken")
+            self.subtitle_dish2.setText("with mushroom sauce")
+            self.title_dish2.setText("583kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day1_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
+            }
         completionHandler(.custom)
+    
+        }
     }
     
     
-
-    
-  /*  switch(response.actionIdentifier){
-    case "order1":
-        print("tapped order1")
-    case "order2":
-        print("tapped order2")
-    default: break
-    }*/
-
-    
-    
-    
-       /* let actionIdentifier = response.actionIdentifier
-        if actionIdentifier == "com.apple.UNNotificationDefaultActionIdentifier" || actionIdentifier == "com.apple.UNNotificationDismissActionIdentifier" {
-            return;
-        }
-        let dish1 = (actionIdentifier == "order1")
-        let dish2 = (actionIdentifier == "order2")
-    
-        repeat {
-            if (dish1) {
-                (print("order 1 pressed"))
-               break;
-            }
-            if (dish2) {
-                (print("order 2 pressed"))
-                break;
-            }
-        } while (false);
-       */ // Must be called when finished
-
-    
-    /*optional func didReceive(_ response: UNNotificationResponse,
-                             completionHandler completion: @escaping () -> Void)
-    {
-        
-        if response.actionIdentifier == "tomorrowReminder" {
-            print("Tomrrow Button Pressed")
-            subLabel.text = "Reminder For Tomorrow"
-            subLabel.textColor = UIColor.blue
-            done(.dismissAndForwardAction)
-        }
-        
-        if response.actionIdentifier == "dismissReminder" {
-            print("Dismiss Button Pressed")
-            done(.dismiss)
-            
-        } else {
-            print("Else response")
-            done(.dismissAndForwardAction)
-        }
-        
-    }*/
 
 }
 
