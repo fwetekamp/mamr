@@ -90,7 +90,7 @@
                         <label alignment="center" text="1. Salmon Fillet" id="rBT-JE-QYL">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
-                        <label height="10" alignment="center" text="with rocket &amp; mashed potatoes" id="F2s-id-OWJ">
+                        <label height="10" alignment="center" text="with rocket &amp; mashed potatoes" id="F2s-id-OsJ">
                             <fontDescription key="font" type="system" weight="light" pointSize="9"/>
                         </label>
                         <imageView alignment="left" image="Lunch_Day1_Dish1" id="KtU-Au-xEk"/>
@@ -101,8 +101,11 @@
                         <label alignment="center" text="2. Grilled Chicken" id="OGJ-Cq-2ox">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
+                        <label height="10" alignment="center" text="with mushroom sauce" id="F2s-id-OWJ">
+                            <fontDescription key="font" type="system" weight="light" pointSize="9"/>
+                        </label>
                         <imageView alignment="left" image="Lunch_Day1_Dish2" id="VdC-fh-QPi"/>
-                        <label height="10" alignment="center" text="text="with mushroom sauce" id="f7p-gd-DJA">
+                        <label height="10" alignment="center" text="583kcal - 8.30€" id="f7p-gd-DJA">
                             <fontDescription key="font" type="system" weight="thin" pointSize="9"/>
                         </label>
                     </items>
@@ -129,7 +132,7 @@
                             <fontDescription key="font" type="system" weight="light" pointSize="9"/>
                         </label>
                         <imageView alignment="left" image="Lunch_Day1_Dish1" id="mol-AX-LSd"/>
-                        <label alignment="center" text="583kcal - 8.30€" id="XCj-Wy-3Mm">
+                        <label alignment="center" text="478kcal - 9.40€" id="XCj-Wy-3Mm">
                             <fontDescription key="font" type="system" pointSize="9"/>
                         </label>
                         <separator alignment="left" id="WwF-kU-ukN"/>
@@ -140,7 +143,7 @@
                         <label height="10" alignment="center" text="Subtitle" id="UOR-9C-AkX">
                             <fontDescription key="font" type="system" weight="thin" pointSize="9"/>
                         </label>
-                        <label alignment="center" text="Price" id="prf-Iw-q8S">
+                        <label alignment="center" text="583kcal - 8.30€" id="prf-Iw-q8S">
                             <fontDescription key="font" type="system" pointSize="9"/>
                         </label>
                     </items>
