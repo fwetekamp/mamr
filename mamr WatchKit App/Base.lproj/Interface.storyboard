@@ -84,7 +84,7 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="center" text="Your lunch" textAlignment="center" id="IdU-wH-bcW">
+                        <label alignment="center" text="Today's Lunch" textAlignment="center" id="IdU-wH-bcW">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                         </label>
                         <label alignment="center" text="1. Salmon Fillet" id="rBT-JE-QYL">
@@ -118,36 +118,43 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="260" y="975"/>
+            <point key="canvasLocation" x="260" y="1047"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="mamr_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Dish1" id="rUK-Be-KbG">
+                        <label height="9" alignment="left" text="Your lunch for" id="VOJ-qu-oMI">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                        </label>
+                        <label height="23" alignment="left" text="Wednesday" id="ihn-KQ-aRA">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="22"/>
+                        </label>
+                        <label height="16" alignment="left" text="Dish1" id="rUK-Be-KbG">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
-                        <label height="10" alignment="center" text="Subtitle" id="AjC-PY-vwZ">
-                            <fontDescription key="font" type="system" weight="light" pointSize="9"/>
+                        <label height="8" alignment="center" text="Subtitle" id="AjC-PY-vwZ">
+                            <fontDescription key="font" type="system" weight="light" pointSize="10"/>
                         </label>
                         <imageView alignment="left" image="Lunch_Day1_Dish1" id="mol-AX-LSd"/>
                         <label alignment="center" text="478kcal - 9.40€" id="XCj-Wy-3Mm">
-                            <fontDescription key="font" type="system" pointSize="9"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
                         </label>
                         <separator alignment="left" id="WwF-kU-ukN"/>
-                        <label alignment="center" text="Dish2" id="EL7-Qk-Lep">
+                        <label alignment="left" text="Dish2" id="EL7-Qk-Lep">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
-                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="Yo6-gW-YGW"/>
                         <label height="10" alignment="center" text="Subtitle" id="UOR-9C-AkX">
-                            <fontDescription key="font" type="system" weight="thin" pointSize="9"/>
+                            <fontDescription key="font" type="system" weight="thin" pointSize="10"/>
                         </label>
+                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="Yo6-gW-YGW"/>
                         <label alignment="center" text="583kcal - 8.30€" id="prf-Iw-q8S">
-                            <fontDescription key="font" type="system" pointSize="9"/>
+                            <fontDescription key="font" type="system" pointSize="10"/>
                         </label>
                     </items>
                     <connections>
+                        <outlet property="Lunch_headline" destination="ihn-KQ-aRA" id="X78-ga-JkE"/>
                         <outlet property="notificationdish1" destination="rUK-Be-KbG" id="wKP-9u-9ez"/>
                         <outlet property="notificationdish2" destination="EL7-Qk-Lep" id="6an-Hz-TZi"/>
                         <outlet property="subtitle_dish1" destination="AjC-PY-vwZ" id="YDI-n7-32d"/>
@@ -159,7 +166,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="1048"/>
+            <point key="canvasLocation" x="603" y="1042.5"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="1bV-GQ-fZ1">
