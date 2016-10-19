@@ -42,26 +42,77 @@ class NotificationController: WKUserNotificationInterfaceController {
 
 
     override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Swift.Void) {
-        
-        
-        if notification.request.content.title == "Your Lunch" { //
-            notificationdish1.setText("#1 - Grilled Salmon")
-            title_dish1.setText("478kcal - 9.40€")
-            subtitle_dish1.setText("with rocket & mashed potatoes")
-            notificationdish2.setText("#2 - Roast Chicken")
-            subtitle_dish2.setText("with mushroom sauce")
+        let date = NSDate()
+        let calendar = NSCalendar.autoupdatingCurrent
+        let datecomponents = calendar.dateComponents([.weekday], from: date as Date) //getting the current weekday
+        let weekday = datecomponents.weekday
+        if notification.request.content.categoryIdentifier == "lunch_notification" { //branching by notification category
 
-            title_dish2.setText("583kcal - 8.30€")
-
-            test_image.setImageNamed("Lunch_Day1_Dish1")
-            test_image2.setImageNamed("Lunch_Day1_Dish2")
-        }
+        switch weekday {
+        case 2?:                                                            //monday
+            self.notificationdish1.setText("#1 - Monday test dish Salmon")
+            self.title_dish1.setText("478kcal - 9.40€")
+            self.subtitle_dish1.setText("with rocket & mashed potatoes")
+            self.notificationdish2.setText("#2 - Roast Chicken")
+            self.subtitle_dish2.setText("with mushroom sauce")
+            self.title_dish2.setText("583kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day1_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
+        case 3?:                                                            //tuesday
+            self.notificationdish1.setText("#1 - Tuesday test dish")
+            self.title_dish1.setText("478kcal - 9.40€")
+            self.subtitle_dish1.setText("with rocket & mashed potatoes")
+            self.notificationdish2.setText("#2 - Roast Chicken")
+            self.subtitle_dish2.setText("with mushroom sauce")
+            self.title_dish2.setText("583kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day1_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
+        case 4?:                                                            //wedneday
+            self.notificationdish1.setText("#1 - Wednesday test dish")
+            self.title_dish1.setText("478kcal - 9.40€")
+            self.subtitle_dish1.setText("with rocket & mashed potatoes")
+            self.notificationdish2.setText("#2 - Roast Chicken")
+            self.subtitle_dish2.setText("with mushroom sauce")
+            self.title_dish2.setText("583kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day1_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
+        case 5?:                                                            //thursday
+            self.notificationdish1.setText("#1 - Thursday test dish")
+            self.title_dish1.setText("478kcal - 9.40€")
+            self.subtitle_dish1.setText("with rocket & mashed potatoes")
+            self.notificationdish2.setText("#2 - Roast Chicken")
+            self.subtitle_dish2.setText("with mushroom sauce")
+            self.title_dish2.setText("583kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day1_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
+        case 6?:                                                            //friday
+            self.notificationdish1.setText("#1 - Friday test dish")
+            self.title_dish1.setText("478kcal - 9.40€")
+            self.subtitle_dish1.setText("with rocket & mashed potatoes")
+            self.notificationdish2.setText("#2 - Roast Chicken")
+            self.subtitle_dish2.setText("with mushroom sauce")
+            self.title_dish2.setText("583kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day1_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
+        default:
+            self.notificationdish1.setText("#1 - General test dish")
+            self.title_dish1.setText("478kcal - 9.40€")
+            self.subtitle_dish1.setText("with rocket & mashed potatoes")
+            self.notificationdish2.setText("#2 - Roast Chicken")
+            self.subtitle_dish2.setText("with mushroom sauce")
+            self.title_dish2.setText("583kcal - 8.30€")
+            self.test_image.setImageNamed("Lunch_Day1_Dish1")
+            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
+            }
+            
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
         //
         // After populating your dynamic notification interface call the completion block.
         completionHandler(.custom)
+    
+        }
     }
     
     

@@ -76,8 +76,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         
         var dateComponents = DateComponents()
-        dateComponents.hour = 11
-        dateComponents.minute = 00
+        dateComponents.hour = 21
+        dateComponents.minute = 42
         for i in 2..<7 { //scheduling for lunch notifications for weekdays
         dateComponents.weekday = i
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)

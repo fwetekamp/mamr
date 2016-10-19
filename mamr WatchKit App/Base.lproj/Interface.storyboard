@@ -87,6 +87,24 @@
                         <label alignment="center" text="Your lunch" textAlignment="center" id="IdU-wH-bcW">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                         </label>
+                        <label alignment="center" text="1. Salmon Fillet" id="rBT-JE-QYL">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
+                        </label>
+                        <label height="10" alignment="center" text="with rocket &amp; mashed potatoes" id="F2s-id-OWJ">
+                            <fontDescription key="font" type="system" weight="light" pointSize="9"/>
+                        </label>
+                        <imageView alignment="left" image="Lunch_Day1_Dish1" id="KtU-Au-xEk"/>
+                        <label height="11" alignment="center" text="478kcal - 9.40€" id="BXe-tr-dE8">
+                            <fontDescription key="font" type="system" pointSize="9"/>
+                        </label>
+                        <separator alignment="left" id="Emx-Y6-oWH"/>
+                        <label alignment="center" text="2. Grilled Chicken" id="OGJ-Cq-2ox">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
+                        </label>
+                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="VdC-fh-QPi"/>
+                        <label height="10" alignment="center" text="text="with mushroom sauce" id="f7p-gd-DJA">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="9"/>
+                        </label>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="lunch_notification" id="JfB-70-Muf">
                         <color key="sashColor" red="0.17823024611398963" green="0.17823024611398963" blue="0.17823024611398963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -97,7 +115,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="260" y="1131"/>
+            <point key="canvasLocation" x="260" y="975"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
@@ -111,7 +129,7 @@
                             <fontDescription key="font" type="system" weight="light" pointSize="9"/>
                         </label>
                         <imageView alignment="left" image="Lunch_Day1_Dish1" id="mol-AX-LSd"/>
-                        <label alignment="center" text="Price" id="XCj-Wy-3Mm">
+                        <label alignment="center" text="583kcal - 8.30€" id="XCj-Wy-3Mm">
                             <fontDescription key="font" type="system" pointSize="9"/>
                         </label>
                         <separator alignment="left" id="WwF-kU-ukN"/>
