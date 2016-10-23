@@ -12,29 +12,26 @@ import Foundation
 
 class GroceriesInterfaceController: WKInterfaceController {
 
-    @IBOutlet var Grociery_Table: WKInterfaceGroup!
     
-    @IBOutlet var grocieryname: WKInterfaceLabel!
-    @IBOutlet var grocerysamount: WKInterfaceLabel!
+    @IBOutlet var table: WKInterfaceTable!
+
     let ingredientsname = ["Pasta", "Bacon", "Zucchini", "Parmesan", "Mushrooms", "Salt", "Pepper"]
-  /*  let ingredientsamount = ["200g", "150g", "1", "50g", "150g", "", "Pepper"]
+    let ingredientsamount = ["200g", "150g", "1", "50g", "150g", "10g", "10g"]
     
     func loadTable() {
-        myTable.setNumberOfRows(stringData.count,
-                                                     withRowType: "MyRowController")
-         
-            for (index, labelText) in stringData.enumerate() {
-                    let row = myTable.rowControllerAtIndex(index)
-                              as! MyRowController
-                    row.myLabel.setText(labelText)
-                    row.myImage.setImage(UIImage(named: imageData[index]))
-                }
+        table.setRowTypes(["groceries"])
+
+        table.setNumberOfRows(ingredientsname.count,
+                                withRowType: "groceries")
+        for (index, grocery) in ingredientsname.enumerated() {
+            let row = table.rowController(at: index) as! RowController
+            row.grocerytype.setText(grocery)
+            row.groceryamount.setText(ingredientsamount[index])
+        }
     }
-    */
-    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        loadTable()
         // Configure interface objects here.
     }
 

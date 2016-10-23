@@ -88,7 +88,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="-6"/>
+            <point key="canvasLocation" x="603" y="-35"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -207,20 +207,27 @@
             <objects>
                 <controller id="svJ-VC-iyw" customClass="GroceriesInterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="XAJ-iK-3af"/>
-                        <table alignment="left" id="0BQ-iT-VJz">
+                        <label alignment="left" text="Grocery List" id="dYm-iy-k0t">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <table alignment="left" id="s8m-rs-M8k">
                             <items>
-                                <tableRow id="oES-X9-mnh">
-                                    <group key="rootItem" width="1" height="20" alignment="left" id="RxY-TG-H9k">
+                                <tableRow identifier="groceries" id="Bo2-IS-ojU" customClass="RowController" customModule="mamr_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="20" alignment="left" id="IQZ-pS-2VN">
                                         <items>
                                             <label alignment="left" text="Type" id="x9s-dP-SDV">
                                                 <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
                                             </label>
-                                            <label alignment="left" text="Amount" id="NXH-tb-7Hx">
+                                            <label alignment="right" text="Amount" id="NXH-tb-7Hx">
                                                 <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                                             </label>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="groceryamount" destination="NXH-tb-7Hx" id="lkV-da-rou"/>
+                                        <outlet property="grocerytype" destination="x9s-dP-SDV" id="7Er-eN-T4P"/>
+                                        <outlet property="table" destination="IQZ-pS-2VN" id="6Y5-oL-l5t"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
@@ -230,6 +237,9 @@
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="s8m-rs-M8k" id="wCp-oI-oXs"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="946" y="633"/>
@@ -278,7 +288,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1311" y="633"/>
+            <point key="canvasLocation" x="1335" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="CZB-Up-Hxk">
@@ -369,7 +379,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="712" y="264"/>
+            <point key="canvasLocation" x="603" y="300"/>
         </scene>
         <!--Address Interface Controller-->
         <scene sceneID="c38-A4-LvZ">
@@ -391,7 +401,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="946" y="311"/>
+            <point key="canvasLocation" x="1021" y="311"/>
         </scene>
         <!--Payment Interface Controller-->
         <scene sceneID="0ek-ee-Q5p">
