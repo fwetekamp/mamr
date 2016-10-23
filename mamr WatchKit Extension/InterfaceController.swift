@@ -15,14 +15,27 @@ import HealthKit
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
     var points = [Points]() //initializing balance array
-    let center = UNUserNotificationCenter.current()
 
     
     @IBOutlet var balancelabelhome: WKInterfaceLabel!
     @IBAction func deletenotififcations() {
+        let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()
     }
     
+    @IBAction func checkdeliverednotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.getDeliveredNotifications { delivered in
+            print("Delivered Notifications: \(delivered)")
+        }
+    }
+    @IBAction func checkpendingnotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests(completionHandler: { request in
+            print("Requested Notifications: \(request)")
+        })
+        
+    }
     override func willActivate() {
         super.willActivate()
     }
@@ -61,7 +74,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     }
     
     @IBAction func ScheduleLunch() {
-        
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
         let notificationManager = NotificationsHandler()
         
         notificationManager.lunchnotificationcategories()
@@ -69,34 +83,33 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         let content = UNMutableNotificationContent() //creating the notification
         content.title = "Your Lunch"
-        content.body = "Your Lunch"
+        content.body = "Tap to see your for today."
         content.categoryIdentifier = "lunch_notification"
-        content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default()
         
         
-        var dateComponents1 = DateComponents() //schedling for 10:30 AM
+        var dateComponents1 = DateComponents() //scheduling for 10:30 AM
+        var dateComponents2 = DateComponents() //schedling for 11:00 AM
+
+      for i in 0..<7 {  //scheduling for lunch notifications for weekdays
+        dateComponents1.weekday = i
         dateComponents1.hour = 10
         dateComponents1.minute = 30
-        for i in 2..<7 { //scheduling for lunch notifications for weekdays
-        dateComponents1.weekday = i
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents1, repeats: true)
- 
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        center.add(request)
-        print("notification scheduled \(dateComponents1.weekday)")
-        }
-        var dateComponents2 = DateComponents() //scheduling for both 11:00AM
+        dateComponents2.weekday = i
         dateComponents2.hour = 11
         dateComponents2.minute = 00
-        for i in 2..<7 { //scheduling for lunch notifications for weekdays
-            dateComponents2.weekday = i
-            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
-            
-            
-            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-            center.add(request)
-            print("notification scheduled \(dateComponents2.weekday)")
+        let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents1, repeats: true)
+        let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
+
+        let request1 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger1)
+        let request2 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger2)
+        center.add(request1) { (error: Error?) in
+            print(error)
+            }
+        center.add(request2) { (error: Error?) in
+            print(error)
+        }
+        print("notifications scheduled")
         }
     }
 

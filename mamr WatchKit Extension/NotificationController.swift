@@ -101,7 +101,7 @@ class NotificationController: WKUserNotificationInterfaceController {
             self.test_image.setImageNamed("Lunch_Day5_Dish1")
             self.test_image2.setImageNamed("Lunch_Day5_Dish2")
         default:
-            self.notificationdish1.setText("#1 - General test dish")
+            self.notificationdish1.setText("#1 - Baked Seabass")
             self.title_dish1.setText("478kcal - 9.40€")
             self.subtitle_dish1.setText("with rocket & mashed potatoes")
             self.notificationdish2.setText("#2 - Roast Chicken")
