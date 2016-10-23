@@ -94,16 +94,16 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label height="9" alignment="left" text="Your lunch for" id="w5R-vU-EAV">
+                        <label height="11" alignment="left" text="Your lunch for" textAlignment="center" id="IdU-wH-bcW">
                             <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
                         </label>
-                        <label height="23" alignment="left" text="Today" id="ixh-7I-YSD">
+                        <label height="23" alignment="left" text="Today" id="gag-6y-zzL">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="22"/>
                         </label>
-                        <label height="16" alignment="left" text="1. Grilled Salmon" id="3qq-ci-naa">
+                        <label height="11" alignment="left" text="1. Salmon Fillet" id="rBT-JE-QYL">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
-                        <label height="10" alignment="center" text="with rocket &amp; mashed potatoes" id="F2s-id-OsJ">
+                        <label height="8" alignment="center" text="with rocket &amp; mashed potatoes" id="F2s-id-OsJ">
                             <fontDescription key="font" type="system" weight="light" pointSize="9"/>
                         </label>
                         <imageView alignment="left" image="Lunch_Day1_Dish1" id="KtU-Au-xEk"/>
@@ -126,11 +126,12 @@
                         <color key="sashColor" red="0.17823024611398963" green="0.17823024611398963" blue="0.17823024611398963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </notificationCategory>
                     <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                         <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="260" y="1047"/>
+            <point key="canvasLocation" x="260" y="1041.5"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">

@@ -14,12 +14,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
 
     func applicationDidFinishLaunching() {
         let center = UNUserNotificationCenter.current()
-        center.getPendingNotificationRequests { request in
-            print(request) //printing which notifications are pending right now
-        }
-        center.getDeliveredNotifications { delivered in
-            print(delivered)
-        }
         center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in //requesting authorization for notifications
             if granted {
                 print("Got the auth!")
