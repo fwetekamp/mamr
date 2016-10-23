@@ -22,6 +22,7 @@
                                 <action selector="ScheduleLunch" destination="SzG-QD-DVv" id="lNf-mt-8Vk"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Schedule Dinner" id="Sus-62-6Jm"/>
                         <button width="1" alignment="left" title="Dinner Flow" id="sIF-ty-0Fv">
                             <connections>
                                 <segue destination="cg2-iR-wfL" kind="push" id="LUa-fU-au3"/>
@@ -39,23 +40,13 @@
                                 <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Check Pending Notifications" id="IdH-p0-P4f">
-                            <connections>
-                                <action selector="checkpendingnotifications" destination="SzG-QD-DVv" id="u7D-rk-W5U"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Check delivered notifications" id="fd4-9L-Nni">
-                            <connections>
-                                <action selector="checkdeliverednotifications" destination="SzG-QD-DVv" id="qTE-bY-TFv"/>
-                            </connections>
-                        </button>
                         <button width="1" height="25" alignment="left" title="Update Point Balance" id="Z2l-h7-IzF">
                             <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <action selector="updatebalance" destination="SzG-QD-DVv" id="qID-QX-ZdK"/>
                             </connections>
                         </button>
-                        <button width="1" height="25" alignment="left" title="Reset Balance" id="s1A-5g-ek2">
+                        <button width="1" height="25" alignment="left" title="Reset Points Balance" id="s1A-5g-ek2">
                             <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <action selector="reset" destination="SzG-QD-DVv" id="W9O-hg-J9w"/>
@@ -82,6 +73,16 @@
                         <button width="1" alignment="left" title="Test Dinner Notifications" id="Fvn-Kj-QfK">
                             <connections>
                                 <action selector="TestDinner" destination="AgC-eL-Hgc" id="vXF-AB-mn5"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Check Pending Notifications" id="IdH-p0-P4f">
+                            <connections>
+                                <action selector="checkpendingnotifications" destination="SzG-QD-DVv" id="u7D-rk-W5U"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Check delivered notifications" id="fd4-9L-Nni">
+                            <connections>
+                                <action selector="checkdeliverednotifications" destination="SzG-QD-DVv" id="qTE-bY-TFv"/>
                             </connections>
                         </button>
                     </items>
@@ -368,7 +369,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="275"/>
+            <point key="canvasLocation" x="712" y="264"/>
         </scene>
         <!--Address Interface Controller-->
         <scene sceneID="c38-A4-LvZ">
