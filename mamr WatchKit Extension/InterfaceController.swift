@@ -80,13 +80,11 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         notificationManager.lunchnotificationcategories()
         
-        
         let content = UNMutableNotificationContent() //creating the notification
         content.title = "Your Lunch"
         content.body = "Tap to see your for today."
         content.categoryIdentifier = "lunch_notification"
         content.sound = UNNotificationSound.default()
-        
         
         var dateComponents1 = DateComponents() //scheduling for 10:30 AM
         var dateComponents2 = DateComponents() //schedling for 11:00 AM
@@ -111,6 +109,9 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         }
         print("notifications scheduled")
         }
+        presentAlert(withTitle: "Success!", message: "I will help you with recommendations to eat clean and healthy.", preferredStyle: WKAlertControllerStyle.alert, actions: [WKAlertAction.init(title: "Got it", style: WKAlertActionStyle.default, handler: {
+        })])
+        
     }
 
     func  initiliazebalance(){ //points are saved, the last array element will be set to 0
