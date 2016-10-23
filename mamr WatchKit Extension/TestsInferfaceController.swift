@@ -65,16 +65,12 @@ class TestsInferfaceController: WKInterfaceController {
         
         let content = UNMutableNotificationContent() //creating the notification
         content.title = "Your Dinner"
-        content.body = "Your Dinner"
+        content.body = "Here's your menu for today."
         content.categoryIdentifier = "dinner_notification"
-        content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default()
         
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) //trigger to the test the notification
-        
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger) //generating random string with UUID() for dinner notification
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil) //generating random string with UUID() for dinner notification
         center.add(request) //adding notification to UNNotificationCenter
         print("notification sent")
         

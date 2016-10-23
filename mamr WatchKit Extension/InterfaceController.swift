@@ -49,6 +49,12 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         case "order2"?:
             print("tapped order2")
             pushController(withName: "Lunch_Start", context: "segue")
+        case "getrecipe1"?:
+            print("tapped recipe1")
+            pushController(withName: "Dinner_Start", context: "segue")
+        case "getrecipe2"?:
+            print("tapped recipe2")
+            pushController(withName: "Dinner_Start", context: "segue")
         default: break
         }
     }
