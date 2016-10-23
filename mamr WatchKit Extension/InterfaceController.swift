@@ -89,7 +89,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         var dateComponents1 = DateComponents() //scheduling for 10:30 AM
         var dateComponents2 = DateComponents() //schedling for 11:00 AM
 
-      for i in 0..<7 {  //scheduling for lunch notifications for weekdays
+      for i in 2..<7 {  //scheduling for lunch notifications for weekdays
         dateComponents1.weekday = i
         dateComponents1.hour = 10
         dateComponents1.minute = 30
