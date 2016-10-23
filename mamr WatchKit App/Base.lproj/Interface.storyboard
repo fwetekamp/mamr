@@ -39,6 +39,16 @@
                                 <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Check Pending Notifications" id="IdH-p0-P4f">
+                            <connections>
+                                <action selector="checkpendingnotifications" destination="SzG-QD-DVv" id="u7D-rk-W5U"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Check delivered notifications" id="fd4-9L-Nni">
+                            <connections>
+                                <action selector="checkdeliverednotifications" destination="SzG-QD-DVv" id="qTE-bY-TFv"/>
+                            </connections>
+                        </button>
                         <button width="1" height="25" alignment="left" title="Update Point Balance" id="Z2l-h7-IzF">
                             <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
@@ -84,10 +94,13 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="center" text="Today's Lunch" textAlignment="center" id="IdU-wH-bcW">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                        <label height="9" alignment="left" text="Your lunch for" id="w5R-vU-EAV">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
                         </label>
-                        <label alignment="center" text="1. Salmon Fillet" id="rBT-JE-QYL">
+                        <label height="23" alignment="left" text="Today" id="ixh-7I-YSD">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="22"/>
+                        </label>
+                        <label height="16" alignment="left" text="1. Grilled Salmon" id="3qq-ci-naa">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
                         <label height="10" alignment="center" text="with rocket &amp; mashed potatoes" id="F2s-id-OsJ">
@@ -113,7 +126,6 @@
                         <color key="sashColor" red="0.17823024611398963" green="0.17823024611398963" blue="0.17823024611398963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </notificationCategory>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                         <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
                     </connections>
                 </notificationController>
@@ -128,7 +140,7 @@
                         <label height="9" alignment="left" text="Your lunch for" id="VOJ-qu-oMI">
                             <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
                         </label>
-                        <label height="23" alignment="left" text="Wednesday" id="ihn-KQ-aRA">
+                        <label height="23" alignment="left" text="Today" id="ihn-KQ-aRA">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="22"/>
                         </label>
                         <label height="16" alignment="left" text="Dish1" id="rUK-Be-KbG">

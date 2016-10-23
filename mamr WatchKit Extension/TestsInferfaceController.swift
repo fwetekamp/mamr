@@ -20,29 +20,41 @@ class TestsInferfaceController: WKInterfaceController {
     }
 
     @IBAction func TestLunch() {
-        
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
         let notificationManager = NotificationsHandler()
         
         notificationManager.lunchnotificationcategories()
         
-        let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
+ /*       center.removeAllPendingNotificationRequests()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in //requesting authorization for notifications on first launch
+            if granted {
+                print("Got the auth!")
+            } else {
+                print("I need the auth to spam you")
+            }
+        }*/
         
         let content = UNMutableNotificationContent() //creating the notification
         content.title = "Your Lunch"
-        content.body = "Your Lunch"
+        content.body = "Here's your menu for today."
         content.categoryIdentifier = "lunch_notification"
-        content.userInfo = ["customData": "fizzbuzz"]
+        content.subtitle = "Testing"
         content.sound = UNNotificationSound.default()
         
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false) //trigger to the test the notification
-        
-        
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-        center.add(request)
+        center.add(request) { (error: Error?) in
+            print(error)
         print("notification sent")
+        }
     }
+    
+/*    func test(content: UNMutableNotificationContent) {
+
+        }
+    }*/
     @IBAction func TestDinner() { // dinner sample notification
         
         let notificationManager = NotificationsHandler()

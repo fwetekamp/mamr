@@ -14,7 +14,13 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
 
     func applicationDidFinishLaunching() {
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in //requesting authorization for notifications on first launch
+        center.getPendingNotificationRequests { request in
+            print(request) //printing which notifications are pending right now
+        }
+        center.getDeliveredNotifications { delivered in
+            print(delivered)
+        }
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in //requesting authorization for notifications
             if granted {
                 print("Got the auth!")
             } else {
@@ -24,11 +30,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
            UNUserNotificationCenter.current().delegate = self //register to be delegate
         }
 
-        
-        guard HKHealthStore.isHealthDataAvailable() == true else { //checking if health data is available
-            print("no health data available")
-            return
-        }
     }
     
     
