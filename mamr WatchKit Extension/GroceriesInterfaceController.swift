@@ -26,7 +26,6 @@ class GroceriesInterfaceController: WKInterfaceController {
         people = context as! Int
         print(people)
         loadTable() //initializing table
-        
     }
 
     

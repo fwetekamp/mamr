@@ -23,7 +23,7 @@
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Schedule Dinner" id="Sus-62-6Jm"/>
-                        <button width="1" alignment="left" title="Dinner Flow" id="sIF-ty-0Fv">
+                        <button width="1" alignment="left" title="Today's Dinner" id="sIF-ty-0Fv">
                             <connections>
                                 <segue destination="cg2-iR-wfL" kind="push" id="LUa-fU-au3"/>
                             </connections>
@@ -332,48 +332,60 @@
             <objects>
                 <controller id="w1Y-We-CDf">
                     <items>
-                        <label alignment="left" text="Recipe Step 1" id="her-pv-YBp"/>
                         <table alignment="left" id="5Hs-Ez-bti"/>
+                        <label alignment="center" text="Step 1" id="yQx-QN-zbK">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <label height="96" alignment="left" text="Instructions" numberOfLines="5" id="UxJ-Mn-3IA"/>
+                        <button width="1" alignment="left" title="Done" id="UKP-gd-EZR">
+                            <connections>
+                                <segue destination="W4e-7G-WTh" kind="push" id="Bfq-MF-ASh"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1708" y="633"/>
+            <point key="canvasLocation" x="1590" y="987"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="CZB-Up-Hxk">
             <objects>
                 <controller id="W4e-7G-WTh">
                     <items>
-                        <label alignment="left" text="Recipe Step 2" id="jNb-vm-xHK"/>
                         <table alignment="left" id="ps9-XG-1Lr"/>
+                        <label alignment="center" text="Step 2" id="ovv-6i-aJr">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <label height="96" alignment="left" text="Instructions" numberOfLines="5" id="GWT-Xx-e6Z"/>
+                        <button width="1" alignment="left" title="Done" id="lUP-ai-ZRU">
+                            <connections>
+                                <segue destination="pQr-1k-Wo6" kind="push" id="7sy-XX-uoo"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1989" y="633"/>
+            <point key="canvasLocation" x="1885" y="978"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="TW3-w2-2I1">
             <objects>
                 <controller id="pQr-1k-Wo6">
                     <items>
-                        <label alignment="left" text="Recipe Step 3" id="JB0-Ci-zYc"/>
                         <table alignment="left" id="2NC-mn-DQV"/>
+                        <label alignment="center" text="Step 3" id="Aqy-3m-h1z">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <label height="96" alignment="left" text="Instructions" numberOfLines="5" id="f80-sC-1Cz"/>
+                        <button width="1" alignment="left" title="Done" id="tXw-af-jle">
+                            <connections>
+                                <segue destination="lOg-3n-8H4" kind="push" id="0gW-j8-R8Z"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="2255" y="633"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="Odg-Qh-1kW">
-            <objects>
-                <controller id="nnJ-0D-O1e">
-                    <items>
-                        <label alignment="left" text="Enjoy! " id="ZKL-ef-6gU"/>
-                        <table alignment="left" id="yrK-Vr-6fO"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="2444" y="633"/>
+            <point key="canvasLocation" x="2147" y="978"/>
         </scene>
         <!--Oder confirmed Controller-->
         <scene sceneID="wTq-fi-5B1">
@@ -402,7 +414,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1708" y="311"/>
+            <point key="canvasLocation" x="1688" y="103"/>
         </scene>
         <!--Lunch_Start-->
         <scene sceneID="2A2-67-Ik4">
@@ -507,11 +519,38 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="942" y="978"/>
+            <point key="canvasLocation" x="1021" y="633"/>
+        </scene>
+        <!--Oder confirmed Controller-->
+        <scene sceneID="7K9-Cd-fdK">
+            <objects>
+                <controller id="lOg-3n-8H4" customClass="Oder_confirmed_Controller" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label height="48" alignment="center" text="Enjoy your Dinner. " textAlignment="center" numberOfLines="2" id="II3-py-5i6">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <imageView alignment="center" image="Logo" contentMode="scaleAspectFit" id="SLj-9F-ECk"/>
+                        <label alignment="center" text="Label" id="wBC-fc-b5B">
+                            <fontDescription key="font" type="system" weight="light" pointSize="12"/>
+                        </label>
+                        <button width="1" alignment="left" title="Home" id="yWU-FV-jww">
+                            <connections>
+                                <segue destination="SzG-QD-DVv" kind="push" id="Smv-9k-Ah9"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="logo" destination="SLj-9F-ECk" id="02L-zH-6se"/>
+                        <outlet property="mamrpointslabel" destination="wBC-fc-b5B" id="sAQ-FC-Zzo"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2487" y="972"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zj7-V1-IeZ"/>
+        <segue reference="Smv-9k-Ah9"/>
         <segue reference="U7o-Sq-nh3"/>
+        <segue reference="zj7-V1-IeZ"/>
     </inferredMetricsTieBreakers>
 </document>

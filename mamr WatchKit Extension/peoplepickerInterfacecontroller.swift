@@ -13,10 +13,10 @@ import Foundation
 class peoplepickerInterfacecontroller: WKInterfaceController {
     
     @IBOutlet var peoplepicker: WKInterfacePicker!
-    var people:Int = 0
+    var people:Int = 1
     
     @IBAction func setpeople(_ value: Int) {
-        people = value
+        people = value+1
     }
     var ingredientsname:[String] = []
     var ingredientsamount:[Int] = []
