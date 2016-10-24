@@ -203,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="603" y="633"/>
         </scene>
-        <!--Groceries Interface Controller-->
+        <!--grocerieslist-->
         <scene sceneID="HIV-eM-V8K">
             <objects>
-                <controller id="svJ-VC-iyw" customClass="GroceriesInterfaceController" customModule="mamr_WatchKit_Extension">
+                <controller identifier="grocerieslist" id="svJ-VC-iyw" customClass="GroceriesInterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Grocery List" id="dYm-iy-k0t">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
@@ -486,14 +486,14 @@
         <!--Dinner_Start-->
         <scene sceneID="sy2-Bp-vT2">
             <objects>
-                <controller identifier="Dinner_Start" id="IKa-eo-WkZ" customClass="GroceriesInterfaceController" customModule="mamr_WatchKit_Extension">
+                <controller identifier="Dinner_Start" id="IKa-eo-WkZ" customClass="peoplepickerInterfacecontroller" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label height="27" alignment="center" text="For how many?" numberOfLines="3" id="Zh0-4c-aoR">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
                         <picker height="50" alignment="left" id="0p4-V6-3JV">
                             <connections>
-                                <action selector="settime:" destination="IKa-eo-WkZ" id="ql4-x1-FR1"/>
+                                <action selector="setpeople:" destination="IKa-eo-WkZ" id="CwY-7q-6Rq"/>
                             </connections>
                         </picker>
                         <button width="1" alignment="left" title="Confirm" id="fMi-jX-MkN">
@@ -503,7 +503,7 @@
                         </button>
                     </items>
                     <connections>
-                        <outlet property="AddressPicker" destination="0p4-V6-3JV" id="BGz-0N-v7z"/>
+                        <outlet property="peoplepicker" destination="0p4-V6-3JV" id="gA7-OM-GC3"/>
                     </connections>
                 </controller>
             </objects>

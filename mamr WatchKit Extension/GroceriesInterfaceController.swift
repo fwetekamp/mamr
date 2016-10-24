@@ -15,10 +15,19 @@ class GroceriesInterfaceController: WKInterfaceController {
     
     @IBOutlet var table: WKInterfaceTable!
 
-
     var ingredientsname:[String] = []
     var ingredientsamount:[Int] = []
     var measuringunit:[String] = []
+    var people:Int = 0
+
+    
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        people = context as! Int
+        print(people)
+        loadTable() //initializing table
+        
+    }
 
     
     func loadTable() {
@@ -26,7 +35,7 @@ class GroceriesInterfaceController: WKInterfaceController {
         let calendar = NSCalendar.autoupdatingCurrent
         let datecomponents = calendar.dateComponents([.weekday], from: date as Date) //getting the current weekday
         let weekday = datecomponents.weekday
-        let dish = Dinner_Dish.init(people: 3, Day: weekday!) //using dinner_dish to calculate ingredients amount
+        let dish = Dinner_Dish.init(people: people, Day: weekday!) //using dinner_dish to calculate ingredients amount
         ingredientsname = dish.ingredients
         print(dish.ingredients)
         ingredientsamount = dish.ingredientsamount
@@ -43,11 +52,6 @@ class GroceriesInterfaceController: WKInterfaceController {
             row.groceryamount.setText(String(ingredientsamount[index]))
             row.unit.setText(measuringunit[index])
         }
-    }
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        loadTable()
-        // Configure interface objects here.
     }
 
     override func willActivate() {
