@@ -11,5 +11,6 @@ import WatchKit
 class RowController: NSObject {
     @IBOutlet var grocerytype: WKInterfaceLabel!
     @IBOutlet var groceryamount: WKInterfaceLabel!
+    @IBOutlet var unit: WKInterfaceLabel!
     @IBOutlet var table: WKInterfaceGroup!
 }

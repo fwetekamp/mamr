@@ -9,20 +9,16 @@
 import WatchKit
 
 class Points: NSObject, NSCoding {
-    //  class Properties
+
     var balance: Int
     
-    // MARK: Archiving Paths
+    // Defining Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("mamrpoints6")
     
-    // MARK: Types
-    
     struct PropertyKey {
-        static let nameKey = "balance"
+        static let nameKey = "balance" //define key vor key-value pair
     }
-    
-    // MARK: Initialisation
     
     init?(balance: Int) {
         // Initialize stored properties.
@@ -31,11 +27,11 @@ class Points: NSObject, NSCoding {
         
         // Initialization should fail if there is no name or if the rating is negative.
         
-    }
+    } //save balance
     
     func  encode(with aCoder: NSCoder) {
         aCoder.encode(balance, forKey: "balance")
-    }
+    } //get balance
     
     required init?(coder aDecoder: NSCoder) {
         self.balance = aDecoder.decodeInteger(forKey: "balance")

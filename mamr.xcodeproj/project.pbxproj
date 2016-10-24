@@ -31,6 +31,7 @@
 		1FDA8B2A1DAD50C20030FA6B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B291DAD50C20030FA6B /* NotificationController.swift */; };
 		1FDA8B2C1DAD50C20030FA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */; };
 		1FE87ADC1DAEBB240046DB24 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE87ADB1DAEBB240046DB24 /* HealthKit.framework */; };
+		1FEC25131DBE76D200AFEC41 /* Dinner_Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC25121DBE76D200AFEC41 /* Dinner_Dish.swift */; };
 		1FEF7C7E1DB4187600407CBC /* GroceriesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF7C7D1DB4187600407CBC /* GroceriesInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FDA8B2D1DAD50C20030FA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FE87ADB1DAEBB240046DB24 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1FEC25121DBE76D200AFEC41 /* Dinner_Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dinner_Dish.swift; sourceTree = "<group>"; };
 		1FEF7C7D1DB4187600407CBC /* GroceriesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceriesInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 				1F8959F21DB16B6C00BC6D34 /* Lunch.swift */,
 				1F0FA9F01DB26DF30049A6ED /* Points.swift */,
 				1F30E3051DBD4925006A413F /* Dinner.swift */,
+				1FEC25121DBE76D200AFEC41 /* Dinner_Dish.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEC25131DBE76D200AFEC41 /* Dinner_Dish.swift in Sources */,
 				1F54D8151DB3C0D000519334 /* PaymentInterfaceController.swift in Sources */,
 				1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */,
 				1FDA8B2A1DAD50C20030FA6B /* NotificationController.swift in Sources */,

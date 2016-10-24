@@ -81,10 +81,6 @@ class NotificationController: WKUserNotificationInterfaceController {
             self.D_subtitledish1.setText(menu.dishsubtitle1)
             self.D_dishimage1.setImageNamed(menu.dishimagename1)
             self.D_cookingtimedish1.setText(menu.dishcookingtime1)
-            self.D_titledish2.setText(menu.dishtitle2)
-            self.D_subtitledish2.setText(menu.dishsubtitle2)
-            self.D_dishimage2.setImageNamed(menu.dishimagename2)
-            self.D_cookingtimedish1.setText(menu.dishcookingtime2)
         }
         completionHandler(.custom)
     }

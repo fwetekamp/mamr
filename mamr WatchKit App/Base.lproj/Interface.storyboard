@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SzG-QD-DVv">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SzG-QD-DVv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
@@ -183,14 +183,14 @@
             </objects>
             <point key="canvasLocation" x="603" y="1042.5"/>
         </scene>
-        <!--Dinner_Start-->
+        <!--Dinner-->
         <scene sceneID="1bV-GQ-fZ1">
             <objects>
-                <controller identifier="Dinner_Start" id="cg2-iR-wfL">
+                <controller identifier="Dinner" id="cg2-iR-wfL">
                     <items>
                         <button width="1" alignment="left" title="Shop Groceries" id="c28-bR-Iyt">
                             <connections>
-                                <segue destination="svJ-VC-iyw" kind="push" id="JRx-t9-Gxz"/>
+                                <segue destination="IKa-eo-WkZ" kind="push" id="ELh-3h-GnW"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx">
@@ -219,7 +219,10 @@
                                             <label alignment="left" text="Type" id="x9s-dP-SDV">
                                                 <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
                                             </label>
-                                            <label alignment="right" text="Amount" id="NXH-tb-7Hx">
+                                            <label alignment="right" text="0" id="NXH-tb-7Hx">
+                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                                            </label>
+                                            <label alignment="right" text="unit" id="EYH-wT-RNa">
                                                 <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
                                             </label>
                                         </items>
@@ -228,6 +231,7 @@
                                         <outlet property="groceryamount" destination="NXH-tb-7Hx" id="lkV-da-rou"/>
                                         <outlet property="grocerytype" destination="x9s-dP-SDV" id="7Er-eN-T4P"/>
                                         <outlet property="table" destination="IQZ-pS-2VN" id="6Y5-oL-l5t"/>
+                                        <outlet property="unit" destination="EYH-wT-RNa" id="c2Y-dD-XDq"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -243,7 +247,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="946" y="633"/>
+            <point key="canvasLocation" x="1290" y="978"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="h51-m9-opd">
@@ -287,7 +291,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="260" y="1546"/>
+            <point key="canvasLocation" x="260" y="1861"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="RHo-0m-zKd">
@@ -310,33 +314,18 @@
                         <label alignment="center" text="478kcal - 9.40€" id="Lwm-C1-Dhu">
                             <fontDescription key="font" type="system" pointSize="10"/>
                         </label>
-                        <separator alignment="left" id="yJZ-ah-hTT"/>
-                        <label alignment="left" text="Dish2" id="zW9-EG-a1e">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
-                        </label>
-                        <label height="10" alignment="center" text="Subtitle" id="ngM-1t-4G2">
-                            <fontDescription key="font" type="system" weight="thin" pointSize="10"/>
-                        </label>
-                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="bkK-2t-1gH"/>
-                        <label alignment="center" text="583kcal - 8.30€" id="kr7-Dz-tmH">
-                            <fontDescription key="font" type="system" pointSize="10"/>
-                        </label>
                     </items>
                     <connections>
                         <outlet property="D_cookingtimedish1" destination="Lwm-C1-Dhu" id="PO9-yg-QYP"/>
-                        <outlet property="D_cookingtimedish2" destination="kr7-Dz-tmH" id="XjS-xW-bm4"/>
                         <outlet property="D_day" destination="FxU-au-Tow" id="U5p-4o-erC"/>
                         <outlet property="D_dishimage1" destination="2AR-g6-5dW" id="fQj-wO-MSW"/>
-                        <outlet property="D_dishimage2" destination="bkK-2t-1gH" id="hFJ-8U-bXz"/>
                         <outlet property="D_subtitledish1" destination="dIW-hp-4vr" id="Zl9-zO-GTQ"/>
-                        <outlet property="D_subtitledish2" destination="ngM-1t-4G2" id="y6v-qV-dUk"/>
                         <outlet property="D_titledish1" destination="edM-x1-OPz" id="j6W-Pd-r7g"/>
-                        <outlet property="D_titledish2" destination="zW9-EG-a1e" id="0Od-Yl-XP2"/>
                         <outlet property="Dinner_headline" destination="O5d-A9-1vg" id="XG8-mi-QCt"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="1546"/>
+            <point key="canvasLocation" x="603" y="1861"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="tqo-dN-3BI">
@@ -348,7 +337,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1335" y="633"/>
+            <point key="canvasLocation" x="1708" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="CZB-Up-Hxk">
@@ -360,7 +349,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1708" y="633"/>
+            <point key="canvasLocation" x="1989" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="TW3-w2-2I1">
@@ -372,7 +361,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="2098" y="633"/>
+            <point key="canvasLocation" x="2255" y="633"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="Odg-Qh-1kW">
@@ -494,9 +483,35 @@
             </objects>
             <point key="canvasLocation" x="1335" y="310"/>
         </scene>
+        <!--Dinner_Start-->
+        <scene sceneID="sy2-Bp-vT2">
+            <objects>
+                <controller identifier="Dinner_Start" id="IKa-eo-WkZ" customClass="GroceriesInterfaceController" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label height="27" alignment="center" text="For how many?" numberOfLines="3" id="Zh0-4c-aoR">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <picker height="50" alignment="left" id="0p4-V6-3JV">
+                            <connections>
+                                <action selector="settime:" destination="IKa-eo-WkZ" id="ql4-x1-FR1"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Confirm" id="fMi-jX-MkN">
+                            <connections>
+                                <segue destination="svJ-VC-iyw" kind="push" id="7ic-iX-Tw5"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="AddressPicker" destination="0p4-V6-3JV" id="BGz-0N-v7z"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="942" y="978"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="zj7-V1-IeZ"/>
-        <segue reference="fWs-m6-xa3"/>
+        <segue reference="U7o-Sq-nh3"/>
     </inferredMetricsTieBreakers>
 </document>

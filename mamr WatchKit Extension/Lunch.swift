@@ -20,7 +20,7 @@ class Lunch: NSObject { //class to initiate declare the luch object
     var dishsubtitle2: String = ""
     var dishimagename2: String = ""
     
-        init(day: Int) //initialization function; sets required initialization values
+        init(day: Int) //Setting lunch menu depending on weekday
         {
             weekday = day
             switch weekday {

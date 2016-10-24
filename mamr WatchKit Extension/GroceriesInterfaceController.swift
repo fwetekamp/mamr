@@ -15,18 +15,33 @@ class GroceriesInterfaceController: WKInterfaceController {
     
     @IBOutlet var table: WKInterfaceTable!
 
-    let ingredientsname = ["Pasta", "Bacon", "Zucchini", "Parmesan", "Mushrooms", "Salt", "Pepper"]
-    let ingredientsamount = ["200g", "150g", "1", "50g", "150g", "10g", "10g"]
+
+    var ingredientsname:[String] = []
+    var ingredientsamount:[Int] = []
+    var measuringunit:[String] = []
+
     
     func loadTable() {
+        let date = NSDate()
+        let calendar = NSCalendar.autoupdatingCurrent
+        let datecomponents = calendar.dateComponents([.weekday], from: date as Date) //getting the current weekday
+        let weekday = datecomponents.weekday
+        let dish = Dinner_Dish.init(people: 3, Day: weekday!) //using dinner_dish to calculate ingredients amount
+        ingredientsname = dish.ingredients
+        print(dish.ingredients)
+        ingredientsamount = dish.ingredientsamount
+        measuringunit = dish.measuringunit
+
+        
         table.setRowTypes(["groceries"])
 
-        table.setNumberOfRows(ingredientsname.count,
+        table.setNumberOfRows(ingredientsname.count, //setting up the table
                                 withRowType: "groceries")
         for (index, grocery) in ingredientsname.enumerated() {
             let row = table.rowController(at: index) as! RowController
             row.grocerytype.setText(grocery)
-            row.groceryamount.setText(ingredientsamount[index])
+            row.groceryamount.setText(String(ingredientsamount[index]))
+            row.unit.setText(measuringunit[index])
         }
     }
     override func awake(withContext context: Any?) {
