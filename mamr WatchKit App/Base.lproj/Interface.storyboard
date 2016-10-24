@@ -327,30 +327,33 @@
             </objects>
             <point key="canvasLocation" x="603" y="1861"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Step 1controller-->
         <scene sceneID="tqo-dN-3BI">
             <objects>
-                <controller id="w1Y-We-CDf">
+                <controller id="w1Y-We-CDf" customClass="step1controller" customModule="mamr_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="5Hs-Ez-bti"/>
                         <label alignment="center" text="Step 1" id="yQx-QN-zbK">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <label height="96" alignment="left" text="Instructions" numberOfLines="5" id="UxJ-Mn-3IA"/>
+                        <label alignment="left" text="Instructions" id="VGQ-9D-n62"/>
                         <button width="1" alignment="left" title="Done" id="UKP-gd-EZR">
                             <connections>
                                 <segue destination="W4e-7G-WTh" kind="push" id="Bfq-MF-ASh"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="instructions" destination="VGQ-9D-n62" id="C5C-ir-Y7U"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1590" y="987"/>
+            <point key="canvasLocation" x="1591" y="978"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Step 2controller-->
         <scene sceneID="CZB-Up-Hxk">
             <objects>
-                <controller id="W4e-7G-WTh">
+                <controller id="W4e-7G-WTh" customClass="step2controller" customModule="mamr_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="ps9-XG-1Lr"/>
                         <label alignment="center" text="Step 2" id="ovv-6i-aJr">
@@ -363,9 +366,12 @@
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="instructions" destination="GWT-Xx-e6Z" id="qfP-BS-KAv"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1885" y="978"/>
+            <point key="canvasLocation" x="1887" y="988"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="TW3-w2-2I1">

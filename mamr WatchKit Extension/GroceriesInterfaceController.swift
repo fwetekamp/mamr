@@ -19,6 +19,7 @@ class GroceriesInterfaceController: WKInterfaceController {
     var ingredientsamount:[Int] = []
     var measuringunit:[String] = []
     var people:Int = 0
+    var dish = Dinner_Dish.init(people: 0, Day: weekday.getweekday()) //using dinner_dish to calculate ingredients amount
 
     
     override func awake(withContext context: Any?) {
@@ -30,11 +31,8 @@ class GroceriesInterfaceController: WKInterfaceController {
 
     
     func loadTable() {
-        let date = NSDate()
-        let calendar = NSCalendar.autoupdatingCurrent
-        let datecomponents = calendar.dateComponents([.weekday], from: date as Date) //getting the current weekday
-        let weekday = datecomponents.weekday
-        let dish = Dinner_Dish.init(people: people, Day: weekday!) //using dinner_dish to calculate ingredients amount
+
+       dish = Dinner_Dish.init(people: people, Day: weekday.getweekday()) //using dinner_dish to calculate ingredients amount
         ingredientsname = dish.ingredients
         print(dish.ingredients)
         ingredientsamount = dish.ingredientsamount
@@ -51,7 +49,14 @@ class GroceriesInterfaceController: WKInterfaceController {
             row.groceryamount.setText(String(ingredientsamount[index]))
             row.unit.setText(measuringunit[index])
         }
+        
     }
+  /*  override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        if segueIdentifier == "grocerieslist" {
+            return(dish as Any?)
+        }
+        return dish
+    }*/
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

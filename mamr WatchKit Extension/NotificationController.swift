@@ -56,12 +56,8 @@ class NotificationController: WKUserNotificationInterfaceController {
 
 
     override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Swift.Void) {
-        let date = NSDate()
-        let calendar = NSCalendar.autoupdatingCurrent
-        let datecomponents = calendar.dateComponents([.weekday], from: date as Date) //getting the current weekday
-        let weekday = datecomponents.weekday
         if notification.request.content.categoryIdentifier == "lunch_notification" { //branching by notification category
-            let menu = Lunch.init(day: weekday!)
+            let menu = Lunch.init(day: weekday.getweekday())
             self.notification_title.setText("Your lunch menu for")
             self.Lunch_headline.setText(menu.dayname)
             self.notificationdish1.setText(menu.dishtitle1)
@@ -74,7 +70,7 @@ class NotificationController: WKUserNotificationInterfaceController {
             self.dishimage2.setImageNamed(menu.dishimagename2)
         }
         else if notification.request.content.categoryIdentifier == "dinner_notification" {
-            let menu = Dinner.init(day: weekday!)
+            let menu = Dinner.init(day: weekday.getweekday())
             self.Dinner_headline.setText("Your dinner recipes for")
             self.D_day.setText(menu.dayname)
             self.D_titledish1.setText(menu.dishtitle1)
