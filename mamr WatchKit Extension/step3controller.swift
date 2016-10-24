@@ -10,12 +10,12 @@ import WatchKit
 import Foundation
 
 
-class step2controller: WKInterfaceController {
+class step3controller: WKInterfaceController {
     
     @IBOutlet var instructions: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
         let dish = Dinner(day: weekday.getweekday())
-        instructions.setText(dish.step2)
+        instructions.setText(dish.step3)
         super.awake(withContext: context)
     }
     override func willActivate() {

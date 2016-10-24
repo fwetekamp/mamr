@@ -22,7 +22,11 @@
                                 <action selector="ScheduleLunch" destination="SzG-QD-DVv" id="lNf-mt-8Vk"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Schedule Dinner" id="Sus-62-6Jm"/>
+                        <button width="1" alignment="left" title="Schedule Dinner" id="Sus-62-6Jm">
+                            <connections>
+                                <action selector="ScheduleDinner" destination="SzG-QD-DVv" id="ySG-sL-UEX"/>
+                            </connections>
+                        </button>
                         <button width="1" alignment="left" title="Today's Dinner" id="sIF-ty-0Fv">
                             <connections>
                                 <segue destination="cg2-iR-wfL" kind="push" id="LUa-fU-au3"/>
@@ -193,11 +197,7 @@
                                 <segue destination="IKa-eo-WkZ" kind="push" id="ELh-3h-GnW"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx">
-                            <connections>
-                                <segue destination="w1Y-We-CDf" kind="push" id="fWs-m6-xa3"/>
-                            </connections>
-                        </button>
+                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx"/>
                     </items>
                 </controller>
             </objects>
@@ -238,7 +238,7 @@
                         </table>
                         <button width="1" alignment="left" title="Done" id="XIu-D7-u4k">
                             <connections>
-                                <segue destination="w1Y-We-CDf" kind="push" id="U7o-Sq-nh3"/>
+                                <segue destination="NHW-ql-EZt" kind="push" id="nYj-FC-b7p"/>
                             </connections>
                         </button>
                     </items>
@@ -248,6 +248,28 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="1290" y="978"/>
+        </scene>
+        <!--Step 1controller-->
+        <scene sceneID="SD6-nl-NNE">
+            <objects>
+                <controller id="NHW-ql-EZt" customClass="step1controller" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Step 1" textAlignment="center" id="tmm-Eb-nX1">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <label height="83" alignment="left" text="instructions" numberOfLines="5" id="deC-kt-aqo"/>
+                        <button width="1" alignment="left" title="Next" id="bSR-1y-Naa">
+                            <connections>
+                                <segue destination="YNZ-L8-ucN" kind="push" id="iXM-5C-OVe"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="instructions" destination="deC-kt-aqo" id="ZWl-0p-91Y"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1614" y="979"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="h51-m9-opd">
@@ -326,72 +348,6 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="603" y="1861"/>
-        </scene>
-        <!--Step 1controller-->
-        <scene sceneID="tqo-dN-3BI">
-            <objects>
-                <controller id="w1Y-We-CDf" customClass="step1controller" customModule="mamr_WatchKit_Extension">
-                    <items>
-                        <table alignment="left" id="5Hs-Ez-bti"/>
-                        <label alignment="center" text="Step 1" id="yQx-QN-zbK">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
-                        </label>
-                        <label alignment="left" text="Instructions" id="VGQ-9D-n62"/>
-                        <button width="1" alignment="left" title="Done" id="UKP-gd-EZR">
-                            <connections>
-                                <segue destination="W4e-7G-WTh" kind="push" id="Bfq-MF-ASh"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="instructions" destination="VGQ-9D-n62" id="C5C-ir-Y7U"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="1591" y="978"/>
-        </scene>
-        <!--Step 2controller-->
-        <scene sceneID="CZB-Up-Hxk">
-            <objects>
-                <controller id="W4e-7G-WTh" customClass="step2controller" customModule="mamr_WatchKit_Extension">
-                    <items>
-                        <table alignment="left" id="ps9-XG-1Lr"/>
-                        <label alignment="center" text="Step 2" id="ovv-6i-aJr">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
-                        </label>
-                        <label height="96" alignment="left" text="Instructions" numberOfLines="5" id="GWT-Xx-e6Z"/>
-                        <button width="1" alignment="left" title="Done" id="lUP-ai-ZRU">
-                            <connections>
-                                <segue destination="pQr-1k-Wo6" kind="push" id="7sy-XX-uoo"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="instructions" destination="GWT-Xx-e6Z" id="qfP-BS-KAv"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="1887" y="988"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="TW3-w2-2I1">
-            <objects>
-                <controller id="pQr-1k-Wo6">
-                    <items>
-                        <table alignment="left" id="2NC-mn-DQV"/>
-                        <label alignment="center" text="Step 3" id="Aqy-3m-h1z">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
-                        </label>
-                        <label height="96" alignment="left" text="Instructions" numberOfLines="5" id="f80-sC-1Cz"/>
-                        <button width="1" alignment="left" title="Done" id="tXw-af-jle">
-                            <connections>
-                                <segue destination="lOg-3n-8H4" kind="push" id="0gW-j8-R8Z"/>
-                            </connections>
-                        </button>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="2147" y="978"/>
         </scene>
         <!--Oder confirmed Controller-->
         <scene sceneID="wTq-fi-5B1">
@@ -553,10 +509,53 @@
             </objects>
             <point key="canvasLocation" x="2487" y="972"/>
         </scene>
+        <!--Step 2controller-->
+        <scene sceneID="gsf-ER-EPp">
+            <objects>
+                <controller id="YNZ-L8-ucN" customClass="step2controller" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Step 2" textAlignment="center" id="Ru1-mG-Ec8">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <label height="83" alignment="left" text="instructions" numberOfLines="5" id="E1g-Uj-bMx"/>
+                        <button width="1" alignment="left" title="Next" id="PEj-Ld-lgC">
+                            <connections>
+                                <segue destination="DyW-1P-9b8" kind="push" id="J1z-L4-e0L"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="instructions" destination="E1g-Uj-bMx" id="CTl-8p-AMK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1905" y="979"/>
+        </scene>
+        <!--Step 3controller-->
+        <scene sceneID="WPd-TR-vfC">
+            <objects>
+                <controller id="DyW-1P-9b8" customClass="step3controller" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Step 3" textAlignment="center" id="MVz-tW-1M7">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <label height="83" alignment="left" text="instructions" numberOfLines="5" id="X7y-wY-Ofs"/>
+                        <button width="1" alignment="left" title="Next" id="2ha-Yb-5e6">
+                            <connections>
+                                <segue destination="lOg-3n-8H4" kind="push" id="jC2-w0-ohK"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="instructions" destination="X7y-wY-Ofs" id="3Wp-aF-uO8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="2157" y="979"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Smv-9k-Ah9"/>
-        <segue reference="U7o-Sq-nh3"/>
         <segue reference="zj7-V1-IeZ"/>
     </inferredMetricsTieBreakers>
 </document>

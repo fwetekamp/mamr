@@ -81,14 +81,13 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
     @IBAction func ScheduleLunch() {
         let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
         let notificationManager = NotificationsHandler()
         
         notificationManager.lunchnotificationcategories()
         
         let content = UNMutableNotificationContent() //creating the notification
         content.title = "Your Lunch"
-        content.body = "Tap to see your for today."
+        content.body = "Tap to see your lunch for today."
         content.categoryIdentifier = "lunch_notification"
         content.sound = UNNotificationSound.default()
         
@@ -120,6 +119,47 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
     }
 
+    @IBAction func ScheduleDinner() {
+        let center = UNUserNotificationCenter.current()
+        let notificationManager = NotificationsHandler()
+        
+        notificationManager.lunchnotificationcategories()
+        
+        let content = UNMutableNotificationContent() //creating the notification
+        content.title = "Your Dinner"
+        content.body = "Tap to see your dinner for today."
+        content.categoryIdentifier = "dinner_notification"
+        content.sound = UNNotificationSound.default()
+        
+        var dateComponents1 = DateComponents() //scheduling for 10:30 AM
+        var dateComponents2 = DateComponents() //schedling for 11:00 AM
+        
+        for i in 2..<7 {  //scheduling for lunch notifications for weekdays
+            dateComponents1.weekday = i
+            dateComponents1.hour = 16
+            dateComponents1.minute = 30
+            dateComponents2.weekday = i
+            dateComponents2.hour = 17
+            dateComponents2.minute = 00
+            let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents1, repeats: true)
+            let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
+            
+            let request1 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger1)
+            let request2 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger2)
+            center.add(request1) { (error: Error?) in
+                print(error)
+            }
+            center.add(request2) { (error: Error?) in
+                print(error)
+            }
+            print("notifications scheduled")
+        }
+        presentAlert(withTitle: "Success!", message: "I will help you with recommendations to eat clean and healthy.", preferredStyle: WKAlertControllerStyle.alert, actions: [WKAlertAction.init(title: "Got it", style: WKAlertActionStyle.default, handler: {
+        })])
+        
+        
+        
+    }
     func  initiliazebalance(){ //points are saved, the last array element will be set to 0
         let user1 = Points(balance: 0)
         points += [user1!]
