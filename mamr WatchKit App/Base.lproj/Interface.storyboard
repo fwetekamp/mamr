@@ -192,12 +192,19 @@
             <objects>
                 <controller identifier="Dinner" id="cg2-iR-wfL">
                     <items>
+                        <label alignment="center" text="Today's Dinner" id="rTS-vE-ITT">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
                         <button width="1" alignment="left" title="Shop Groceries" id="c28-bR-Iyt">
                             <connections>
                                 <segue destination="IKa-eo-WkZ" kind="push" id="ELh-3h-GnW"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx"/>
+                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx">
+                            <connections>
+                                <segue destination="NHW-ql-EZt" kind="push" id="ijR-sW-Bmz"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -257,7 +264,14 @@
                         <label alignment="center" text="Step 1" textAlignment="center" id="tmm-Eb-nX1">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <timer alignment="left" id="8xE-0D-Tiy"/>
+                        <timer alignment="center" id="8xE-0D-Tiy">
+                            <calendarUnit key="units" minute="YES" second="YES"/>
+                        </timer>
+                        <button width="1" alignment="left" title="Start" id="Sy8-ym-umm">
+                            <connections>
+                                <action selector="starttimer" destination="NHW-ql-EZt" id="cvl-zO-2Q7"/>
+                            </connections>
+                        </button>
                         <label height="83" alignment="left" text="instructions" numberOfLines="5" id="deC-kt-aqo"/>
                         <button width="1" alignment="left" title="Next" id="bSR-1y-Naa">
                             <connections>
@@ -268,6 +282,7 @@
                     <connections>
                         <outlet property="cookingtimer" destination="8xE-0D-Tiy" id="HL4-dc-hIq"/>
                         <outlet property="instructions" destination="deC-kt-aqo" id="ZWl-0p-91Y"/>
+                        <outlet property="startbutton" destination="Sy8-ym-umm" id="l0R-ui-lcF"/>
                     </connections>
                 </controller>
             </objects>
@@ -558,6 +573,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Smv-9k-Ah9"/>
+        <segue reference="ijR-sW-Bmz"/>
         <segue reference="zj7-V1-IeZ"/>
     </inferredMetricsTieBreakers>
 </document>

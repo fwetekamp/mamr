@@ -12,17 +12,33 @@ import Foundation
 
 class step1controller: WKInterfaceController {
     let dish = Dinner(day: weekday.getweekday())
+    var timerrunning:Bool = false
+
 
     @IBOutlet var cookingtimer: WKInterfaceTimer!
     
+    @IBOutlet var startbutton: WKInterfaceButton!
+    @IBAction func starttimer() { //basic timer function
+        if (!timerrunning) {
+            cookingtimer.start()
+            startbutton.setTitle("Pause")
+            timerrunning = true
+        }
+        else {
+        cookingtimer.stop()
+        timerrunning = false
+        startbutton.setTitle("Start")
+        }
+    }
+    
     @IBOutlet var instructions: WKInterfaceLabel!
-override func awake(withContext context: Any?) {
+    override func awake(withContext context: Any?) {
         instructions.setText(dish.step1.step)
     let date = Date(timeIntervalSinceNow: TimeInterval(dish.step1.time*60+1)) //configuring the cookingtimer
     cookingtimer.setHidden(!dish.step1.timerrequired) //cookingtimer will be hidden if false flag is set on step object
 
     cookingtimer.setDate(date)
-    
+
         super.awake(withContext: context)
     
     
