@@ -267,15 +267,19 @@
                         <timer alignment="center" id="8xE-0D-Tiy">
                             <calendarUnit key="units" minute="YES" second="YES"/>
                         </timer>
-                        <button width="1" alignment="left" title="Start" id="Sy8-ym-umm">
+                        <button width="1" height="21" alignment="left" title="Start" id="Sy8-ym-umm">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                             <connections>
                                 <action selector="starttimer" destination="NHW-ql-EZt" id="cvl-zO-2Q7"/>
                             </connections>
                         </button>
-                        <label height="83" alignment="left" text="instructions" numberOfLines="5" id="deC-kt-aqo"/>
+                        <label width="136" height="134" alignment="left" numberOfLines="9" id="deC-kt-aqo">
+                            <string key="text">Start boiling 3L of salt water. Put olive oil in a pan (mid heat), add tomato paste &amp; pepper flakes; reduce heat to low &amp; stir until fragrant for 4 min. Stir in tomatoes &amp; remove from heat.</string>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
                         <button width="1" alignment="left" title="Next" id="bSR-1y-Naa">
                             <connections>
-                                <segue destination="YNZ-L8-ucN" kind="push" id="iXM-5C-OVe"/>
+                                <segue destination="HSb-qq-yW4" kind="push" id="UrB-Ud-E4k"/>
                             </connections>
                         </button>
                     </items>
@@ -286,7 +290,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1614" y="979"/>
+            <point key="canvasLocation" x="1582" y="1000"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="h51-m9-opd">
@@ -527,53 +531,81 @@
             <point key="canvasLocation" x="2487" y="972"/>
         </scene>
         <!--Step 2controller-->
-        <scene sceneID="gsf-ER-EPp">
+        <scene sceneID="4Mf-vm-M4f">
             <objects>
-                <controller id="YNZ-L8-ucN" customClass="step2controller" customModule="mamr_WatchKit_Extension">
+                <controller id="HSb-qq-yW4" customClass="step2controller" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Step 2" textAlignment="center" id="Ru1-mG-Ec8">
+                        <label alignment="center" text="Step 2" textAlignment="center" id="8sE-dG-Fbl">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <label height="83" alignment="left" text="instructions" numberOfLines="5" id="E1g-Uj-bMx"/>
-                        <button width="1" alignment="left" title="Next" id="PEj-Ld-lgC">
+                        <timer alignment="center" id="kFX-KE-kJ5">
+                            <calendarUnit key="units" minute="YES" second="YES"/>
+                        </timer>
+                        <button width="1" height="21" alignment="left" title="Start" id="ZRB-jk-Nab">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                             <connections>
-                                <segue destination="DyW-1P-9b8" kind="push" id="J1z-L4-e0L"/>
+                                <action selector="starttimer" destination="HSb-qq-yW4" id="N3B-ES-myf"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="134" alignment="left" numberOfLines="9" id="h29-Iu-M50">
+                            <string key="text">Start boiling 3L of salt water. Put olive oil in a pan (mid heat), add tomato paste &amp; pepper flakes; reduce heat to low &amp; stir until fragrant for 4 min. Stir in tomatoes &amp; remove from heat.</string>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <button width="1" alignment="left" title="Next" id="eER-wa-2p1">
+                            <connections>
+                                <segue destination="vWq-cZ-a4l" kind="push" id="IHO-am-28l"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="instructions" destination="E1g-Uj-bMx" id="CTl-8p-AMK"/>
+                        <outlet property="cookingtimer" destination="kFX-KE-kJ5" id="Els-CT-9Q9"/>
+                        <outlet property="instructions" destination="h29-Iu-M50" id="DvG-Zk-i0m"/>
+                        <outlet property="startbutton" destination="ZRB-jk-Nab" id="lIg-9K-9OI"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1905" y="979"/>
+            <point key="canvasLocation" x="1871" y="1000"/>
         </scene>
         <!--Step 3controller-->
-        <scene sceneID="WPd-TR-vfC">
+        <scene sceneID="Emn-41-ocx">
             <objects>
-                <controller id="DyW-1P-9b8" customClass="step3controller" customModule="mamr_WatchKit_Extension">
+                <controller id="vWq-cZ-a4l" customClass="step3controller" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Step 3" textAlignment="center" id="MVz-tW-1M7">
+                        <label alignment="center" text="Step 3" textAlignment="center" id="SAZ-xa-o64">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <label height="83" alignment="left" text="instructions" numberOfLines="5" id="X7y-wY-Ofs"/>
-                        <button width="1" alignment="left" title="Next" id="2ha-Yb-5e6">
+                        <timer alignment="center" id="XDs-Al-pKM">
+                            <calendarUnit key="units" minute="YES" second="YES"/>
+                        </timer>
+                        <button width="1" height="21" alignment="left" title="Start" id="88c-sN-CA3">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                             <connections>
-                                <segue destination="lOg-3n-8H4" kind="push" id="jC2-w0-ohK"/>
+                                <action selector="starttimer" destination="vWq-cZ-a4l" id="9Eu-R1-Yng"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="134" alignment="left" numberOfLines="9" id="oJy-mB-vmR">
+                            <string key="text">Start boiling 3L of salt water. Put olive oil in a pan (mid heat), add tomato paste &amp; pepper flakes; reduce heat to low &amp; stir until fragrant for 4 min. Stir in tomatoes &amp; remove from heat.</string>
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <button width="1" alignment="left" title="Next" id="VVk-yl-bEg">
+                            <connections>
+                                <segue destination="lOg-3n-8H4" kind="push" id="jNV-Yi-86Q"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="instructions" destination="X7y-wY-Ofs" id="3Wp-aF-uO8"/>
+                        <outlet property="cookingtimer" destination="XDs-Al-pKM" id="Lrx-If-tcc"/>
+                        <outlet property="instructions" destination="oJy-mB-vmR" id="mgh-lw-Q6j"/>
+                        <outlet property="startbutton" destination="88c-sN-CA3" id="CGc-Py-zs6"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="2157" y="979"/>
+            <point key="canvasLocation" x="2174" y="1000"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Smv-9k-Ah9"/>
-        <segue reference="ijR-sW-Bmz"/>
         <segue reference="zj7-V1-IeZ"/>
+        <segue reference="Smv-9k-Ah9"/>
+        <segue reference="nYj-FC-b7p"/>
     </inferredMetricsTieBreakers>
 </document>

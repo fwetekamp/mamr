@@ -19,13 +19,20 @@ class step1controller: WKInterfaceController {
     
     @IBOutlet var startbutton: WKInterfaceButton!
     @IBAction func starttimer() { //basic timer function
+        
         if (!timerrunning) {
+            let date = Date(timeIntervalSinceNow: TimeInterval(dish.step1.time*60)) //configuring the cookingtimer
+            cookingtimer.setDate(date)
+
             cookingtimer.start()
-            startbutton.setTitle("Pause")
+            startbutton.setTitle("Reset") //have to do a reset cause pause is not possible
             timerrunning = true
         }
         else {
         cookingtimer.stop()
+            let date = Date(timeIntervalSinceNow: TimeInterval(dish.step1.time*60+1)) //configuring the cookingtimer
+            cookingtimer.setDate(date)
+
         timerrunning = false
         startbutton.setTitle("Start")
         }
@@ -34,11 +41,10 @@ class step1controller: WKInterfaceController {
     @IBOutlet var instructions: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
         instructions.setText(dish.step1.step)
-    let date = Date(timeIntervalSinceNow: TimeInterval(dish.step1.time*60+1)) //configuring the cookingtimer
+    startbutton.setHidden(!dish.step1.timerrequired)
     cookingtimer.setHidden(!dish.step1.timerrequired) //cookingtimer will be hidden if false flag is set on step object
-
-    cookingtimer.setDate(date)
-
+        let date = Date(timeIntervalSinceNow: TimeInterval(dish.step1.time*60+1)) //configuring the cookingtimer
+        cookingtimer.setDate(date)
         super.awake(withContext: context)
     
     
