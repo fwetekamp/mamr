@@ -12,6 +12,7 @@
 		1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */; };
 		1F54D8151DB3C0D000519334 /* PaymentInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8141DB3C0D000519334 /* PaymentInterfaceController.swift */; };
 		1F54D8171DB3C29000519334 /* Oder_confirmed_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8161DB3C29000519334 /* Oder_confirmed_Controller.swift */; };
+		1F67FA171DBFDD7C005A6D26 /* cookingstep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F67FA161DBFDD7C005A6D26 /* cookingstep.swift */; };
 		1F8959ED1DB1546400BC6D34 /* NotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959EC1DB1546400BC6D34 /* NotificationsHandler.swift */; };
 		1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959F21DB16B6C00BC6D34 /* Lunch.swift */; };
 		1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */; };
@@ -91,6 +92,7 @@
 		1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsInferfaceController.swift; sourceTree = "<group>"; };
 		1F54D8141DB3C0D000519334 /* PaymentInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentInterfaceController.swift; sourceTree = "<group>"; };
 		1F54D8161DB3C29000519334 /* Oder_confirmed_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oder_confirmed_Controller.swift; sourceTree = "<group>"; };
+		1F67FA161DBFDD7C005A6D26 /* cookingstep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cookingstep.swift; sourceTree = "<group>"; };
 		1F8959EC1DB1546400BC6D34 /* NotificationsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsHandler.swift; sourceTree = "<group>"; };
 		1F8959F21DB16B6C00BC6D34 /* Lunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lunch.swift; sourceTree = "<group>"; };
 		1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryTimeInterfaceController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				1F0FA9F01DB26DF30049A6ED /* Points.swift */,
 				1F30E3051DBD4925006A413F /* Dinner.swift */,
 				1FEC25121DBE76D200AFEC41 /* Dinner_Dish.swift */,
+				1F67FA161DBFDD7C005A6D26 /* cookingstep.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				1FB9CAC91DBE9C020002C65C /* peoplepickerInterfacecontroller.swift in Sources */,
 				1FB9CAD31DBEC5F70002C65C /* step3controller.swift in Sources */,
 				1FC9E3BA1DBD3555006B3FF3 /* RowController.swift in Sources */,
+				1F67FA171DBFDD7C005A6D26 /* cookingstep.swift in Sources */,
 				1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */,
 				1F54D8171DB3C29000519334 /* Oder_confirmed_Controller.swift in Sources */,
 				1FB9CACF1DBEBDFA0002C65C /* step1controller.swift in Sources */,

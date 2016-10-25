@@ -11,12 +11,21 @@ import Foundation
 
 
 class step1controller: WKInterfaceController {
+    let dish = Dinner(day: weekday.getweekday())
+
+    @IBOutlet var cookingtimer: WKInterfaceTimer!
     
     @IBOutlet var instructions: WKInterfaceLabel!
 override func awake(withContext context: Any?) {
-       let dish = Dinner(day: weekday.getweekday())
-        instructions.setText(dish.step1)
+        instructions.setText(dish.step1.step)
+    let date = Date(timeIntervalSinceNow: TimeInterval(dish.step1.time*60+1)) //configuring the cookingtimer
+    cookingtimer.setHidden(!dish.step1.timerrequired) //cookingtimer will be hidden if false flag is set on step object
+
+    cookingtimer.setDate(date)
+    
         super.awake(withContext: context)
+    
+    
     }
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

@@ -15,7 +15,7 @@ class step2controller: WKInterfaceController {
     @IBOutlet var instructions: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
         let dish = Dinner(day: weekday.getweekday())
-        instructions.setText(dish.step2)
+        instructions.setText(dish.step2.step)
         super.awake(withContext: context)
     }
     override func willActivate() {

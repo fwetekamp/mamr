@@ -257,6 +257,7 @@
                         <label alignment="center" text="Step 1" textAlignment="center" id="tmm-Eb-nX1">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
+                        <timer alignment="left" id="8xE-0D-Tiy"/>
                         <label height="83" alignment="left" text="instructions" numberOfLines="5" id="deC-kt-aqo"/>
                         <button width="1" alignment="left" title="Next" id="bSR-1y-Naa">
                             <connections>
@@ -265,6 +266,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="cookingtimer" destination="8xE-0D-Tiy" id="HL4-dc-hIq"/>
                         <outlet property="instructions" destination="deC-kt-aqo" id="ZWl-0p-91Y"/>
                     </connections>
                 </controller>
