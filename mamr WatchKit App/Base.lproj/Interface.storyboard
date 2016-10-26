@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SzG-QD-DVv">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SzG-QD-DVv">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -59,6 +62,7 @@
                     </items>
                     <connections>
                         <outlet property="balancelabelhome" destination="6LZ-RG-FQu" id="8ab-Zt-teK"/>
+                        <outlet property="dinnerhome" destination="sIF-ty-0Fv" id="Zf6-kl-YoE"/>
                     </connections>
                 </controller>
             </objects>
@@ -143,23 +147,24 @@
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="mamr_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label height="9" alignment="left" text="Your lunch for" id="VOJ-qu-oMI">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                        <label height="8" alignment="center" text="Your Lunch for" textAlignment="center" id="eow-Ro-y8y">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="10"/>
                         </label>
-                        <label height="23" alignment="left" text="Today" id="ihn-KQ-aRA">
+                        <label height="22" alignment="center" text="Wednesday" textAlignment="center" id="Ke0-AJ-BCo">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="22"/>
                         </label>
-                        <label height="16" alignment="left" text="Dish1" id="rUK-Be-KbG">
+                        <separator alignment="left" alpha="0.14999999999999999" id="A9T-gW-ZCR"/>
+                        <label alignment="center" text="Dish1" id="Gk2-2t-4QI">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
-                        <label height="8" alignment="center" text="Subtitle" id="AjC-PY-vwZ">
+                        <label height="10" alignment="center" text="Subtitle" id="AjC-PY-vwZ">
                             <fontDescription key="font" type="system" weight="light" pointSize="10"/>
                         </label>
                         <imageView alignment="left" image="Lunch_Day1_Dish1" id="mol-AX-LSd"/>
                         <label alignment="center" text="478kcal - 9.40€" id="XCj-Wy-3Mm">
                             <fontDescription key="font" type="system" pointSize="10"/>
                         </label>
-                        <separator alignment="left" id="WwF-kU-ukN"/>
+                        <separator alignment="left" alpha="0.14999999999999999" id="WwF-kU-ukN"/>
                         <label alignment="left" text="Dish2" id="EL7-Qk-Lep">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
@@ -172,11 +177,10 @@
                         </label>
                     </items>
                     <connections>
-                        <outlet property="Lunch_headline" destination="ihn-KQ-aRA" id="X78-ga-JkE"/>
+                        <outlet property="day" destination="Ke0-AJ-BCo" id="VQV-8Y-mKD"/>
                         <outlet property="dishimage1" destination="mol-AX-LSd" id="Si9-nq-zd8"/>
                         <outlet property="dishimage2" destination="Yo6-gW-YGW" id="0da-8g-9fy"/>
-                        <outlet property="notification_title" destination="VOJ-qu-oMI" id="XKE-h9-YYi"/>
-                        <outlet property="notificationdish1" destination="rUK-Be-KbG" id="wKP-9u-9ez"/>
+                        <outlet property="notificationdish1" destination="Gk2-2t-4QI" id="KX3-zC-gJe"/>
                         <outlet property="notificationdish2" destination="EL7-Qk-Lep" id="6an-Hz-TZi"/>
                         <outlet property="subtitle_dish1" destination="AjC-PY-vwZ" id="YDI-n7-32d"/>
                         <outlet property="subtitle_dish2" destination="UOR-9C-AkX" id="oZ1-hQ-yLx"/>
@@ -185,37 +189,56 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="1042.5"/>
+            <point key="canvasLocation" x="603" y="1044"/>
         </scene>
         <!--Dinner-->
         <scene sceneID="1bV-GQ-fZ1">
             <objects>
-                <controller identifier="Dinner" id="cg2-iR-wfL">
+                <controller identifier="Dinner" id="cg2-iR-wfL" customClass="DinnerHome" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Today's Dinner" id="rTS-vE-ITT">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        <label height="10" alignment="center" text="Today's Dinner" textAlignment="center" id="ta3-nM-Rry">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="10"/>
                         </label>
-                        <button width="1" alignment="left" title="Shop Groceries" id="c28-bR-Iyt">
+                        <separator alignment="left" alpha="0.14999999999999999" id="nIX-Ou-6fn"/>
+                        <label height="14" alignment="center" text="Dish1" id="VHC-EX-cKI">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
+                        </label>
+                        <label height="11" alignment="center" text="Subtitle" id="Ymw-5i-My9">
+                            <fontDescription key="font" type="system" weight="light" pointSize="10"/>
+                        </label>
+                        <imageView alignment="left" image="Dinner_Day1_Dish1" id="K5a-qv-9y1"/>
+                        <label alignment="center" text="25min" id="SLi-Nu-i4l">
+                            <fontDescription key="font" type="system" weight="light" pointSize="10"/>
+                        </label>
+                        <button width="1" height="25" alignment="left" title="Shop Groceries" id="c28-bR-Iyt">
+                            <fontDescription key="font" type="system" weight="light" pointSize="13"/>
                             <connections>
                                 <segue destination="IKa-eo-WkZ" kind="push" id="ELh-3h-GnW"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Show Recipe" id="d5g-NW-txx">
+                        <button width="1" height="25" alignment="left" title="Show Recipe" id="d5g-NW-txx">
+                            <fontDescription key="font" type="system" weight="light" pointSize="13"/>
                             <connections>
                                 <segue destination="NHW-ql-EZt" kind="push" id="ijR-sW-Bmz"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="cookingtime" destination="SLi-Nu-i4l" id="U5j-Qh-fJp"/>
+                        <outlet property="dishimage" destination="K5a-qv-9y1" id="X8m-D8-6MA"/>
+                        <outlet property="dishname" destination="VHC-EX-cKI" id="I8b-B2-4Il"/>
+                        <outlet property="dishsubtitle" destination="Ymw-5i-My9" id="HAv-Lq-Gxf"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="633"/>
+            <point key="canvasLocation" x="603" y="604.5"/>
         </scene>
         <!--grocerieslist-->
         <scene sceneID="HIV-eM-V8K">
             <objects>
                 <controller identifier="grocerieslist" id="svJ-VC-iyw" customClass="GroceriesInterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Grocery List" id="dYm-iy-k0t">
+                        <label alignment="center" text="Grocery List" id="dYm-iy-k0t">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
                         <table alignment="left" id="s8m-rs-M8k">
@@ -313,17 +336,6 @@
                         <label height="11" alignment="center" text="478kcal - 9.40€" id="Zwk-Ya-ZFG">
                             <fontDescription key="font" type="system" pointSize="9"/>
                         </label>
-                        <separator alignment="left" id="mUw-ur-MAG"/>
-                        <label alignment="center" text="2. Grilled Chicken" id="ZIO-xx-pUi">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
-                        </label>
-                        <label height="10" alignment="center" text="with mushroom sauce" id="BIS-6P-hrF">
-                            <fontDescription key="font" type="system" weight="light" pointSize="9"/>
-                        </label>
-                        <imageView alignment="left" image="Lunch_Day1_Dish2" id="g6F-Eh-uHq"/>
-                        <label height="10" alignment="center" text="583kcal - 8.30€" id="Ebg-Lh-Zho">
-                            <fontDescription key="font" type="system" weight="thin" pointSize="9"/>
-                        </label>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="dinner_notification" id="wHB-bC-P1h">
                         <color key="sashColor" red="0.17823024609999999" green="0.17823024609999999" blue="0.17823024609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -334,23 +346,24 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="260" y="1861"/>
+            <point key="canvasLocation" x="260" y="1530"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="RHo-0m-zKd">
             <objects>
                 <controller id="W5t-CJ-L7X" customClass="NotificationController" customModule="mamr_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label height="9" alignment="left" text="Your dinner for" id="O5d-A9-1vg">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                        <label height="9" alignment="center" text="Your dinner for" id="O5d-A9-1vg">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="10"/>
                         </label>
-                        <label height="23" alignment="left" text="Today" id="FxU-au-Tow">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="22"/>
+                        <label height="18" alignment="center" text="Today" id="FxU-au-Tow">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <label height="16" alignment="left" text="Dish1" id="edM-x1-OPz">
+                        <separator alignment="left" alpha="0.10000000000000001" id="O62-ob-B8H"/>
+                        <label alignment="center" text="Dish1" id="edM-x1-OPz">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                         </label>
-                        <label height="8" alignment="center" text="Subtitle" id="dIW-hp-4vr">
+                        <label height="10" alignment="center" text="Subtitle" id="dIW-hp-4vr">
                             <fontDescription key="font" type="system" weight="light" pointSize="10"/>
                         </label>
                         <imageView alignment="left" image="Lunch_Day1_Dish1" id="2AR-g6-5dW"/>
@@ -364,11 +377,10 @@
                         <outlet property="D_dishimage1" destination="2AR-g6-5dW" id="fQj-wO-MSW"/>
                         <outlet property="D_subtitledish1" destination="dIW-hp-4vr" id="Zl9-zO-GTQ"/>
                         <outlet property="D_titledish1" destination="edM-x1-OPz" id="j6W-Pd-r7g"/>
-                        <outlet property="Dinner_headline" destination="O5d-A9-1vg" id="XG8-mi-QCt"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="1861"/>
+            <point key="canvasLocation" x="603" y="1525"/>
         </scene>
         <!--Oder confirmed Controller-->
         <scene sceneID="wTq-fi-5B1">
@@ -502,7 +514,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1021" y="633"/>
+            <point key="canvasLocation" x="1021" y="572"/>
         </scene>
         <!--Oder confirmed Controller-->
         <scene sceneID="7K9-Cd-fdK">
@@ -604,8 +616,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zj7-V1-IeZ"/>
         <segue reference="Smv-9k-Ah9"/>
-        <segue reference="nYj-FC-b7p"/>
+        <segue reference="ijR-sW-Bmz"/>
+        <segue reference="zj7-V1-IeZ"/>
     </inferredMetricsTieBreakers>
 </document>

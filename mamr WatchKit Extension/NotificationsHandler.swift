@@ -24,7 +24,7 @@ class NotificationsHandler: NSObject {
     
     func dinnernotificationcategories() { //declaring for actionable buttons for dinnernotifications
         
-        let getrecipe = UNNotificationAction(identifier: "getrecipe1", title: "Get Recipe", options: .foreground) //Button 1
+        let getrecipe = UNNotificationAction(identifier: "getrecipe", title: "Get Recipe", options: .foreground) //Button 1
         
         let dinnercategory = UNNotificationCategory(identifier: "dinner_notification", actions: [getrecipe], intentIdentifiers: []) //setting the notification category for dinner
         

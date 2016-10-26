@@ -15,7 +15,10 @@ import HealthKit
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
     
     var points = [Points]() //initializing balance array
+    var dateComponents_dinner_1 = DateComponents() //scheduling for 10:30 AM
+    var dateComponents_dinner_2 = DateComponents() //schedling for 11:00 AM
 
+    @IBOutlet var dinnerhome: WKInterfaceButton!
     
     @IBOutlet var balancelabelhome: WKInterfaceLabel!
     @IBAction func deletenotififcations() {
@@ -41,7 +44,6 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     }
     override func handleAction(withIdentifier identifier: String?, for notification: UNNotification) {
         print("Tapped in notification") //handling action notifications
-        print(identifier)
         switch(identifier){
         case "order1"?:
             print("tapped order1")
@@ -49,11 +51,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         case "order2"?:
             print("tapped order2")
             pushController(withName: "Lunch_Start", context: "segue")
-        case "getrecipe1"?:
-            print("tapped recipe1")
-            pushController(withName: "Dinner_Start", context: "segue")
-        case "getrecipe2"?:
-            print("tapped recipe2")
+        case "getrecipe"?:
+            print("tapped recipe")
             pushController(withName: "Dinner_Start", context: "segue")
         default: break
         }
@@ -61,6 +60,18 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        dinnerhome.setHidden(true)
+        dateComponents_dinner_1.hour = 19
+        dateComponents_dinner_1.minute = 00 //setting the dinner date components
+        let date = NSDate()
+        let calendar = NSCalendar.autoupdatingCurrent
+        let datecomponents = calendar.dateComponents([.hour], from: date as Date) //getting the current hour
+        let hour = datecomponents.hour
+
+        if (hour! >= dateComponents_dinner_1.hour!) { //Dinnerhome will only be shown after the notification has been sent.
+            dinnerhome.setHidden(false)
+        }
+        
         
         if let savedBalance = loadBalance(){  //loading point balance from NSCoder and printing it to main label
             points += savedBalance
@@ -131,17 +142,14 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         content.categoryIdentifier = "dinner_notification"
         content.sound = UNNotificationSound.default()
         
-        var dateComponents1 = DateComponents() //scheduling for 10:30 AM
         var dateComponents2 = DateComponents() //schedling for 11:00 AM
         
         for i in 2..<7 {  //scheduling for lunch notifications for weekdays
-            dateComponents1.weekday = i
-            dateComponents1.hour = 16
-            dateComponents1.minute = 30
+            dateComponents_dinner_1.weekday = i
             dateComponents2.weekday = i
             dateComponents2.hour = 17
             dateComponents2.minute = 00
-            let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents1, repeats: true)
+            let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents_dinner_1, repeats: true)
             let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
             
             let request1 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger1)

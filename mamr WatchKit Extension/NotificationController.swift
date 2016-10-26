@@ -15,7 +15,8 @@ import UIKit
 class NotificationController: WKUserNotificationInterfaceController {
 
     //Lunch Outlets
-    @IBOutlet var Lunch_headline: WKInterfaceLabel!
+    
+    @IBOutlet var day: WKInterfaceLabel!
     @IBOutlet var notificationdish1: WKInterfaceLabel!
     @IBOutlet var dishimage1: WKInterfaceImage!
     @IBOutlet var title_dish1: WKInterfaceLabel!
@@ -24,7 +25,6 @@ class NotificationController: WKUserNotificationInterfaceController {
     @IBOutlet var title_dish2: WKInterfaceLabel!
     @IBOutlet var subtitle_dish2: WKInterfaceLabel!
     @IBOutlet var dishimage2: WKInterfaceImage!
-    @IBOutlet var notification_title: WKInterfaceLabel!
     
     //Dinner Outlets
     @IBOutlet var Dinner_headline: WKInterfaceLabel!
@@ -58,8 +58,7 @@ class NotificationController: WKUserNotificationInterfaceController {
     override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Swift.Void) {
         if notification.request.content.categoryIdentifier == "lunch_notification" { //branching by notification category
             let menu = Lunch.init(day: weekday.getweekday())
-            self.notification_title.setText("Your lunch menu for")
-            self.Lunch_headline.setText(menu.dayname)
+            self.day.setText(menu.dayname)
             self.notificationdish1.setText(menu.dishtitle1)
             self.title_dish1.setText(menu.dishprice1)
             self.subtitle_dish1.setText(menu.dishsubtitle1)
@@ -71,7 +70,6 @@ class NotificationController: WKUserNotificationInterfaceController {
         }
         else if notification.request.content.categoryIdentifier == "dinner_notification" {
             let menu = Dinner.init(day: weekday.getweekday())
-            self.Dinner_headline.setText("Your dinner recipes for")
             self.D_day.setText(menu.dayname)
             self.D_titledish1.setText(menu.dishtitle1)
             self.D_subtitledish1.setText(menu.dishsubtitle1)
