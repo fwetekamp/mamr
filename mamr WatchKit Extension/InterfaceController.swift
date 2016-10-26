@@ -147,10 +147,10 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
             let request1 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger1)
             let request2 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger2)
             center.add(request1) { (error: Error?) in
-                print(error)
+                print(error ?? "all good")
             }
             center.add(request2) { (error: Error?) in
-                print(error)
+                print(error ?? "all good")
             }
             print("notifications scheduled")
         }

@@ -26,7 +26,7 @@ class DeliveryTimeInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        let pickerItems: [WKPickerItem] = itemList.map { //defining the picker
+        let pickerItems: [WKPickerItem] = itemList.map { //defining the picker for timeframes
             
             let pickerItem = WKPickerItem()
             pickerItem.caption = $0.0

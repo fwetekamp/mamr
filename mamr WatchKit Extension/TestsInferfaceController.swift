@@ -26,14 +26,6 @@ class TestsInferfaceController: WKInterfaceController {
         
         notificationManager.lunchnotificationcategories()
         
- /*       center.removeAllPendingNotificationRequests()
-        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in //requesting authorization for notifications on first launch
-            if granted {
-                print("Got the auth!")
-            } else {
-                print("I need the auth to spam you")
-            }
-        }*/
         
         let content = UNMutableNotificationContent() //creating the notification
         content.title = "Your Lunch"
@@ -46,15 +38,11 @@ class TestsInferfaceController: WKInterfaceController {
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
         
         center.add(request) { (error: Error?) in
-            print(error)
+            print(error ?? "all good") //if error is catched, I might as well print it
         print("notification sent")
         }
     }
     
-/*    func test(content: UNMutableNotificationContent) {
-
-        }
-    }*/
     @IBAction func TestDinner() { // dinner sample notification
         
         let notificationManager = NotificationsHandler()

@@ -42,12 +42,6 @@ class Dinner: NSObject { //defining the dinner recipes
             ingredientsamount = [200, 150, 1, 50, 150, 10, 10]
             measuringunit = ["g", "g", "x", "g", "g", "g", "g"]
             
-            
-            
-          /*  step1 = "Heat up of olive oil in a large skillet over medium heat. Add the garlic, and saute for a few minutes. Sprinkle in the red pepper flakes, and saute for another minute. Pour in the diced tomatoes and tomato sauce, and add the basil. Simmer for about 20 minutes, stirring occasionally."
-            step2 = "Meanwhile, bring a large pot of lightly salted water to a boil. Add penne pasta, and cook for 8 minutes, or until tender. Drain."
-            step3 = "Heat remaining olive oil in a large skillet over medium heat. Fry chicken for about 5 minutes per side, or until the coating is a nice dark brown color. Mix everything and enjoy."
-            */
         case 3:
             dayname = "Tuesday"
             dishtitle1 = "Penne Arrabiata"
