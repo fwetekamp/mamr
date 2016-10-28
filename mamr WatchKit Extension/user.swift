@@ -14,7 +14,7 @@ class User: NSObject, NSCoding {
     
     // Defining Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("userstatus")
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("user")
     
     struct PropertyKey {
         static let nameKey = "user" //define key vor key-value pair

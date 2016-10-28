@@ -13,7 +13,7 @@ import HealthKit
 
 
 class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelegate { //Extending class with notifications delegate
-    
+    var newuser:User = User(newuser: false)!
     var points = [Points]() //initializing balance array
     var dateComponents_dinner_1 = DateComponents() //scheduling for 10:30 AM
     var dateComponents_dinner_2 = DateComponents() //schedling for 11:00 AM
@@ -40,6 +40,10 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         })
         
     }
+    func  getuserstatus() -> User?{
+        return NSKeyedUnarchiver.unarchiveObject(withFile: User.ArchiveURL.path) as? User
+    }
+    
     override func willActivate() {
         super.willActivate()
     }
@@ -61,6 +65,11 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        if getuserstatus() == nil {
+            print(newuser.newuser)
+            pushController(withName: "onboarding", context: "segue")
+        }
+        
         dinnerhome.setHidden(true)
         dateComponents_dinner_1.hour = 16
         dateComponents_dinner_1.minute = 31 //setting the dinner notification schedule

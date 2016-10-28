@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qUy-gP-Qez">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SzG-QD-DVv">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="-70" y="300"/>
         </scene>
-        <!--Tests Inferface Controller-->
+        <!--onboarding-->
         <scene sceneID="d5L-QT-bhc">
             <objects>
-                <controller id="qUy-gP-Qez" customClass="TestsInferfaceController" customModule="mamr_WatchKit_Extension">
+                <controller identifier="onboarding" id="qUy-gP-Qez" customClass="TestsInferfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Hello." id="qKS-j8-Ahw">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="24"/>

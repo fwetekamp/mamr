@@ -16,10 +16,10 @@ class TestsInferfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        if let newuser = getuserstatus(){
+    /*    if let newuser = getuserstatus(){
             print(newuser.newuser)
             pushController(withName: "home", context: "segue")
-        }
+        }*/
 
         // Configure interface objects here.
     }
@@ -128,9 +128,9 @@ class TestsInferfaceController: WKInterfaceController {
         
     }
     
-    func  getuserstatus() -> User?{
+  /*  func  getuserstatus() -> User?{
         return NSKeyedUnarchiver.unarchiveObject(withFile: User.ArchiveURL.path) as? User
-    }
+    }*/
     func setuserstatus(){
         let isSuccessfullSave = NSKeyedArchiver.archiveRootObject(newuser, toFile: User.ArchiveURL.path)
         if !isSuccessfullSave{
