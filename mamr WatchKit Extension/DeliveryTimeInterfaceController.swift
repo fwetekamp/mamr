@@ -14,7 +14,6 @@ class DeliveryTimeInterfaceController: WKInterfaceController {
 //took me a gazilion hours to find out that you have to create a separate interface for controller in order to get the picker to work
     
     @IBOutlet var AddressPicker: WKInterfacePicker!
-    let yourlunch = Lunch(time: "", address: "")
 
     var itemList: [(String, String)] = [
         ("Time 1", "11:00 - 11:30"),
@@ -27,7 +26,7 @@ class DeliveryTimeInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        let pickerItems: [WKPickerItem] = itemList.map {
+        let pickerItems: [WKPickerItem] = itemList.map { //defining the picker for timeframes
             
             let pickerItem = WKPickerItem()
             pickerItem.caption = $0.0
@@ -37,7 +36,7 @@ class DeliveryTimeInterfaceController: WKInterfaceController {
         AddressPicker.setItems(pickerItems)
     }
     @IBAction func settime(_ value: Int) {
-        yourlunch.deliverytime = itemList[value].1
+
     }
     
     override func willActivate() {

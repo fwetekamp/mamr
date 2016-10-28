@@ -1,28 +1,28 @@
 //
-//  mamrpoints.swift
+//  user.swift
 //  mamr
 //
-//  Created by Fabian Wetekamp on 15/10/2016.
+//  Created by Fabian Wetekamp on 28/10/2016.
 //  Copyright © 2016 Fabian Wetekamp. All rights reserved.
 //
 
-import WatchKit
+import Foundation
 
-class Points: NSObject, NSCoding {
-
-    var balance: Int
+class User: NSObject, NSCoding {
+    
+    var newuser: Bool
     
     // Defining Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("mamrpoints6")
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("user")
     
     struct PropertyKey {
-        static let nameKey = "balance" //define key vor key-value pair
+        static let nameKey = "user" //define key vor key-value pair
     }
     
-    init?(balance: Int) {
+    init?(newuser: Bool) {
         // Initialize stored properties.
-        self.balance = balance
+        self.newuser = newuser
         super.init()
         
         // Initialization should fail if there is no name or if the rating is negative.
@@ -30,12 +30,11 @@ class Points: NSObject, NSCoding {
     } //save balance
     
     func  encode(with aCoder: NSCoder) {
-        aCoder.encode(balance, forKey: "balance")
+        aCoder.encode(newuser, forKey: "user")
     } //get balance
     
     required init?(coder aDecoder: NSCoder) {
-        self.balance = aDecoder.decodeInteger(forKey: "balance")
+        self.newuser = aDecoder.decodeBool(forKey: "user")
         super.init()
     }
 }
-

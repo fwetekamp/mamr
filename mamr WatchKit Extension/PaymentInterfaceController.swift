@@ -23,7 +23,7 @@ class PaymentInterfaceController: WKInterfaceController {
         confirmpayment()
     }
     func confirmpayment() {
-        testlabel.setText("test is working")
+        testlabel.setText("test is working") // dummy function for potential future payment set ups
     }
     @IBOutlet var testlabel: WKInterfaceLabel!
     override func awake(withContext context: Any?) {

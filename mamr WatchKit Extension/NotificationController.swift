@@ -14,16 +14,29 @@ import UIKit
 
 class NotificationController: WKUserNotificationInterfaceController {
 
+    //Lunch Outlets
     
-    @IBOutlet var Lunch_headline: WKInterfaceLabel!
+    @IBOutlet var day: WKInterfaceLabel!
     @IBOutlet var notificationdish1: WKInterfaceLabel!
-    @IBOutlet var test_image: WKInterfaceImage!
+    @IBOutlet var dishimage1: WKInterfaceImage!
     @IBOutlet var title_dish1: WKInterfaceLabel!
     @IBOutlet var subtitle_dish1: WKInterfaceLabel!
     @IBOutlet var notificationdish2: WKInterfaceLabel!
     @IBOutlet var title_dish2: WKInterfaceLabel!
     @IBOutlet var subtitle_dish2: WKInterfaceLabel!
-    @IBOutlet var test_image2: WKInterfaceImage!
+    @IBOutlet var dishimage2: WKInterfaceImage!
+    
+    //Dinner Outlets
+    @IBOutlet var Dinner_headline: WKInterfaceLabel!
+    @IBOutlet var D_day: WKInterfaceLabel!
+    @IBOutlet var D_titledish1: WKInterfaceLabel!
+    @IBOutlet var D_subtitledish1: WKInterfaceLabel!
+    @IBOutlet var D_dishimage1: WKInterfaceImage!
+    @IBOutlet var D_cookingtimedish1: WKInterfaceLabel!
+    @IBOutlet var D_titledish2: WKInterfaceLabel!
+    @IBOutlet var D_subtitledish2: WKInterfaceLabel!
+    @IBOutlet var D_dishimage2: WKInterfaceImage!
+    @IBOutlet var D_cookingtimedish2: WKInterfaceLabel!
     override init() {
         // Initialize variables here.
         super.init()
@@ -43,80 +56,32 @@ class NotificationController: WKUserNotificationInterfaceController {
 
 
     override func didReceive(_ notification: UNNotification, withCompletion completionHandler: @escaping (WKUserNotificationInterfaceType) -> Swift.Void) {
-        let date = NSDate()
-        let calendar = NSCalendar.autoupdatingCurrent
-        let datecomponents = calendar.dateComponents([.weekday], from: date as Date) //getting the current weekday
-        let weekday = datecomponents.weekday
         if notification.request.content.categoryIdentifier == "lunch_notification" { //branching by notification category
-
-        switch weekday {
-        case 2?:                                                            //monday
-            self.Lunch_headline.setText("Monday")
-            self.notificationdish1.setText("#1 Baked Seabass")
-            self.title_dish1.setText("478kcal - 9.40€")
-            self.subtitle_dish1.setText("with Rocket Salad")
-            self.notificationdish2.setText("#2 Roast Chicken")
-            self.subtitle_dish2.setText("with Mushroom Sauce")
-            self.title_dish2.setText("583kcal - 8.30€")
-            self.test_image.setImageNamed("Lunch_Day1_Dish1")
-            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
-        case 3?:                                                            //tuesday
-            self.Lunch_headline.setText("Tuesday")
-            self.notificationdish1.setText("#1 Teriyaki Chicken")
-            self.title_dish1.setText("478kcal - 9.00€")
-            self.subtitle_dish1.setText("with Fried Rice")
-            self.notificationdish2.setText("#2 Avocado Salad")
-            self.title_dish2.setText("478kcal - 8.00€")
-            self.subtitle_dish2.setText("with Grilled Sweet Potatoe")
-            self.test_image.setImageNamed("Lunch_Day2_Dish2")
-            self.test_image2.setImageNamed("Lunch_Day2_Dish1")
-        case 4?:                                                            //wedneday
-            self.Lunch_headline.setText("Wednesday")
-            self.notificationdish1.setText("#1 Almond Salmon")
-            self.title_dish1.setText("448kcal - 9.60€")
-            self.subtitle_dish1.setText("with Orange Blur Blanc")
-            self.notificationdish2.setText("#2 - Grilled Chicken")
-            self.subtitle_dish2.setText("with Toasted Barley")
-            self.title_dish2.setText("535kcal - 8.30€")
-            self.test_image.setImageNamed("Lunch_Day3_Dish1")
-            self.test_image2.setImageNamed("Lunch_Day3_Dish2")
-        case 5?:                                                            //thursday
-            self.Lunch_headline.setText("Thursday")
-            self.notificationdish1.setText("#1 Pesto Pasta")
-            self.title_dish1.setText("578kcal - 8.00€")
-            self.subtitle_dish1.setText("with Chicken Fillet")
-            self.notificationdish2.setText("#2 Grilled Perch Fillet")
-            self.subtitle_dish2.setText(" with Apricot & Herb Barley")
-            self.title_dish2.setText("461kcal - 9.80€")
-            self.test_image.setImageNamed("Lunch_Day4_Dish1")
-            self.test_image2.setImageNamed("Lunch_Day4_Dish2")
-        case 6?:                                                            //friday
-            self.Lunch_headline.setText("Friday")
-            self.notificationdish1.setText("#1 Grilled Beef")
-            self.title_dish1.setText("478kcal - 9.40€")
-            self.subtitle_dish1.setText("with Soba Noodles")
-            self.notificationdish2.setText("#2 Teriyaki Salmon")
-            self.subtitle_dish2.setText("with Bok Choy & Rice")
-            self.title_dish2.setText("583kcal - 8.30€")
-            self.test_image.setImageNamed("Lunch_Day5_Dish1")
-            self.test_image2.setImageNamed("Lunch_Day5_Dish2")
-        default:
-            self.notificationdish1.setText("#1 - Baked Seabass")
-            self.title_dish1.setText("478kcal - 9.40€")
-            self.subtitle_dish1.setText("with rocket & mashed potatoes")
-            self.notificationdish2.setText("#2 - Roast Chicken")
-            self.subtitle_dish2.setText("with mushroom sauce")
-            self.title_dish2.setText("583kcal - 8.30€")
-            self.test_image.setImageNamed("Lunch_Day1_Dish1")
-            self.test_image2.setImageNamed("Lunch_Day1_Dish2")
-            }
-        completionHandler(.custom)
-    
+            let menu = Lunch.init(day: weekday.getweekday())
+            self.day.setText(menu.dayname)
+            self.notificationdish1.setText(menu.dishtitle1)
+            self.title_dish1.setText(menu.dishprice1)
+            self.subtitle_dish1.setText(menu.dishsubtitle1)
+            self.dishimage1.setImageNamed(menu.dishimagename1)
+            self.notificationdish2.setText(menu.dishtitle2)
+            self.title_dish2.setText(menu.dishprice2)
+            self.subtitle_dish2.setText(menu.dishsubtitle2)
+            self.dishimage2.setImageNamed(menu.dishimagename2)
         }
+        else if notification.request.content.categoryIdentifier == "dinner_notification" {
+            let menu = Dinner.init(day: weekday.getweekday())
+            self.D_day.setText(menu.dayname)
+            self.D_titledish1.setText(menu.dishtitle1)
+            self.D_subtitledish1.setText(menu.dishsubtitle1)
+            self.D_dishimage1.setImageNamed(menu.dishimagename1)
+            self.D_cookingtimedish1.setText(menu.dishcookingtime1)
+        }
+        completionHandler(.custom)
     }
+}
     
     
 
-}
+
 
 

@@ -12,31 +12,51 @@ import Foundation
 
 class GroceriesInterfaceController: WKInterfaceController {
 
-    @IBOutlet var Grociery_Table: WKInterfaceGroup!
     
-    @IBOutlet var grocieryname: WKInterfaceLabel!
-    @IBOutlet var grocerysamount: WKInterfaceLabel!
-    let ingredientsname = ["Pasta", "Bacon", "Zucchini", "Parmesan", "Mushrooms", "Salt", "Pepper"]
-  /*  let ingredientsamount = ["200g", "150g", "1", "50g", "150g", "", "Pepper"]
-    
-    func loadTable() {
-        myTable.setNumberOfRows(stringData.count,
-                                                     withRowType: "MyRowController")
-         
-            for (index, labelText) in stringData.enumerate() {
-                    let row = myTable.rowControllerAtIndex(index)
-                              as! MyRowController
-                    row.myLabel.setText(labelText)
-                    row.myImage.setImage(UIImage(named: imageData[index]))
-                }
-    }
-    */
+    @IBOutlet var table: WKInterfaceTable!
+
+    var ingredientsname:[String] = []
+    var ingredientsamount:[Int] = []
+    var measuringunit:[String] = []
+    var people:Int = 0
+    var dish = Dinner_Dish.init(people: 0, Day: weekday.getweekday()) //using dinner_dish to calculate ingredients amount
+
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
+        people = context as! Int
+        print(people)
+        loadTable() //initializing table
     }
+
+    
+    func loadTable() {
+
+       dish = Dinner_Dish.init(people: people, Day: weekday.getweekday()) //using dinner_dish to calculate ingredients amount
+        ingredientsname = dish.ingredients
+        print(dish.ingredients)
+        ingredientsamount = dish.ingredientsamount
+        measuringunit = dish.measuringunit
+
+        
+        table.setRowTypes(["groceries"])
+
+        table.setNumberOfRows(ingredientsname.count, //setting up the table
+                                withRowType: "groceries")
+        for (index, grocery) in ingredientsname.enumerated() {
+            let row = table.rowController(at: index) as! RowController
+            row.grocerytype.setText(grocery)
+            row.groceryamount.setText(String(ingredientsamount[index]))
+            row.unit.setText(measuringunit[index])
+        }
+        
+    }
+  /*  override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        if segueIdentifier == "grocerieslist" {
+            return(dish as Any?)
+        }
+        return dish
+    }*/
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

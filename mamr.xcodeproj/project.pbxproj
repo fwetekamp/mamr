@@ -8,13 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		1F0FA9F11DB26DF30049A6ED /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FA9F01DB26DF30049A6ED /* Points.swift */; };
+		1F30E3061DBD4925006A413F /* Dinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30E3051DBD4925006A413F /* Dinner.swift */; };
 		1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */; };
 		1F54D8151DB3C0D000519334 /* PaymentInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8141DB3C0D000519334 /* PaymentInterfaceController.swift */; };
 		1F54D8171DB3C29000519334 /* Oder_confirmed_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F54D8161DB3C29000519334 /* Oder_confirmed_Controller.swift */; };
-		1F8959ED1DB1546400BC6D34 /* Notificationshandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */; };
+		1F67FA171DBFDD7C005A6D26 /* cookingstep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F67FA161DBFDD7C005A6D26 /* cookingstep.swift */; };
+		1F8959ED1DB1546400BC6D34 /* NotificationsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959EC1DB1546400BC6D34 /* NotificationsHandler.swift */; };
 		1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8959F21DB16B6C00BC6D34 /* Lunch.swift */; };
 		1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */; };
 		1F939D481DB1A938005FF392 /* AddressInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */; };
+		1F9A96BC1DC0FB8E00DD5ED1 /* DinnerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A96BB1DC0FB8E00DD5ED1 /* DinnerHome.swift */; };
+		1FA1FDC61DC36AE100E612F9 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1FDC51DC36AE100E612F9 /* user.swift */; };
+		1FB9CAC91DBE9C020002C65C /* peoplepickerInterfacecontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9CAC81DBE9C020002C65C /* peoplepickerInterfacecontroller.swift */; };
+		1FB9CACD1DBEB8AB0002C65C /* weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9CACC1DBEB8AB0002C65C /* weekday.swift */; };
+		1FB9CACF1DBEBDFA0002C65C /* step1controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9CACE1DBEBDFA0002C65C /* step1controller.swift */; };
+		1FB9CAD11DBEC1EA0002C65C /* step2controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9CAD01DBEC1EA0002C65C /* step2controller.swift */; };
+		1FB9CAD31DBEC5F70002C65C /* step3controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9CAD21DBEC5F70002C65C /* step3controller.swift */; };
+		1FC9E3BA1DBD3555006B3FF3 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9E3B91DBD3555006B3FF3 /* RowController.swift */; };
 		1FDA8B011DAD50C10030FA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B001DAD50C10030FA6B /* AppDelegate.swift */; };
 		1FDA8B031DAD50C10030FA6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B021DAD50C10030FA6B /* ViewController.swift */; };
 		1FDA8B061DAD50C10030FA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDA8B041DAD50C10030FA6B /* Main.storyboard */; };
@@ -29,6 +39,7 @@
 		1FDA8B2A1DAD50C20030FA6B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA8B291DAD50C20030FA6B /* NotificationController.swift */; };
 		1FDA8B2C1DAD50C20030FA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */; };
 		1FE87ADC1DAEBB240046DB24 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE87ADB1DAEBB240046DB24 /* HealthKit.framework */; };
+		1FEC25131DBE76D200AFEC41 /* Dinner_Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC25121DBE76D200AFEC41 /* Dinner_Dish.swift */; };
 		1FEF7C7E1DB4187600407CBC /* GroceriesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF7C7D1DB4187600407CBC /* GroceriesInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,13 +90,23 @@
 		1F1F0B421DAEADF000F38619 /* mamr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mamr.entitlements; sourceTree = "<group>"; };
 		1F1F0B431DAEB9D000F38619 /* mamr WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit App.entitlements"; sourceTree = "<group>"; };
 		1F1F0B441DAEB9DF00F38619 /* mamr WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mamr WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		1F30E3051DBD4925006A413F /* Dinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dinner.swift; sourceTree = "<group>"; };
 		1F54D8121DB3AB7D00519334 /* TestsInferfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsInferfaceController.swift; sourceTree = "<group>"; };
 		1F54D8141DB3C0D000519334 /* PaymentInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentInterfaceController.swift; sourceTree = "<group>"; };
 		1F54D8161DB3C29000519334 /* Oder_confirmed_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Oder_confirmed_Controller.swift; sourceTree = "<group>"; };
-		1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notificationshandler.swift; sourceTree = "<group>"; };
+		1F67FA161DBFDD7C005A6D26 /* cookingstep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cookingstep.swift; sourceTree = "<group>"; };
+		1F8959EC1DB1546400BC6D34 /* NotificationsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsHandler.swift; sourceTree = "<group>"; };
 		1F8959F21DB16B6C00BC6D34 /* Lunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lunch.swift; sourceTree = "<group>"; };
 		1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryTimeInterfaceController.swift; sourceTree = "<group>"; };
 		1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressInterfaceController.swift; sourceTree = "<group>"; };
+		1F9A96BB1DC0FB8E00DD5ED1 /* DinnerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinnerHome.swift; sourceTree = "<group>"; };
+		1FA1FDC51DC36AE100E612F9 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		1FB9CAC81DBE9C020002C65C /* peoplepickerInterfacecontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = peoplepickerInterfacecontroller.swift; sourceTree = "<group>"; };
+		1FB9CACC1DBEB8AB0002C65C /* weekday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weekday.swift; sourceTree = "<group>"; };
+		1FB9CACE1DBEBDFA0002C65C /* step1controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = step1controller.swift; sourceTree = "<group>"; };
+		1FB9CAD01DBEC1EA0002C65C /* step2controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = step2controller.swift; sourceTree = "<group>"; };
+		1FB9CAD21DBEC5F70002C65C /* step3controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = step3controller.swift; sourceTree = "<group>"; };
+		1FC9E3B91DBD3555006B3FF3 /* RowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		1FDA8AFD1DAD50C10030FA6B /* mamr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mamr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDA8B001DAD50C10030FA6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FDA8B021DAD50C10030FA6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +126,7 @@
 		1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FDA8B2D1DAD50C20030FA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FE87ADB1DAEBB240046DB24 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1FEC25121DBE76D200AFEC41 /* Dinner_Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dinner_Dish.swift; sourceTree = "<group>"; };
 		1FEF7C7D1DB4187600407CBC /* GroceriesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceriesInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +158,13 @@
 				1F54D8141DB3C0D000519334 /* PaymentInterfaceController.swift */,
 				1F54D8161DB3C29000519334 /* Oder_confirmed_Controller.swift */,
 				1FEF7C7D1DB4187600407CBC /* GroceriesInterfaceController.swift */,
+				1FC9E3B91DBD3555006B3FF3 /* RowController.swift */,
+				1FB9CAC81DBE9C020002C65C /* peoplepickerInterfacecontroller.swift */,
+				1FB9CACC1DBEB8AB0002C65C /* weekday.swift */,
+				1FB9CACE1DBEBDFA0002C65C /* step1controller.swift */,
+				1FB9CAD01DBEC1EA0002C65C /* step2controller.swift */,
+				1FB9CAD21DBEC5F70002C65C /* step3controller.swift */,
+				1F9A96BB1DC0FB8E00DD5ED1 /* DinnerHome.swift */,
 			);
 			name = InterfaceControllers;
 			sourceTree = "<group>";
@@ -145,6 +174,10 @@
 			children = (
 				1F8959F21DB16B6C00BC6D34 /* Lunch.swift */,
 				1F0FA9F01DB26DF30049A6ED /* Points.swift */,
+				1F30E3051DBD4925006A413F /* Dinner.swift */,
+				1FEC25121DBE76D200AFEC41 /* Dinner_Dish.swift */,
+				1F67FA161DBFDD7C005A6D26 /* cookingstep.swift */,
+				1FA1FDC51DC36AE100E612F9 /* user.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -211,7 +244,7 @@
 				1F0FA9EF1DB26A1A0049A6ED /* InterfaceControllers */,
 				1FDA8B271DAD50C20030FA6B /* ExtensionDelegate.swift */,
 				1FDA8B251DAD50C20030FA6B /* InterfaceController.swift */,
-				1F8959EC1DB1546400BC6D34 /* Notificationshandler.swift */,
+				1F8959EC1DB1546400BC6D34 /* NotificationsHandler.swift */,
 				1FDA8B291DAD50C20030FA6B /* NotificationController.swift */,
 				1FDA8B2B1DAD50C20030FA6B /* Assets.xcassets */,
 				1FDA8B2D1DAD50C20030FA6B /* Info.plist */,
@@ -310,6 +343,7 @@
 					1FDA8B0E1DAD50C10030FA6B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9J5KWZ8M97;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -393,16 +427,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9A96BC1DC0FB8E00DD5ED1 /* DinnerHome.swift in Sources */,
+				1FEC25131DBE76D200AFEC41 /* Dinner_Dish.swift in Sources */,
 				1F54D8151DB3C0D000519334 /* PaymentInterfaceController.swift in Sources */,
 				1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */,
 				1FDA8B2A1DAD50C20030FA6B /* NotificationController.swift in Sources */,
-				1F8959ED1DB1546400BC6D34 /* Notificationshandler.swift in Sources */,
+				1F8959ED1DB1546400BC6D34 /* NotificationsHandler.swift in Sources */,
+				1FB9CAD11DBEC1EA0002C65C /* step2controller.swift in Sources */,
 				1FDA8B281DAD50C20030FA6B /* ExtensionDelegate.swift in Sources */,
+				1F30E3061DBD4925006A413F /* Dinner.swift in Sources */,
+				1FB9CACD1DBEB8AB0002C65C /* weekday.swift in Sources */,
 				1FEF7C7E1DB4187600407CBC /* GroceriesInterfaceController.swift in Sources */,
+				1FB9CAC91DBE9C020002C65C /* peoplepickerInterfacecontroller.swift in Sources */,
+				1FB9CAD31DBEC5F70002C65C /* step3controller.swift in Sources */,
+				1FC9E3BA1DBD3555006B3FF3 /* RowController.swift in Sources */,
+				1F67FA171DBFDD7C005A6D26 /* cookingstep.swift in Sources */,
 				1F8959F31DB16B6C00BC6D34 /* Lunch.swift in Sources */,
 				1F54D8171DB3C29000519334 /* Oder_confirmed_Controller.swift in Sources */,
+				1FB9CACF1DBEBDFA0002C65C /* step1controller.swift in Sources */,
 				1F0FA9F11DB26DF30049A6ED /* Points.swift in Sources */,
 				1FDA8B261DAD50C20030FA6B /* InterfaceController.swift in Sources */,
+				1FA1FDC61DC36AE100E612F9 /* user.swift in Sources */,
 				1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */,
 				1F939D481DB1A938005FF392 /* AddressInterfaceController.swift in Sources */,
 			);
@@ -495,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=*]" = "";
@@ -503,6 +548,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Debug;
 		};
@@ -544,13 +590,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=*]" = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Release;
 		};
@@ -593,15 +640,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "mamr WatchKit App/mamr WatchKit App.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				IBSC_MODULE = mamr_WatchKit_Extension;
 				INFOPLIST_FILE = "mamr WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
@@ -613,11 +663,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "mamr WatchKit App/mamr WatchKit App.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				IBSC_MODULE = mamr_WatchKit_Extension;
 				INFOPLIST_FILE = "mamr WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;

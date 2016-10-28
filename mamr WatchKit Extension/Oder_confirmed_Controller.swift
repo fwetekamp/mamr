@@ -34,14 +34,6 @@ class Oder_confirmed_Controller: WKInterfaceController {
         }
         updatebalance()
 
-       /* let lastbalancestring:Int = (points.last?.balance)!
-        print(lastbalancestring)
-        if Int(lastbalancestring) == 1 {
-        mamrpointslabel.setText("You earned your first point! Yay!")
-        }
-        else {
-        mamrpointslabel.setText("You now have \(lastbalancestring) mamrpoints")
-        }    code not used*/
     }
     
     func  initiliazebalance(){
@@ -56,7 +48,7 @@ class Oder_confirmed_Controller: WKInterfaceController {
             mamrpointslabel.setText("First point earned! Yay!")
         }
         else {
-            mamrpointslabel.setText("You earned \(newvalueint) mamrpoints")}
+            mamrpointslabel.setText("You earned \(newvalueint) points")}
         points.append(Points(balance: newvalueint)!)
         saveBalance()
     }

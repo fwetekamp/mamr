@@ -16,7 +16,7 @@ class AddressInterfaceController: WKInterfaceController, CLLocationManagerDelega
 
     @IBOutlet var mapObject: WKInterfaceMap!
     var locationManager: CLLocationManager = CLLocationManager()
-    var mapLocation: CLLocationCoordinate2D?
+    var mapLocation: CLLocationCoordinate2D? //using location manager to determine current location
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let currentLocation = locations[0]
