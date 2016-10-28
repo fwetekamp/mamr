@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SzG-QD-DVv">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qUy-gP-Qez">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--home-->
         <scene sceneID="7O7-dx-DJV">
             <objects>
-                <controller id="SzG-QD-DVv" customClass="InterfaceController" customModule="mamr_WatchKit_Extension">
+                <controller identifier="home" id="SzG-QD-DVv" customClass="InterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Hello. I'm mamr." id="Eaw-sT-x9L">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
@@ -66,7 +67,98 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="260" y="249"/>
+            <point key="canvasLocation" x="57" y="252"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="d5L-QT-bhc">
+            <objects>
+                <controller id="qUy-gP-Qez">
+                    <items>
+                        <label alignment="left" text="Hello." id="K4p-8k-z3Z"/>
+                        <imageView alignment="center" image="Logo" id="Bga-xh-wWl"/>
+                        <button width="1" alignment="left" title="Button" id="BU9-NG-k8B">
+                            <connections>
+                                <segue destination="OK3-8y-nrH" kind="push" id="cUh-vi-IaG"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="115" y="-414"/>
+        </scene>
+        <!--Tests Inferface Controller-->
+        <scene sceneID="ep9-ZQ-gVT">
+            <objects>
+                <controller id="OK3-8y-nrH" customClass="TestsInferfaceController" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Lunch" id="lrt-ji-9Pg">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <label height="88" alignment="center" text="Everyday you will receive a healthy menu for lunch with two options. You can order directly from your watch." textAlignment="center" numberOfLines="6" id="0EK-gg-n0m">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                        </label>
+                        <button width="1" alignment="left" title="Show Me" id="GXc-hn-B7y">
+                            <connections>
+                                <action selector="showlunch" destination="OK3-8y-nrH" id="89z-T0-YtU"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Skip This" id="noH-XU-0PA">
+                            <connections>
+                                <segue destination="FZ9-A3-VKq" kind="push" id="DfB-7t-kFu"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="491" y="-362"/>
+        </scene>
+        <!--Tests Inferface Controller-->
+        <scene sceneID="6qf-Ck-ebV">
+            <objects>
+                <controller id="FZ9-A3-VKq" customClass="TestsInferfaceController" customModule="mamr_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Dinner" id="JXo-uI-wB3">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <label height="93" alignment="center" text="For dinner, I will sent you a healthy dish for you to cook. The grocery list and the recipe are shown directly on your watch. " textAlignment="center" numberOfLines="6" id="VcE-If-mx2">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                        </label>
+                        <button width="1" alignment="left" title="Show Me" id="4LL-Rl-eJg">
+                            <connections>
+                                <action selector="showdinner" destination="FZ9-A3-VKq" id="TvR-77-gYp"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Next" id="oNH-Gz-Unc">
+                            <connections>
+                                <segue destination="eHd-xy-FyR" kind="push" id="OXI-pY-J5K"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="810" y="-379"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="RFb-aN-J5I">
+            <objects>
+                <controller id="eHd-xy-FyR">
+                    <items>
+                        <label alignment="center" text="mamr Points" id="1kJ-cC-FZt">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <label height="106" alignment="center" textAlignment="center" numberOfLines="7" id="CqN-Nq-gge">
+                            <string key="text">For every dish that you order or cook you'll receive points. The higher the score, the closer you are towards your goal of eating heatlhy everyday.</string>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                        </label>
+                        <button width="1" alignment="left" title="Get Started" id="XYy-BT-MdE">
+                            <connections>
+                                <segue destination="SzG-QD-DVv" kind="push" id="vNt-aq-HT5"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1092" y="-379.5"/>
         </scene>
         <!--Tests Inferface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -616,8 +708,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Smv-9k-Ah9"/>
         <segue reference="ijR-sW-Bmz"/>
+        <segue reference="vNt-aq-HT5"/>
         <segue reference="zj7-V1-IeZ"/>
     </inferredMetricsTieBreakers>
 </document>

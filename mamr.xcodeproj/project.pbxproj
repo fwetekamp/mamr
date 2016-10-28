@@ -340,6 +340,7 @@
 					1FDA8B0E1DAD50C10030FA6B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9J5KWZ8M97;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -635,15 +636,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "mamr WatchKit App/mamr WatchKit App.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				IBSC_MODULE = mamr_WatchKit_Extension;
 				INFOPLIST_FILE = "mamr WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
@@ -655,11 +659,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "mamr WatchKit App/mamr WatchKit App.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9J5KWZ8M97;
 				IBSC_MODULE = mamr_WatchKit_Extension;
 				INFOPLIST_FILE = "mamr WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fw.mamr.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;

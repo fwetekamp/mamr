@@ -19,6 +19,30 @@ class TestsInferfaceController: WKInterfaceController {
         // Configure interface objects here.
     }
 
+    @IBAction func showlunch() {
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        let notificationManager = NotificationsHandler()
+        
+        notificationManager.lunchnotificationcategories()
+        
+        
+        let content = UNMutableNotificationContent() //creating the notification
+        content.title = "Your Lunch"
+        content.body = "Here's your menu for today."
+        content.categoryIdentifier = "lunch_notification"
+        content.subtitle = "Testing"
+        content.sound = UNNotificationSound.default()
+        
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
+        
+        center.add(request) { (error: Error?) in
+            print(error ?? "all good") //if error is catched, I might as well print it
+            print("notification sent")
+        }
+    }
+    
     @IBAction func TestLunch() {
         let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()
@@ -43,6 +67,25 @@ class TestsInferfaceController: WKInterfaceController {
         }
     }
     
+    @IBAction func showdinner() {
+        let notificationManager = NotificationsHandler()
+        notificationManager.dinnernotificationcategories()
+        
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        
+        let content = UNMutableNotificationContent() //creating the notification
+        content.title = "Your Dinner"
+        content.body = "Here's your menu for today."
+        content.categoryIdentifier = "dinner_notification"
+        content.sound = UNNotificationSound.default()
+        
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil) //generating random string with UUID() for dinner notification
+        center.add(request) //adding notification to UNNotificationCenter
+        print("notification sent")
+        
+    }
     @IBAction func TestDinner() { // dinner sample notification
         
         let notificationManager = NotificationsHandler()
