@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
@@ -17,7 +16,7 @@
                         <label alignment="center" text="Hello. I'm mamr." id="Eaw-sT-x9L">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <imageView alignment="center" image="Logo" id="XBN-9Y-f8p"/>
+                        <imageView width="50" height="50" alignment="center" image="Logo" id="XBN-9Y-f8p"/>
                         <label height="20" alignment="center" text="label" id="6LZ-RG-FQu">
                             <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
@@ -317,16 +316,16 @@
                         <table alignment="left" id="s8m-rs-M8k">
                             <items>
                                 <tableRow identifier="groceries" id="Bo2-IS-ojU" customClass="RowController" customModule="mamr_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="20" alignment="left" id="IQZ-pS-2VN">
+                                    <group key="rootItem" width="1" height="16" alignment="left" id="IQZ-pS-2VN">
                                         <items>
                                             <label alignment="left" text="Type" id="x9s-dP-SDV">
-                                                <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="13"/>
                                             </label>
                                             <label alignment="right" text="0" id="NXH-tb-7Hx">
-                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="12"/>
                                             </label>
                                             <label alignment="right" text="unit" id="EYH-wT-RNa">
-                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="16"/>
+                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="13"/>
                                             </label>
                                         </items>
                                     </group>
@@ -369,7 +368,7 @@
                                 <action selector="starttimer" destination="NHW-ql-EZt" id="cvl-zO-2Q7"/>
                             </connections>
                         </button>
-                        <label width="136" height="134" alignment="left" numberOfLines="9" id="deC-kt-aqo">
+                        <label alignment="left" numberOfLines="9" id="deC-kt-aqo">
                             <string key="text">Start boiling 3L of salt water. Put olive oil in a pan (mid heat), add tomato paste &amp; pepper flakes; reduce heat to low &amp; stir until fragrant for 4 min. Stir in tomatoes &amp; remove from heat.</string>
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
@@ -463,11 +462,11 @@
                         <label alignment="center" text="Order Placed" id="2YZ-Os-bzb">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <imageView alignment="center" image="Logo" contentMode="scaleAspectFit" id="ET1-qG-g03"/>
+                        <imageView width="50" height="50" alignment="center" image="Logo" contentMode="scaleAspectFit" id="ET1-qG-g03"/>
                         <label alignment="center" text="Congratulations!" id="gMi-nK-Dxg">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
                         </label>
-                        <label alignment="center" text="Label" id="Skc-ea-uz1">
+                        <label height="27" alignment="center" text="Label" numberOfLines="2" id="Skc-ea-uz1">
                             <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
                         <button width="1" alignment="left" title="Home" id="BGv-vd-Db3">
@@ -482,7 +481,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1688" y="103"/>
+            <point key="canvasLocation" x="1688" y="108"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="9qo-rD-Cp7">
@@ -634,8 +633,8 @@
                         <label height="48" alignment="center" text="Enjoy your Dinner. " textAlignment="center" numberOfLines="2" id="II3-py-5i6">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
-                        <imageView alignment="center" image="Logo" contentMode="scaleAspectFit" id="SLj-9F-ECk"/>
-                        <label alignment="center" text="Label" id="wBC-fc-b5B">
+                        <imageView width="50" height="50" alignment="center" image="Logo" contentMode="scaleAspectFit" id="SLj-9F-ECk"/>
+                        <label height="25" alignment="center" text="Label" numberOfLines="2" id="wBC-fc-b5B">
                             <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
                         <button width="1" alignment="left" title="Home" id="yWU-FV-jww">
@@ -650,7 +649,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="2487" y="972"/>
+            <point key="canvasLocation" x="2487" y="977"/>
         </scene>
         <!--Step 2controller-->
         <scene sceneID="4Mf-vm-M4f">
@@ -669,7 +668,7 @@
                                 <action selector="starttimer" destination="HSb-qq-yW4" id="N3B-ES-myf"/>
                             </connections>
                         </button>
-                        <label width="136" height="134" alignment="left" numberOfLines="9" id="h29-Iu-M50">
+                        <label height="134" alignment="left" numberOfLines="9" id="h29-Iu-M50">
                             <string key="text">Start boiling 3L of salt water. Put olive oil in a pan (mid heat), add tomato paste &amp; pepper flakes; reduce heat to low &amp; stir until fragrant for 4 min. Stir in tomatoes &amp; remove from heat.</string>
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
@@ -705,7 +704,7 @@
                                 <action selector="starttimer" destination="vWq-cZ-a4l" id="9Eu-R1-Yng"/>
                             </connections>
                         </button>
-                        <label width="136" height="134" alignment="left" numberOfLines="9" id="oJy-mB-vmR">
+                        <label alignment="left" numberOfLines="9" id="oJy-mB-vmR">
                             <string key="text">Start boiling 3L of salt water. Put olive oil in a pan (mid heat), add tomato paste &amp; pepper flakes; reduce heat to low &amp; stir until fragrant for 4 min. Stir in tomatoes &amp; remove from heat.</string>
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
@@ -726,8 +725,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ijR-sW-Bmz"/>
         <segue reference="Smv-9k-Ah9"/>
-        <segue reference="zj7-V1-IeZ"/>
+        <segue reference="nYj-FC-b7p"/>
+        <segue reference="7Hr-kz-eUE"/>
     </inferredMetricsTieBreakers>
 </document>

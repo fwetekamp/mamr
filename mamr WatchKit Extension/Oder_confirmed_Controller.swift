@@ -44,13 +44,18 @@ class Oder_confirmed_Controller: WKInterfaceController {
     func updatebalance() {
         let lastbalance:Int = (points.last?.balance)!
         let newvalueint:Int = lastbalance + 1
-        if Int(newvalueint) == 1 {
-            mamrpointslabel.setText("First point earned! Yay!")
+        switch newvalueint {
+        case 1: mamrpointslabel.setText("First point earned! Yay!")
+        case 2: mamrpointslabel.setText("Second point, Congrats!")
+        case 3: mamrpointslabel.setText("Third point earned! Stay health.")
+        case 4: mamrpointslabel.setText("4 points, way to go!")
+        case 5: mamrpointslabel.setText("Yes, 5 points earned.")
+        case 6: mamrpointslabel.setText("Point 6, mamr is proud!")
+        case 7: mamrpointslabel.setText("Lucky point number 7!")
+        default: mamrpointslabel.setText("You have \(newvalueint) points.")
         }
-        else {
-            mamrpointslabel.setText("You earned \(newvalueint) points")}
         points.append(Points(balance: newvalueint)!)
-        saveBalance()
+        saveBalance() //saving balance
     }
     
     func saveBalance(){

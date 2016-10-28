@@ -93,10 +93,10 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         let lastbalancestring:Int = (points.last?.balance)!
         print(lastbalancestring)
         if lastbalancestring == 1 { // it has to be grammatically correct, right?
-            balancelabelhome.setText("You earned \(lastbalancestring) point")
+            balancelabelhome.setText("You earned \(lastbalancestring) point.")
         }
         else {
-            balancelabelhome.setText("You earned \(lastbalancestring) points")
+            balancelabelhome.setText("You earned \(lastbalancestring) points.")
         }
     }
     
@@ -194,7 +194,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     @IBAction func updatebalance() { //testing function to increment balance, remove later
         let lastbalance:Int = (points.last?.balance)!
         let newvalueint:Int = lastbalance + 1
-        balancelabelhome.setText("You earned \(newvalueint) points")
+        balancelabelhome.setText("You earned \(newvalueint) points.")
         points.append(Points(balance: newvalueint)!)
         saveBalance()
     }
@@ -202,7 +202,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     @IBAction func reset() { //test function to setbalance to 0
         initiliazebalance()
         saveBalance()
-        balancelabelhome.setText("You earned 0 points")
+        balancelabelhome.setText("You earned 0 points.")
         print("balance resetted")
     }
 

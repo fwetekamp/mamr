@@ -18,7 +18,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, UNUserNotificationCenter
             if granted {
                 print("Got the auth!")
             } else {
-                print("I need the auth to spam you")
+                print("WARNING! NO AUTH GRANTED")
             }
             
            UNUserNotificationCenter.current().delegate = self //register to be delegate
