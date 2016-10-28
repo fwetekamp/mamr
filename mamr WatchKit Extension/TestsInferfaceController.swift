@@ -29,12 +29,26 @@ class TestsInferfaceController: WKInterfaceController {
         setuserstatus() //saving user status so that onboarding is not launched when user-reopnes app again
         pushController(withName: "home", context: "segue")
     }
+    override func handleAction(withIdentifier identifier: String?, for notification: UNNotification) {
+        print("Tapped in notification") //handling action notifications
+        switch(identifier){
+        case "order1"?:
+            print("tapped order1")
+            pushController(withName: "Lunch_Start", context: "segue")
+        case "order2"?:
+            print("tapped order2")
+            pushController(withName: "Lunch_Start", context: "segue")
+        case "getrecipe"?:
+            print("tapped recipe")
+            pushController(withName: "Dinner_Start", context: "segue")
+        default: break
+        }
+    }
+    
     @IBAction func showlunch() {
         let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
         let notificationManager = NotificationsHandler()
-        
-        notificationManager.lunchnotificationcategories()
+        notificationManager.notificationcategories()
         
         
         let content = UNMutableNotificationContent() //creating the notification
@@ -53,10 +67,9 @@ class TestsInferfaceController: WKInterfaceController {
     }
     @IBAction func TestLunch() {
         let center = UNUserNotificationCenter.current()
-        center.removeAllPendingNotificationRequests()
         let notificationManager = NotificationsHandler()
         
-        notificationManager.lunchnotificationcategories()
+        notificationManager.notificationcategories()
         
         
         let content = UNMutableNotificationContent() //creating the notification
@@ -77,7 +90,7 @@ class TestsInferfaceController: WKInterfaceController {
     
     @IBAction func showdinner() {
         let notificationManager = NotificationsHandler()
-        notificationManager.dinnernotificationcategories()
+        notificationManager.notificationcategories()
         
         let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()
@@ -97,7 +110,7 @@ class TestsInferfaceController: WKInterfaceController {
     @IBAction func TestDinner() { // dinner sample notification
         
         let notificationManager = NotificationsHandler()
-        notificationManager.dinnernotificationcategories()
+        notificationManager.notificationcategories()
         
         let center = UNUserNotificationCenter.current()
         center.removeAllPendingNotificationRequests()

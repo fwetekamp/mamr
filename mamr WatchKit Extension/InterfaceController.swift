@@ -62,8 +62,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         dinnerhome.setHidden(true)
-        dateComponents_dinner_1.hour = 15
-        dateComponents_dinner_1.minute = 25 //setting the dinner notification schedule
+        dateComponents_dinner_1.hour = 16
+        dateComponents_dinner_1.minute = 31 //setting the dinner notification schedule
         let date = NSDate()
         let calendar = NSCalendar.autoupdatingCurrent
         let datecomponents = calendar.dateComponents([.hour], from: date as Date) //getting the current hour
@@ -93,9 +93,6 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     
     func schedulelunch(){
         let center = UNUserNotificationCenter.current()
-        let notificationManager = NotificationsHandler()
-        
-        notificationManager.lunchnotificationcategories()
         
         let content = UNMutableNotificationContent() //creating the notification
         content.title = "Your Lunch"
@@ -108,11 +105,11 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         for i in 2..<7 {  //scheduling for lunch notifications for weekdays
             dateComponents1.weekday = i
-            dateComponents1.hour = 15
-            dateComponents1.minute = 16
+            dateComponents1.hour = 16
+            dateComponents1.minute = 32
             dateComponents2.weekday = i
-            dateComponents2.hour = 15
-            dateComponents2.minute = 20
+            dateComponents2.hour = 16
+            dateComponents2.minute = 33
             let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents1, repeats: true)
             let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
             
@@ -127,11 +124,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         }
     }
     func scheduledinner() {
+        
         let center = UNUserNotificationCenter.current()
-        let notificationManager = NotificationsHandler()
-        
-        notificationManager.lunchnotificationcategories()
-        
         let content = UNMutableNotificationContent() //creating the notification
         content.title = "Your Dinner"
         content.body = "Tap to see your dinner for today."
@@ -143,8 +137,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         for i in 2..<7 {  //scheduling for lunch notifications for weekdays
             dateComponents_dinner_1.weekday = i
             dateComponents2.weekday = i
-            dateComponents2.hour = 15 //scheduling second dinner reminder
-            dateComponents2.minute = 30
+            dateComponents2.hour = 16 //scheduling second dinner reminder
+            dateComponents2.minute = 34
             let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents_dinner_1, repeats: true)
             let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
             
@@ -156,7 +150,6 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
             center.add(request2) { (error: Error?) in
                 print(error ?? "all good")
             }
-            print("notifications scheduled")
         }
         presentAlert(withTitle: "Success!", message: "I will help you with recommendations to eat clean and healthy.", preferredStyle: WKAlertControllerStyle.alert, actions: [WKAlertAction.init(title: "Got it", style: WKAlertActionStyle.default, handler: {
         })])
@@ -166,6 +159,10 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     }
     
     @IBAction func activatenotifications() {
+        let notificationManager = NotificationsHandler()
+        notificationManager.notificationcategories()
+      //  let center = UNUserNotificationCenter.current()
+     //   center.removeAllPendingNotificationRequests()
         schedulelunch()
         scheduledinner()
 
