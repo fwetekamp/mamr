@@ -18,9 +18,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     var dateComponents_dinner_1 = DateComponents() //scheduling for 10:30 AM
     var dateComponents_dinner_2 = DateComponents() //schedling for 11:00 AM
 
-    @IBAction func home() {
-        pushController(withName: "home", context: "segue")
-    }
+
     @IBOutlet var dinnerhome: WKInterfaceButton!
     
     @IBOutlet var balancelabelhome: WKInterfaceLabel!

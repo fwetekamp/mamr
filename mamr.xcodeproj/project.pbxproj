@@ -18,6 +18,7 @@
 		1F939D461DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */; };
 		1F939D481DB1A938005FF392 /* AddressInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */; };
 		1F9A96BC1DC0FB8E00DD5ED1 /* DinnerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9A96BB1DC0FB8E00DD5ED1 /* DinnerHome.swift */; };
+		1FA1FDC61DC36AE100E612F9 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1FDC51DC36AE100E612F9 /* user.swift */; };
 		1FB9CAC91DBE9C020002C65C /* peoplepickerInterfacecontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9CAC81DBE9C020002C65C /* peoplepickerInterfacecontroller.swift */; };
 		1FB9CACD1DBEB8AB0002C65C /* weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9CACC1DBEB8AB0002C65C /* weekday.swift */; };
 		1FB9CACF1DBEBDFA0002C65C /* step1controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9CACE1DBEBDFA0002C65C /* step1controller.swift */; };
@@ -99,6 +100,7 @@
 		1F939D451DB1A7DB005FF392 /* DeliveryTimeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryTimeInterfaceController.swift; sourceTree = "<group>"; };
 		1F939D471DB1A938005FF392 /* AddressInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressInterfaceController.swift; sourceTree = "<group>"; };
 		1F9A96BB1DC0FB8E00DD5ED1 /* DinnerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinnerHome.swift; sourceTree = "<group>"; };
+		1FA1FDC51DC36AE100E612F9 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		1FB9CAC81DBE9C020002C65C /* peoplepickerInterfacecontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = peoplepickerInterfacecontroller.swift; sourceTree = "<group>"; };
 		1FB9CACC1DBEB8AB0002C65C /* weekday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = weekday.swift; sourceTree = "<group>"; };
 		1FB9CACE1DBEBDFA0002C65C /* step1controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = step1controller.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				1F30E3051DBD4925006A413F /* Dinner.swift */,
 				1FEC25121DBE76D200AFEC41 /* Dinner_Dish.swift */,
 				1F67FA161DBFDD7C005A6D26 /* cookingstep.swift */,
+				1FA1FDC51DC36AE100E612F9 /* user.swift */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				1FB9CACF1DBEBDFA0002C65C /* step1controller.swift in Sources */,
 				1F0FA9F11DB26DF30049A6ED /* Points.swift in Sources */,
 				1FDA8B261DAD50C20030FA6B /* InterfaceController.swift in Sources */,
+				1FA1FDC61DC36AE100E612F9 /* user.swift in Sources */,
 				1F54D8131DB3AB7D00519334 /* TestsInferfaceController.swift in Sources */,
 				1F939D481DB1A938005FF392 /* AddressInterfaceController.swift in Sources */,
 			);

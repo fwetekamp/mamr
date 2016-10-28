@@ -69,16 +69,16 @@
             </objects>
             <point key="canvasLocation" x="57" y="252"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Tests Inferface Controller-->
         <scene sceneID="d5L-QT-bhc">
             <objects>
-                <controller id="qUy-gP-Qez">
+                <controller id="qUy-gP-Qez" customClass="TestsInferfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Hello." id="K4p-8k-z3Z"/>
                         <imageView alignment="center" image="Logo" id="Bga-xh-wWl"/>
-                        <button width="1" alignment="left" title="Button" id="BU9-NG-k8B">
+                        <button width="1" alignment="left" title="Next" id="BU9-NG-k8B">
                             <connections>
-                                <segue destination="OK3-8y-nrH" kind="push" id="cUh-vi-IaG"/>
+                                <segue destination="OK3-8y-nrH" kind="push" id="y8N-a0-UtJ"/>
                             </connections>
                         </button>
                     </items>
@@ -102,15 +102,15 @@
                                 <action selector="showlunch" destination="OK3-8y-nrH" id="89z-T0-YtU"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Skip This" id="noH-XU-0PA">
+                        <button width="1" alignment="left" title="Next" id="noH-XU-0PA">
                             <connections>
-                                <segue destination="FZ9-A3-VKq" kind="push" id="DfB-7t-kFu"/>
+                                <segue destination="FZ9-A3-VKq" kind="push" id="sqf-r3-I4N"/>
                             </connections>
                         </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="491" y="-362"/>
+            <point key="canvasLocation" x="444" y="-391"/>
         </scene>
         <!--Tests Inferface Controller-->
         <scene sceneID="6qf-Ck-ebV">
@@ -130,7 +130,7 @@
                         </button>
                         <button width="1" alignment="left" title="Next" id="oNH-Gz-Unc">
                             <connections>
-                                <segue destination="eHd-xy-FyR" kind="push" id="OXI-pY-J5K"/>
+                                <segue destination="eHd-xy-FyR" kind="push" id="zxh-YC-7Hj"/>
                             </connections>
                         </button>
                     </items>
@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="810" y="-379"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Tests Inferface Controller-->
         <scene sceneID="RFb-aN-J5I">
             <objects>
-                <controller id="eHd-xy-FyR">
+                <controller id="eHd-xy-FyR" customClass="TestsInferfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="mamr Points" id="1kJ-cC-FZt">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
@@ -152,7 +152,8 @@
                         </label>
                         <button width="1" alignment="left" title="Get Started" id="XYy-BT-MdE">
                             <connections>
-                                <segue destination="SzG-QD-DVv" kind="push" id="vNt-aq-HT5"/>
+                                <action selector="getstarted" destination="eHd-xy-FyR" id="OF6-LL-lKD"/>
+                                <segue destination="SzG-QD-DVv" kind="push" id="fYt-jF-hlg"/>
                             </connections>
                         </button>
                     </items>
@@ -188,7 +189,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="603" y="-35"/>
+            <point key="canvasLocation" x="618" y="136"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -709,7 +710,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ijR-sW-Bmz"/>
-        <segue reference="vNt-aq-HT5"/>
+        <segue reference="fYt-jF-hlg"/>
         <segue reference="zj7-V1-IeZ"/>
     </inferredMetricsTieBreakers>
 </document>
