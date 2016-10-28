@@ -71,8 +71,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         }
         
         dinnerhome.setHidden(true)
-        dateComponents_dinner_1.hour = 16
-        dateComponents_dinner_1.minute = 31 //setting the dinner notification schedule
+        dateComponents_dinner_1.hour = 17
+        dateComponents_dinner_1.minute = 00 //setting the dinner notification schedule
         let date = NSDate()
         let calendar = NSCalendar.autoupdatingCurrent
         let datecomponents = calendar.dateComponents([.hour], from: date as Date) //getting the current hour
@@ -114,11 +114,11 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         for i in 2..<7 {  //scheduling for lunch notifications for weekdays
             dateComponents1.weekday = i
-            dateComponents1.hour = 16
-            dateComponents1.minute = 32
+            dateComponents1.hour = 10
+            dateComponents1.minute = 30
             dateComponents2.weekday = i
-            dateComponents2.hour = 16
-            dateComponents2.minute = 33
+            dateComponents2.hour = 11
+            dateComponents2.minute = 00
             let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents1, repeats: true)
             let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
             
@@ -146,8 +146,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         for i in 2..<7 {  //scheduling for lunch notifications for weekdays
             dateComponents_dinner_1.weekday = i
             dateComponents2.weekday = i
-            dateComponents2.hour = 16 //scheduling second dinner reminder
-            dateComponents2.minute = 34
+            dateComponents2.hour = 17 //scheduling second dinner reminder
+            dateComponents2.minute = 30
             let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents_dinner_1, repeats: true)
             let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
             

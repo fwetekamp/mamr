@@ -18,9 +18,6 @@ class Dinner: NSObject { //defining the dinner recipes
     var ingredients: [String] = []
     var ingredientsamount: [Int] = []
     var measuringunit: [String] = []
-  //  var step1 = String()
- //   var step2 = String()
-  //  var step3 = String()
     var timerrequired: Bool = false
     var time = Int()
     var step1:cookingstep = cookingstep(cookingstep: "", timer: false)
@@ -28,7 +25,7 @@ class Dinner: NSObject { //defining the dinner recipes
     var step3:cookingstep = cookingstep(cookingstep: "", timer: false)
 
     
-    init(day: Int) //initialization function; sets required initialization values
+    init(day: Int)
     {
         weekday = day
         switch weekday {
@@ -41,6 +38,9 @@ class Dinner: NSObject { //defining the dinner recipes
             ingredients = ["Pasta", "Bacon", "Zucchini", "Parmesan", "Mushrooms", "Salt", "Pepper"]
             ingredientsamount = [200, 150, 1, 50, 150, 10, 10]
             measuringunit = ["g", "g", "x", "g", "g", "g", "g"]
+            step1 = cookingstep(cookingstep: "Start boiling 3L of salt water. Put olive oil in a pan (mid heat), add tomato paste & pepper flakes; reduce heat to low & stir until fragrant for 4 min. Stir in tomatoes & remove from heat.",timer: true, steptime: 4)
+            step2 = cookingstep(cookingstep: "Drop the pasta into the boiling water, and cook until al dente. Drain the pasta, reserving 1/4 cup of the pasta water.",timer: true, steptime: 8)
+            step3 = cookingstep(cookingstep: "Add pasta and reserved pasta water to tomato sauce, stir and toss over medium heat until the pasta is well coated. Season with salt & oliver oil. Serve with Parmigiano.",timer:false)
             
         case 3:
             dayname = "Tuesday"
