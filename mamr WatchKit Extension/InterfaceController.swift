@@ -62,8 +62,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         dinnerhome.setHidden(true)
-        dateComponents_dinner_1.hour = 19
-        dateComponents_dinner_1.minute = 00 //setting the dinner date components
+        dateComponents_dinner_1.hour = 15
+        dateComponents_dinner_1.minute = 25 //setting the dinner notification schedule
         let date = NSDate()
         let calendar = NSCalendar.autoupdatingCurrent
         let datecomponents = calendar.dateComponents([.hour], from: date as Date) //getting the current hour
@@ -91,7 +91,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         }
     }
     
-    @IBAction func ScheduleLunch() {
+    func schedulelunch(){
         let center = UNUserNotificationCenter.current()
         let notificationManager = NotificationsHandler()
         
@@ -105,33 +105,28 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         var dateComponents1 = DateComponents() //scheduling for 10:30 AM
         var dateComponents2 = DateComponents() //schedling for 11:00 AM
-
-      for i in 2..<7 {  //scheduling for lunch notifications for weekdays
-        dateComponents1.weekday = i
-        dateComponents1.hour = 10
-        dateComponents1.minute = 30
-        dateComponents2.weekday = i
-        dateComponents2.hour = 11
-        dateComponents2.minute = 00
-        let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents1, repeats: true)
-        let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
-
-        let request1 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger1)
-        let request2 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger2)
-        center.add(request1) { (error: Error?) in
-            print(error ?? "all good")
-            }
-        center.add(request2) { (error: Error?) in
-            print(error ?? "all good")
-        }
-        print("notifications scheduled")
-        }
-        presentAlert(withTitle: "Success!", message: "I will help you with recommendations to eat clean and healthy.", preferredStyle: WKAlertControllerStyle.alert, actions: [WKAlertAction.init(title: "Got it", style: WKAlertActionStyle.default, handler: {
-        })])
         
+        for i in 2..<7 {  //scheduling for lunch notifications for weekdays
+            dateComponents1.weekday = i
+            dateComponents1.hour = 15
+            dateComponents1.minute = 16
+            dateComponents2.weekday = i
+            dateComponents2.hour = 15
+            dateComponents2.minute = 20
+            let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents1, repeats: true)
+            let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
+            
+            let request1 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger1)
+            let request2 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger2)
+            center.add(request1) { (error: Error?) in
+                print(error ?? "all good")
+            }
+            center.add(request2) { (error: Error?) in
+                print(error ?? "all good")
+            }
+        }
     }
-
-    @IBAction func ScheduleDinner() {
+    func scheduledinner() {
         let center = UNUserNotificationCenter.current()
         let notificationManager = NotificationsHandler()
         
@@ -148,8 +143,8 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         for i in 2..<7 {  //scheduling for lunch notifications for weekdays
             dateComponents_dinner_1.weekday = i
             dateComponents2.weekday = i
-            dateComponents2.hour = 17
-            dateComponents2.minute = 00
+            dateComponents2.hour = 15 //scheduling second dinner reminder
+            dateComponents2.minute = 30
             let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents_dinner_1, repeats: true)
             let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
             
@@ -169,6 +164,16 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         
         
     }
+    
+    @IBAction func activatenotifications() {
+        schedulelunch()
+        scheduledinner()
+
+        presentAlert(withTitle: "Success!", message: "I will help you with recommendations to eat clean and healthy.", preferredStyle: WKAlertControllerStyle.alert, actions: [WKAlertAction.init(title: "Got it", style: WKAlertActionStyle.default, handler: {
+        })])
+        
+    }
+
     func  initiliazebalance(){ //points are saved, the last array element will be set to 0
         let user1 = Points(balance: 0)
         points += [user1!]

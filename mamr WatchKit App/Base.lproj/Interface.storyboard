@@ -21,43 +21,19 @@
                         <label height="20" alignment="center" text="label" id="6LZ-RG-FQu">
                             <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
-                        <button width="1" alignment="left" title="Schedule Lunch" id="HvA-jH-zZ4">
-                            <connections>
-                                <action selector="ScheduleLunch" destination="SzG-QD-DVv" id="lNf-mt-8Vk"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Schedule Dinner" id="Sus-62-6Jm">
-                            <connections>
-                                <action selector="ScheduleDinner" destination="SzG-QD-DVv" id="ySG-sL-UEX"/>
-                            </connections>
-                        </button>
                         <button width="1" alignment="left" title="Today's Dinner" id="sIF-ty-0Fv">
                             <connections>
                                 <segue destination="cg2-iR-wfL" kind="push" id="LUa-fU-au3"/>
                             </connections>
                         </button>
-                        <button width="1" height="25" alignment="left" title="Delete Notifications" id="uqj-J3-TLN">
-                            <fontDescription key="font" type="system" pointSize="10"/>
+                        <button width="1" alignment="left" title="Activate Notifications" id="HvA-jH-zZ4">
                             <connections>
-                                <action selector="deletenotififcations" destination="SzG-QD-DVv" id="RBn-rh-F5c"/>
+                                <action selector="activatenotifications" destination="SzG-QD-DVv" id="fil-k7-2OE"/>
                             </connections>
                         </button>
-                        <button width="1" height="25" alignment="left" title="Tests" id="A9D-Ow-2HP">
-                            <fontDescription key="font" type="system" pointSize="10"/>
+                        <button width="1" height="20" alignment="left" title="Settings" id="bcD-ND-XE4">
                             <connections>
-                                <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
-                            </connections>
-                        </button>
-                        <button width="1" height="25" alignment="left" title="Update Point Balance" id="Z2l-h7-IzF">
-                            <fontDescription key="font" type="system" pointSize="10"/>
-                            <connections>
-                                <action selector="updatebalance" destination="SzG-QD-DVv" id="qID-QX-ZdK"/>
-                            </connections>
-                        </button>
-                        <button width="1" height="25" alignment="left" title="Reset Points Balance" id="s1A-5g-ek2">
-                            <fontDescription key="font" type="system" pointSize="10"/>
-                            <connections>
-                                <action selector="reset" destination="SzG-QD-DVv" id="W9O-hg-J9w"/>
+                                <segue destination="Dba-dr-ZCJ" kind="push" id="8DD-3V-Eke"/>
                             </connections>
                         </button>
                     </items>
@@ -67,15 +43,20 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="57" y="252"/>
+            <point key="canvasLocation" x="-70" y="300"/>
         </scene>
         <!--Tests Inferface Controller-->
         <scene sceneID="d5L-QT-bhc">
             <objects>
                 <controller id="qUy-gP-Qez" customClass="TestsInferfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Hello." id="K4p-8k-z3Z"/>
-                        <imageView alignment="center" image="Logo" id="Bga-xh-wWl"/>
+                        <label alignment="center" text="Hello." id="qKS-j8-Ahw">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="24"/>
+                        </label>
+                        <imageView width="50" height="50" alignment="center" image="Logo" id="Bga-xh-wWl"/>
+                        <label height="51" alignment="left" text="I'm mamr. My job is to help you eat healthy in your busy life." textAlignment="center" numberOfLines="3" id="K4p-8k-z3Z">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                        </label>
                         <button width="1" alignment="left" title="Next" id="BU9-NG-k8B">
                             <connections>
                                 <segue destination="OK3-8y-nrH" kind="push" id="y8N-a0-UtJ"/>
@@ -84,7 +65,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="115" y="-414"/>
+            <point key="canvasLocation" x="115" y="-392"/>
         </scene>
         <!--Tests Inferface Controller-->
         <scene sceneID="ep9-ZQ-gVT">
@@ -110,7 +91,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="444" y="-391"/>
+            <point key="canvasLocation" x="442" y="-393"/>
         </scene>
         <!--Tests Inferface Controller-->
         <scene sceneID="6qf-Ck-ebV">
@@ -136,7 +117,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="810" y="-379"/>
+            <point key="canvasLocation" x="807" y="-393"/>
         </scene>
         <!--Tests Inferface Controller-->
         <scene sceneID="RFb-aN-J5I">
@@ -153,13 +134,12 @@
                         <button width="1" alignment="left" title="Get Started" id="XYy-BT-MdE">
                             <connections>
                                 <action selector="getstarted" destination="eHd-xy-FyR" id="OF6-LL-lKD"/>
-                                <segue destination="SzG-QD-DVv" kind="push" id="fYt-jF-hlg"/>
                             </connections>
                         </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1092" y="-379.5"/>
+            <point key="canvasLocation" x="1153" y="-394"/>
         </scene>
         <!--Tests Inferface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -189,7 +169,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="618" y="136"/>
+            <point key="canvasLocation" x="603" y="-50"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -504,6 +484,43 @@
             </objects>
             <point key="canvasLocation" x="1688" y="103"/>
         </scene>
+        <!--Interface Controller-->
+        <scene sceneID="9qo-rD-Cp7">
+            <objects>
+                <controller id="Dba-dr-ZCJ">
+                    <items>
+                        <label alignment="center" text="Settings" id="HgY-kV-8Dp">
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
+                        </label>
+                        <button width="1" height="25" alignment="left" title="Delete Notifications" id="uqj-J3-TLN">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="deletenotififcations" destination="SzG-QD-DVv" id="RBn-rh-F5c"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="25" alignment="left" title="Update Point Balance" id="Z2l-h7-IzF">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="updatebalance" destination="SzG-QD-DVv" id="qID-QX-ZdK"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="25" alignment="left" title="Reset Points Balance" id="s1A-5g-ek2">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <action selector="reset" destination="SzG-QD-DVv" id="W9O-hg-J9w"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="25" alignment="left" title="Tests" id="A9D-Ow-2HP">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="K4a-wF-69X"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="358" y="311"/>
+        </scene>
         <!--Lunch_Start-->
         <scene sceneID="2A2-67-Ik4">
             <objects>
@@ -710,7 +727,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ijR-sW-Bmz"/>
-        <segue reference="fYt-jF-hlg"/>
+        <segue reference="Smv-9k-Ah9"/>
         <segue reference="zj7-V1-IeZ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -20,18 +20,14 @@ class TestsInferfaceController: WKInterfaceController {
             print(newuser.newuser)
             pushController(withName: "home", context: "segue")
         }
-        else {
-            setuserstatus()
-            print("user status set")
-        }
 
         // Configure interface objects here.
     }
 
 
     @IBAction func getstarted() {
-        newuser.newuser = false
-        setuserstatus()
+        setuserstatus() //saving user status so that onboarding is not launched when user-reopnes app again
+        pushController(withName: "home", context: "segue")
     }
     @IBAction func showlunch() {
         let center = UNUserNotificationCenter.current()
@@ -45,7 +41,6 @@ class TestsInferfaceController: WKInterfaceController {
         content.title = "Your Lunch"
         content.body = "Here's your menu for today."
         content.categoryIdentifier = "lunch_notification"
-        content.subtitle = "Testing"
         content.sound = UNNotificationSound.default()
         
         
