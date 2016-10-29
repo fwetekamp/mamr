@@ -491,19 +491,19 @@
                         <label alignment="center" text="Settings" id="HgY-kV-8Dp">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
+                        <button width="1" height="25" alignment="left" title="Back to Introduction" id="yPc-ho-RZl">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                            <connections>
+                                <segue destination="qUy-gP-Qez" kind="push" id="pjd-cd-P0g"/>
+                            </connections>
+                        </button>
                         <button width="1" height="25" alignment="left" title="Delete Notifications" id="uqj-J3-TLN">
                             <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <action selector="deletenotififcations" destination="SzG-QD-DVv" id="RBn-rh-F5c"/>
                             </connections>
                         </button>
-                        <button width="1" height="25" alignment="left" title="Update Point Balance" id="Z2l-h7-IzF">
-                            <fontDescription key="font" type="system" pointSize="10"/>
-                            <connections>
-                                <action selector="updatebalance" destination="SzG-QD-DVv" id="qID-QX-ZdK"/>
-                            </connections>
-                        </button>
-                        <button width="1" height="25" alignment="left" title="Reset Points Balance" id="s1A-5g-ek2">
+                        <button width="1" height="25" alignment="left" title="Reset Points" id="s1A-5g-ek2">
                             <fontDescription key="font" type="system" pointSize="10"/>
                             <connections>
                                 <action selector="reset" destination="SzG-QD-DVv" id="W9O-hg-J9w"/>

@@ -190,15 +190,6 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         super.didDeactivate()
     }
     
-
-    @IBAction func updatebalance() { //testing function to increment balance, remove later
-        let lastbalance:Int = (points.last?.balance)!
-        let newvalueint:Int = lastbalance + 1
-        balancelabelhome.setText("You earned \(newvalueint) points.")
-        points.append(Points(balance: newvalueint)!)
-        saveBalance()
-    }
-    
     @IBAction func reset() { //test function to setbalance to 0
         initiliazebalance()
         saveBalance()
