@@ -148,12 +148,13 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
             dateComponents2.weekday = i
             dateComponents2.hour = 17 //scheduling second dinner reminder
             dateComponents2.minute = 30
+            //creating 2 triggers to scheudle lunch notifications
             let trigger1 = UNCalendarNotificationTrigger(dateMatching: dateComponents_dinner_1, repeats: true)
             let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents2, repeats: true)
             
             let request1 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger1)
             let request2 = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger2)
-            center.add(request1) { (error: Error?) in
+            center.add(request1) { (error: Error?) in  //cathing errors with fancy swift 3 closures
                 print(error ?? "all good")
             }
             center.add(request2) { (error: Error?) in
@@ -190,7 +191,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
         super.didDeactivate()
     }
     
-    @IBAction func reset() { //test function to setbalance to 0
+    @IBAction func reset() { //setbalance to 0
         initiliazebalance()
         saveBalance()
         balancelabelhome.setText("You earned 0 points.")
@@ -207,22 +208,5 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
     func  loadBalance() -> [Points]?{
         return NSKeyedUnarchiver.unarchiveObject(withFile: Points.ArchiveURL.path) as? [Points]
     }
-    
-
-    /*//Starting heart rate code // heartrate code used at this stage
-     let calendar = NSCalendar.current
-     override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
-        guard let quantityType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
-            print("not working")
-            return
-        }
-        
-        // Configure interface objects here.
-    }
-    let query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: <#T##NSPredicate?#>, options: <#T##HKStatisticsOptions#>, anchorDate: Date, intervalComponents: DateComponents.init(hour: 2))
-    
-    */
     
 }

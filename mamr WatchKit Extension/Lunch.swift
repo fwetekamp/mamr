@@ -32,8 +32,8 @@ class Lunch: NSObject { //class to initiate declare the luch object
                 dishprice1 = "478kcal - 9.40€"
                 dishimagename1 = "Lunch_Day1_Dish1"
                 dishtitle2 = "#2 Roast Chicken"
-                dishsubtitle2 = "with Rocket Salad"
-                dishprice2 = "583kcal - 8.30€"
+                dishsubtitle2 = "with grilled Vegetables"
+                dishprice2 = "583kcal - 8.70€"
                 dishimagename2 = "Lunch_Day1_Dish2"
                 
             case 3:
@@ -87,8 +87,8 @@ class Lunch: NSObject { //class to initiate declare the luch object
                 dishprice1 = "478kcal - 9.40€"
                 dishimagename1 = "Lunch_Day1_Dish1"
                 dishtitle2 = "#2 Roast Chicken"
-                dishsubtitle2 = "with Rocket Salad"
-                dishprice2 = "584kcal - 8.30€"
+                dishsubtitle2 = "with grilled Vegetables"
+                dishprice2 = "584kcal - 8.70€"
                 dishimagename2 = "Lunch_Day1_Dish2"
         }
     }

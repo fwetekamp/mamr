@@ -45,7 +45,7 @@ class Dinner: NSObject { //defining the dinner recipes
         case 3:
             dayname = "Tuesday"
             dishtitle1 = "Spinach Salad"
-            dishsubtitle1 = "with Goat Cheese and Walnuts"
+            dishsubtitle1 = "with Goat Cheese"
             dishcookingtime1 = "Cooking Time: 10 Min"
             dishimagename1 = "Dinner_Day2_Dish1"
             ingredients = ["Red Wine Vinegar", "Minced Shallot", "Dijon Mustard", "Salt", "Black Pepper", "Walnut Oil", "Baby Spinach", "Chopped Walnuts", "Goat Cheese"]
@@ -71,7 +71,7 @@ class Dinner: NSObject { //defining the dinner recipes
         case 5:
             dayname = "Thursday"
             dishtitle1 = "Beef Taco"
-            dishsubtitle1 = "with fresh Vegetables"
+            dishsubtitle1 = "with Vegetables"
             dishcookingtime1 = "Cooking Time: 20 Min"
             ingredients = ["Ground Beef", "Onion", "Chili", "Salt", "Garlic Powder", "Tomato Sauce", "Taco Shells", "Cheddar Cheese", "Lettuce", "Tomatos", "Salsa"]
             ingredientsamount = [150,  50, 5,  5, 3, 200, 3, 100, 1, 1, 50]
@@ -96,10 +96,16 @@ class Dinner: NSObject { //defining the dinner recipes
             
         default:
             dayname = "Today"
-            dishtitle1 = "Penne Arrabiata"
-            dishsubtitle1 = "with Fried Eggplant"
-            dishcookingtime1 = "20 Min"
-            dishimagename1 = "Dinner_Day1_Dish2"
+            dishtitle1 = "Spinach Salad"
+            dishsubtitle1 = "with Goat Cheese"
+            dishcookingtime1 = "Cooking Time: 10 Min"
+            dishimagename1 = "Dinner_Day2_Dish1"
+            ingredients = ["Red Wine Vinegar", "Minced Shallot", "Dijon Mustard", "Salt", "Black Pepper", "Walnut Oil", "Baby Spinach", "Chopped Walnuts", "Goat Cheese"]
+            ingredientsamount = [10, 20, 20,  10,   10, 20,  150,  30, 30]
+            measuringunit = ["ml", "g", "ml", "g", "g", "ml", "g", "g", "g"]
+            step1 = cookingstep(cookingstep: "In a small bowl, combine the vinegar, shallot, mustard, salt, and pepper. Gradually whisk in the oil to make a creamy dressing.",timer: false)
+            step2 = cookingstep(cookingstep: "Put all but a large handful of the spinach in a large bowl. Toss with most of the dressing.",timer: false)
+            step3 = cookingstep(cookingstep: "Add remaining spinach and continue tossing until well coated. Serve immediately topped with goat cheese and walnuts.",timer:false)
         }
     }
 
