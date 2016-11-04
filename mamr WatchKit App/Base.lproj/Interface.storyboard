@@ -13,7 +13,7 @@
             <objects>
                 <controller identifier="home" id="SzG-QD-DVv" customClass="InterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Hello. I'm mamr." id="Eaw-sT-x9L">
+                        <label alignment="center" text="Home" id="Eaw-sT-x9L">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
                         <imageView width="50" height="50" alignment="center" image="Logo" id="XBN-9Y-f8p"/>
@@ -42,7 +42,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-70" y="300"/>
+            <point key="canvasLocation" x="-248" y="269"/>
         </scene>
         <!--onboarding-->
         <scene sceneID="d5L-QT-bhc">
@@ -604,7 +604,7 @@
             <objects>
                 <controller identifier="Dinner_Start" id="IKa-eo-WkZ" customClass="peoplepickerInterfacecontroller" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label height="27" alignment="center" text="For how many?" numberOfLines="3" id="Zh0-4c-aoR">
+                        <label height="27" alignment="center" text="Portions" numberOfLines="3" id="Zh0-4c-aoR">
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
                         <picker height="50" alignment="left" id="0p4-V6-3JV">
@@ -612,6 +612,9 @@
                                 <action selector="setpeople:" destination="IKa-eo-WkZ" id="CwY-7q-6Rq"/>
                             </connections>
                         </picker>
+                        <label alignment="center" text="Why not also cook for tomorrow's lunch?" textAlignment="center" numberOfLines="2" id="bvg-XH-KxA">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="11"/>
+                        </label>
                         <button width="1" alignment="left" title="Confirm" id="fMi-jX-MkN">
                             <connections>
                                 <segue destination="svJ-VC-iyw" kind="push" id="7ic-iX-Tw5"/>
@@ -634,7 +637,7 @@
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
                         </label>
                         <imageView width="50" height="50" alignment="center" image="Logo" contentMode="scaleAspectFit" id="SLj-9F-ECk"/>
-                        <label height="25" alignment="center" text="Label" numberOfLines="2" id="wBC-fc-b5B">
+                        <label height="30" alignment="center" text="Label as2. line" textAlignment="center" numberOfLines="2" id="wBC-fc-b5B">
                             <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
                         <button width="1" alignment="left" title="Home" id="yWU-FV-jww">
@@ -649,7 +652,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="2487" y="977"/>
+            <point key="canvasLocation" x="2487" y="979.5"/>
         </scene>
         <!--Step 2controller-->
         <scene sceneID="4Mf-vm-M4f">
