@@ -80,6 +80,7 @@ class InterfaceController: WKInterfaceController, UNUserNotificationCenterDelega
 
         if (hour! >= dateComponents_dinner_1.hour!) { //Dinnerhome will only be shown after the notification has been sent.
             dinnerhome.setHidden(false)
+            print("Showing dinner menu on home")  
         }
         
         

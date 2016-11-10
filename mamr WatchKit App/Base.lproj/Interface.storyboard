@@ -13,10 +13,7 @@
             <objects>
                 <controller identifier="home" id="SzG-QD-DVv" customClass="InterfaceController" customModule="mamr_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Home" id="Eaw-sT-x9L">
-                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="20"/>
-                        </label>
-                        <imageView width="50" height="50" alignment="center" image="Logo" id="XBN-9Y-f8p"/>
+                        <imageView width="64" height="80" alignment="center" image="home_lgog" id="XBN-9Y-f8p"/>
                         <label height="20" alignment="center" text="label" id="6LZ-RG-FQu">
                             <fontDescription key="font" type="system" weight="light" pointSize="12"/>
                         </label>
@@ -42,7 +39,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-248" y="269"/>
+            <point key="canvasLocation" x="-248" y="232"/>
         </scene>
         <!--onboarding-->
         <scene sceneID="d5L-QT-bhc">
@@ -613,7 +610,7 @@
                             </connections>
                         </picker>
                         <label alignment="center" text="Why not also cook for tomorrow's lunch?" textAlignment="center" numberOfLines="2" id="bvg-XH-KxA">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="11"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="9"/>
                         </label>
                         <button width="1" alignment="left" title="Confirm" id="fMi-jX-MkN">
                             <connections>
